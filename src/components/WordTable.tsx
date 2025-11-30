@@ -46,8 +46,7 @@ export default function WordTable({ words, familiarity, onMark }: Props) {
           <thead>
             <tr>
               <th>單字</th>
-              <th>詞性</th>
-              <th>中文解釋</th>
+              <th>詞性及解釋</th>
               <th>出現次數等級</th>
               <th>熟悉度</th>
             </tr>
@@ -56,8 +55,11 @@ export default function WordTable({ words, familiarity, onMark }: Props) {
             {viewWords.map(word => (
               <tr key={word.id}>
                 <td data-label="單字">{word.word}</td>
-                <td data-label="詞性">{getPosDisplay(word) || '—'}</td>
-                <td data-label="中文解釋">{getMeaningDisplay(word) || '—'}</td>
+                <td data-label="詞性＋中文解釋">{
+                  word.posList && word.posList.length > 0
+                    ? word.posList.map(item => `${item.pos} ${item.meaningZh}`).join('； ')
+                    : '—'
+                }</td>
                 <td data-label="出現次數等級" style={{ textAlign: 'center' }}>{word.frequencyCount ?? word.frequencyGroup?.length ?? 0}</td>
                 <td data-label="熟悉度">
                   <div style={{ display: 'flex', gap: 6 }}>
