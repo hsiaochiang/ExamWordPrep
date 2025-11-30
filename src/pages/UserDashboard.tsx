@@ -17,6 +17,34 @@ const alphabetPresetOptions = [
 
 const maxOptions = Array.from({ length: 9 }, (_, idx) => 10 + idx * 5);
 
+type QuickAction = {
+  label: string;
+  description: string;
+  to: string;
+  tone: 'primary' | 'secondary';
+};
+
+const quickActions: QuickAction[] = [
+  {
+    label: '前往單字總覽',
+    description: '確認挑選結果並調整熟悉度',
+    to: '/words',
+    tone: 'primary'
+  },
+  {
+    label: '直接進入學習卡',
+    description: '用翻牌模式快速記憶單字',
+    to: '/flashcards',
+    tone: 'secondary'
+  },
+  {
+    label: '直接進入測驗',
+    description: '立即測驗並蒐集常錯字',
+    to: '/quiz',
+    tone: 'secondary'
+  }
+];
+
 export default function UserDashboard() {
   const { currentUser, appData } = useAuth();
   const { words, buildSession } = useWordSet();
@@ -221,16 +249,24 @@ export default function UserDashboard() {
               <span className="section-pill light">STEP 3</span>
               <p>完成條件挑選後，先前往單字總覽確認，再依需求進入其他模式。</p>
             </div>
-            <div className="button-row">
-              <button className={`btn primary ${isProcessing ? 'disabled' : ''}`} type="button" onClick={e => handleBuild(e as unknown as FormEvent, '/words')} disabled={isProcessing}>
-                前往單字總覽
-              </button>
-              <button className="btn secondary" type="button" onClick={e => handleBuild(e as unknown as FormEvent, '/flashcards')} disabled={isProcessing}>
-                直接進入學習卡
-              </button>
-              <button className="btn secondary" type="button" onClick={e => handleBuild(e as unknown as FormEvent, '/quiz')} disabled={isProcessing}>
-                直接進入測驗
-              </button>
+            <div className="action-panel">
+              {quickActions.map(action => (
+                <button
+                  key={action.to}
+                  type="button"
+                  className={`action-card ${action.tone} ${isProcessing ? 'disabled' : ''}`}
+                  onClick={e => handleBuild(e as unknown as FormEvent, action.to)}
+                  disabled={isProcessing}
+                >
+                  <div className="action-text">
+                    <span className="action-label">{action.label}</span>
+                    <span className="action-desc">{action.description}</span>
+                  </div>
+                  <span className="action-arrow" aria-hidden>
+                    →
+                  </span>
+                </button>
+              ))}
             </div>
           </div>
           {status && (
@@ -282,6 +318,8 @@ export default function UserDashboard() {
         .selection-card { background: #f8fafc; border: 1px solid #e2e8f0; }
         .stats-card { background: #e0f2fe; color: #000000; border: 1px solid #bae6fd; }
         .stats-card .section-desc { color: #000000; }
+        .stats-card .section-pill.light { background: rgba(0,0,0,0.08); color: #000; }
+        .stats-card h3 { color: #000; }
         .section-header { margin-bottom: 12px; }
         .section-pill {
           display: inline-block;
@@ -301,13 +339,34 @@ export default function UserDashboard() {
         .chip-row { display: flex; flex-wrap: wrap; gap: 6px; }
         .chip { background: #e0e7ff; color: #312e81; padding: 4px 8px; border-radius: 999px; font-size: 12px; }
         .chip.muted { background: transparent; color: #334155; border: 1px solid rgba(51,65,85,0.6); }
-        .button-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
         .btn.primary { background: #4f46e5; color: #fff; border: none; }
         .btn.primary.disabled { opacity: 0.7; cursor: not-allowed; }
         .btn.secondary { border: 1px solid #cbd5f5; color: #1d4ed8; background: #fff; }
-        .action-toolbar { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+        .action-toolbar { display: flex; flex-direction: column; gap: 12px; margin-top: 12px; }
         .toolbar-header { display: flex; flex-direction: column; gap: 4px; color: #475467; }
         .toolbar-header p { margin: 0; font-size: 14px; }
+        .action-panel { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+        .action-card {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-radius: 16px;
+          padding: 16px;
+          border: 1px solid #e2e8f0;
+          background: #fff;
+          text-align: left;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .action-card.primary { background: #1d4ed8; color: #fff; border-color: #1d4ed8; }
+        .action-card.secondary { background: #f8fafc; }
+        .action-card.disabled { opacity: 0.7; cursor: not-allowed; }
+        .action-card:not(.disabled):hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(15,23,42,0.12); }
+        .action-text { display: flex; flex-direction: column; gap: 4px; }
+        .action-label { font-size: 16px; font-weight: 700; }
+        .action-card.secondary .action-label { color: #0f172a; }
+        .action-card.secondary .action-desc { color: #475467; }
+        .action-desc { font-size: 13px; opacity: 0.9; }
+        .action-arrow { font-size: 20px; }
         .status-banner { margin-top: 12px; padding: 10px 12px; border-radius: 8px; font-size: 14px; }
         .status-banner.info { background: #e0f2fe; color: #0369a1; }
         .status-banner.success { background: #dcfce7; color: #166534; }

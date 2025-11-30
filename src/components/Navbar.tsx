@@ -40,14 +40,20 @@ export default function Navbar() {
       <nav id={navMenuId} className={`nav-links ${open ? 'open' : ''}`}>
         {links.map(link => {
           const locked = Boolean(link.requiresSession && !hasSession);
-          const linkClass = [pathname === link.to ? 'active' : '', link.emphasis ? 'highlight' : '', locked ? 'disabled' : '']
+          const isActive = pathname === link.to;
+          const classes = ['nav-item', link.emphasis ? 'highlight' : '', locked ? 'disabled' : '', isActive ? 'active' : '']
             .filter(Boolean)
             .join(' ');
+          const hint = locked
+            ? '請先建立單字範圍'
+            : link.to === '/dashboard'
+              ? '建立或調整本回合單字'
+              : '已可使用';
           return (
             <Link
               key={link.to}
               to={link.to}
-              className={linkClass}
+              className={classes}
               aria-disabled={locked}
               onClick={event => {
                 if (locked) {
@@ -57,9 +63,13 @@ export default function Navbar() {
                 setOpen(false);
               }}
             >
-              {link.emphasis && <span className="nav-icon" aria-hidden>★</span>}
-              {link.label}
-              {locked && <span className="nav-lock">（請先建立單字範圍）</span>}
+              <span className="nav-label">
+                {link.emphasis && <span className="nav-icon" aria-hidden>★</span>}
+                {link.label}
+              </span>
+              <span className={`nav-sub ${locked ? 'alert' : ''}`}>
+                {locked ? `（${hint}）` : hint}
+              </span>
             </Link>
           );
         })}
@@ -122,35 +132,56 @@ export default function Navbar() {
         }
         .nav-links {
           display: flex;
+          flex-wrap: wrap;
           align-items: center;
           gap: 12px;
         }
-        .nav-links a {
+        .nav-item {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          min-width: 140px;
           text-decoration: none;
-          color: #1f2937;
-          padding: 6px 8px;
-          border-radius: 8px;
+          color: #0f172a;
+          border: 1px solid #e2e8f0;
+          border-radius: 14px;
+          padding: 10px 14px;
+          background: #ffffff;
+          transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
         }
-        .nav-links a.active {
+        .nav-item:hover:not(.disabled) {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
+        }
+        .nav-item.active {
+          border-color: #93c5fd;
+          box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2);
+        }
+        .nav-item.highlight {
+          border-color: #c7d2fe;
           background: #eef2ff;
-          color: #1d4ed8;
         }
-        .nav-links a.highlight {
-          border: 1px solid #c7d2fe;
-          background: #eef2ff;
-          font-weight: 600;
-        }
-        .nav-links a.disabled {
+        .nav-item.disabled {
+          border-style: dashed;
           color: #9ca3af;
-          border-color: transparent;
           pointer-events: none;
+          background: #f9fafb;
         }
+        .nav-label {
+          font-weight: 700;
+          display: inline-flex;
+          align-items: center;
+          gap: 4px;
+        }
+        .nav-sub {
+          font-size: 12px;
+          color: #64748b;
+        }
+        .nav-sub.alert { color: #b91c1c; }
         .nav-icon {
-          margin-right: 4px;
           color: #f97316;
           font-size: 14px;
         }
-        .nav-lock { display: block; font-size: 11px; color: #9ca3af; }
         .nav-user {
           display: flex;
           align-items: center;
@@ -208,10 +239,13 @@ export default function Navbar() {
             flex-direction: column;
             width: 100%;
             margin-top: 8px;
-            align-items: flex-start;
+            align-items: stretch;
             background: #fff;
             border-radius: 12px;
             padding: 12px;
+          }
+          .nav-item {
+            width: 100%;
           }
         }
       `}</style>
