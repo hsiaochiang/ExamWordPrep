@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Familiarity, WordItem, getMeaningDisplay, getPosDisplay } from '../utils/jsonSchema';
+import { Familiarity, WordItem } from '../utils/jsonSchema';
 
 type Props = {
   words: WordItem[];

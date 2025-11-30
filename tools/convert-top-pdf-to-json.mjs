@@ -324,7 +324,6 @@ function buildWordEntryFromRow(row, pageNumber, indexInPage) {
   }
 
   return {
-    id: `${word}-${pageNumber}-${indexInPage}`,
     word,
     posList: posList.length ? posList : [{ pos: "", meaningZh: posText }],
     frequencyGroup,
@@ -356,6 +355,7 @@ function main() {
 
   const allWords = [];
   const unparsedLines = [];
+  let nextId = 1;
 
   pngFiles.forEach((pngPath, idx) => {
     // 單字表邏輯頁碼（不含封面目錄）：第 1 頁就是單字表第 1 頁
@@ -368,6 +368,7 @@ function main() {
     rows.forEach((row, rowIndex) => {
       const wordObj = buildWordEntryFromRow(row, logicalPageNumber, rowIndex + 1);
       if (wordObj) {
+        wordObj.id = nextId++;
         allWords.push(wordObj);
       } else {
         const rawLine = row.tokens.map((t) => t.text).join(" ").trim();

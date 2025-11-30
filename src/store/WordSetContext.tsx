@@ -39,20 +39,36 @@ export function WordSetProvider({ children }: { children: ReactNode }) {
   }, [currentUser, appData.userSettings]);
 
   useEffect(() => {
+    let canceled = false;
     const fetchWords = async () => {
+      setLoading(true);
+      const candidates = getWordDataCandidates();
       try {
-        const dataFile = import.meta.env.DEV ? '/data/words.json' : '/data/words-sample.json';
-        const res = await fetch(dataFile);
-        const json = (await res.json()) as WordItem[];
-        setWords(json);
-      } catch (err) {
-        console.error('載入單字檔失敗', err);
-        setWords([]);
+        for (const url of candidates) {
+          try {
+            const res = await fetch(url, { cache: 'no-cache' });
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            const json = (await res.json()) as WordItem[];
+            if (!canceled) {
+              setWords(json);
+              return;
+            }
+          } catch (err) {
+            console.warn(`無法從 ${url} 載入單字檔`, err);
+          }
+        }
+        if (!canceled) {
+          setWords([]);
+          console.error('載入單字檔失敗，已嘗試來源：', candidates);
+        }
       } finally {
-        setLoading(false);
+        if (!canceled) setLoading(false);
       }
     };
     fetchWords();
+    return () => {
+      canceled = true;
+    };
   }, []);
 
   useEffect(() => {
@@ -127,4 +143,24 @@ function filterWords(words: WordItem[], condition: SelectionCondition) {
     default:
       return words;
   }
+}
+
+function getWordDataCandidates(): string[] {
+  const urls = new Set<string>();
+  const override = import.meta.env.VITE_WORD_DATA_URL;
+  if (override) urls.add(override);
+  if (import.meta.env.DEV) {
+    urls.add('/data/words.json');
+    return Array.from(urls);
+  }
+  const base = (import.meta.env.BASE_URL ?? '/').replace(/\/+$/, '');
+  if (base) {
+    urls.add(`${base}/data/words.json`);
+    if (typeof window !== 'undefined') {
+      urls.add(`${window.location.origin}${base}/data/words.json`);
+    }
+  }
+  urls.add('/data/words.json');
+  urls.add('data/words.json');
+  return Array.from(urls);
 }

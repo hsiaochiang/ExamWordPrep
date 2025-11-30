@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "convert-pdf": "node tools/convert-top-pdf-to-json.mjs sample.pdf public/data/words.json || true"
+    "convert-pdf": "node tools/convert-top-pdf-to-json.mjs sample.pdf public/data/words.json || true",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "nanoid": "^5.0.7",
@@ -20,8 +21,9 @@
     "@types/react": "^18.3.4",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
+    "gh-pages": "^6.3.0",
+    "pdf-parse": "^1.1.1",
     "typescript": "^5.5.4",
-    "vite": "^5.3.4",
-    "pdf-parse": "^1.1.1"
+    "vite": "^5.3.4"
   }
 }
