@@ -1,0 +1,5 @@
+{"session_id":"019ad00a-8186-78e1-86fc-d48eada1165f","ts":1764426965,"text":"請執行 0source/會考單字學習網站.prompt.md 並讓我知道執行進度"}
+{"session_id":"019ad00a-8186-78e1-86fc-d48eada1165f","ts":1764429742,"text":"請提供給我詳細步驟 並告知如何驗證"}
+{"session_id":"019ad00a-8186-78e1-86fc-d48eada1165f","ts":1764430694,"text":"PDF轉JSON工具驗證 執行後結果如下。PDF檔案格式不如預期 請先讀取該檔案後 依照檔案格式 提供解析程式。PS D:\\program\\ExamWordPrep> node tools/convert-top-pdf-to-json.mjs top2025.pdf public/data/words.json\nWarning: TT: undefined function: 21\nWarning: TT: undefined function: 21\n警告：未解析出任何單字，請確認 PDF 格式是否與 TOP 字表一致。\n已寫出 0 筆單字至 public/data/words.json"}
+{"session_id":"019ad00a-8186-78e1-86fc-d48eada1165f","ts":1764431187,"text":"pdf檔案的封面及目錄這兩頁，請忽略不需要解析。表格中的第二欄有詞性及中文解釋，請重新確認"}
+{"session_id":"019ad00a-8186-78e1-86fc-d48eada1165f","ts":1764431487,"text":"此PDF檔案只有影像/無文字層，需先做 OCR 取得詞性與中文，再行解析。請提供解析程式。"}

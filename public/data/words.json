@@ -1,0 +1,4938 @@
+[
+  {
+    "id": "Copyright-3-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "@ 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 3
+  },
+  {
+    "id": "about-3-6",
+    "word": "about",
+    "posRaw": "[adv.]",
+    "meaningZh": "在附近; 大約;  [prep.] 大約 ; 關於              10111213",
+    "frequencyGroup": 14,
+    "page": 3
+  },
+  {
+    "id": "after-3-8",
+    "word": "after",
+    "posRaw": "[adv.]",
+    "meaningZh": "以後; [prep.] [conj.] 在.''之後                 10111213",
+    "frequencyGroup": 14,
+    "page": 3
+  },
+  {
+    "id": "all-3-10",
+    "word": "all",
+    "posRaw": "[adj.]",
+    "meaningZh": "全部; [adv.] 完全地; [n.] 全體",
+    "frequencyGroup": 1011121314,
+    "page": 3
+  },
+  {
+    "id": "also-3-12",
+    "word": "also",
+    "posRaw": "[adv.]",
+    "meaningZh": "th",
+    "frequencyGroup": 1011121314,
+    "page": 3
+  },
+  {
+    "id": "an-3-14",
+    "word": "an",
+    "posRaw": "[art.]",
+    "meaningZh": "一個 ; 一種",
+    "frequencyGroup": 1011121314,
+    "page": 3
+  },
+  {
+    "id": "oe-3-15",
+    "word": "oe",
+    "posRaw": "",
+    "meaningZh": "05 06 07 08",
+    "frequencyGroup": 9,
+    "page": 3
+  },
+  {
+    "id": "and-3-16",
+    "word": "and",
+    "posRaw": "[conj.]",
+    "meaningZh": "和;及;而;就                               1011",
+    "frequencyGroup": 121314,
+    "page": 3
+  },
+  {
+    "id": "another-3-18",
+    "word": "another",
+    "posRaw": "[adj.]",
+    "meaningZh": "另一個; [pron.] 另一個                  101112 13",
+    "frequencyGroup": 14,
+    "page": 3
+  },
+  {
+    "id": "answer-3-19",
+    "word": "answer",
+    "posRaw": "",
+    "meaningZh": "wv) BIS: lu 和                               05 06 07 08",
+    "frequencyGroup": 9,
+    "page": 3
+  },
+  {
+    "id": "are-3-22",
+    "word": "are",
+    "posRaw": "",
+    "meaningZh": "lv.] 是,在",
+    "frequencyGroup": 1011121314,
+    "page": 3
+  },
+  {
+    "id": "as-3-24",
+    "word": "as",
+    "posRaw": "",
+    "meaningZh": "基] 問",
+    "frequencyGroup": 1011121314,
+    "page": 3
+  },
+  {
+    "id": "at-3-26",
+    "word": "at",
+    "posRaw": "[prep.]",
+    "meaningZh": "在                                     101112 13",
+    "frequencyGroup": 14,
+    "page": 3
+  },
+  {
+    "id": "away-3-28",
+    "word": "away",
+    "posRaw": "[adj.]",
+    "meaningZh": "不在的; [adv.] 離開",
+    "frequencyGroup": 1011121314,
+    "page": 3
+  },
+  {
+    "id": "ecause-3-32",
+    "word": "ecause",
+    "posRaw": "[conj.]",
+    "meaningZh": "因為",
+    "frequencyGroup": 1011121314,
+    "page": 3
+  },
+  {
+    "id": "been-3-34",
+    "word": "been",
+    "posRaw": "[v.]",
+    "meaningZh": "be(是; 要;有,;在) 的過去分詞",
+    "frequencyGroup": 1011121314,
+    "page": 3
+  },
+  {
+    "id": "before-3-36",
+    "word": "before",
+    "posRaw": "[adv.]",
+    "meaningZh": "以前; [prep.] 在'“'之前                      101112 13",
+    "frequencyGroup": 14,
+    "page": 3
+  },
+  {
+    "id": "best-3-38",
+    "word": "best",
+    "posRaw": "[adj.]",
+    "meaningZh": "good(好的) 的最高級                        101112 13",
+    "frequencyGroup": 14,
+    "page": 3
+  },
+  {
+    "id": "us-3-40",
+    "word": "us",
+    "posRaw": "[v.]",
+    "meaningZh": "用公車運送; [n.] 公車                         1011 12 13",
+    "frequencyGroup": 14,
+    "page": 3
+  },
+  {
+    "id": "but-4-3",
+    "word": "but",
+    "posRaw": "[adv.]",
+    "meaningZh": "只; [prep.] 除...以外; [conj.] 但是",
+    "frequencyGroup": 1011121314,
+    "page": 4
+  },
+  {
+    "id": "can-4-5",
+    "word": "can",
+    "posRaw": "[aux.]",
+    "meaningZh": "可以; [n.] 罐頭                         101112 13",
+    "frequencyGroup": 14,
+    "page": 4
+  },
+  {
+    "id": "change-4-7",
+    "word": "change",
+    "posRaw": "[v.]",
+    "meaningZh": "改變;更改; [n.] 零錢",
+    "frequencyGroup": 1011121314,
+    "page": 4
+  },
+  {
+    "id": "come-4-9",
+    "word": "come",
+    "posRaw": "[v.]",
+    "meaningZh": "到來",
+    "frequencyGroup": 1011121314,
+    "page": 4
+  },
+  {
+    "id": "ay-4-11",
+    "word": "ay",
+    "posRaw": "",
+    "meaningZh": "In] 白天;日                   101112 13",
+    "frequencyGroup": 14,
+    "page": 4
+  },
+  {
+    "id": "de-4-13",
+    "word": "de",
+    "posRaw": "",
+    "meaningZh": "過            feo] CO|",
+    "frequencyGroup": null,
+    "page": 4
+  },
+  {
+    "id": "did-4-15",
+    "word": "did",
+    "posRaw": "[v.]",
+    "meaningZh": "do(做) 的過去式",
+    "frequencyGroup": 1011121314,
+    "page": 4
+  },
+  {
+    "id": "does-4-19",
+    "word": "does",
+    "posRaw": "[v.]",
+    "meaningZh": "do(做) 的第三人稱單數現在式",
+    "frequencyGroup": 1011121314,
+    "page": 4
+  },
+  {
+    "id": "each-4-21",
+    "word": "each",
+    "posRaw": "[adj.]",
+    "meaningZh": "每個; [adv.] 各自(地); [pron.] 各個",
+    "frequencyGroup": 1011121314,
+    "page": 4
+  },
+  {
+    "id": "family-4-23",
+    "word": "family",
+    "posRaw": "[n.]",
+    "meaningZh": "家庭",
+    "frequencyGroup": 1011121314,
+    "page": 4
+  },
+  {
+    "id": "few-4-25",
+    "word": "few",
+    "posRaw": "[adj.]",
+    "meaningZh": "少數的; 一些; [pron.] 一些                  101112 13",
+    "frequencyGroup": 14,
+    "page": 4
+  },
+  {
+    "id": "first-4-27",
+    "word": "first",
+    "posRaw": "[adj.]",
+    "meaningZh": "第一的; [adv.] 首先; [n.] 第一",
+    "frequencyGroup": 1011121314,
+    "page": 4
+  },
+  {
+    "id": "for-4-29",
+    "word": "for",
+    "posRaw": "[prep.]",
+    "meaningZh": "為-.'做的;關於; [conj.] 因為",
+    "frequencyGroup": 1011121314,
+    "page": 4
+  },
+  {
+    "id": "found-4-31",
+    "word": "found",
+    "posRaw": "[v.]",
+    "meaningZh": "find(找到) 的過去式及過去分詞",
+    "frequencyGroup": 1011121314,
+    "page": 4
+  },
+  {
+    "id": "from-4-33",
+    "word": "from",
+    "posRaw": "[prep.]",
+    "meaningZh": "從",
+    "frequencyGroup": 1011121314,
+    "page": 4
+  },
+  {
+    "id": "get-4-35",
+    "word": "get",
+    "posRaw": "",
+    "meaningZh": "lv.] 得到 ;拿到101112 13",
+    "frequencyGroup": 14,
+    "page": 4
+  },
+  {
+    "id": "good-4-39",
+    "word": "good",
+    "posRaw": "[adj.]",
+    "meaningZh": "好的; [m.] 利益 ; 好處 ; 優點",
+    "frequencyGroup": 1011121314,
+    "page": 4
+  },
+  {
+    "id": "got-4-41",
+    "word": "got",
+    "posRaw": "",
+    "meaningZh": "lv.] get(得到 5 SEH) 的過去式",
+    "frequencyGroup": 1011121314,
+    "page": 4
+  },
+  {
+    "id": "hard-4-43",
+    "word": "hard",
+    "posRaw": "[adj.]",
+    "meaningZh": "硬的;難的; [adv.] 辛苦地 ; 牢固地             1011 12 13",
+    "frequencyGroup": 14,
+    "page": 4
+  },
+  {
+    "id": "Copyright-5-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "@ 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 5
+  },
+  {
+    "id": "as-5-3",
+    "word": "as",
+    "posRaw": "",
+    "meaningZh": "lv.] have(有) 的第三人稱單數現在式                 101112 13",
+    "frequencyGroup": 14,
+    "page": 5
+  },
+  {
+    "id": "have-5-5",
+    "word": "have",
+    "posRaw": "",
+    "meaningZh": "lv] A; [aux.] 已經                         101112 13",
+    "frequencyGroup": 14,
+    "page": 5
+  },
+  {
+    "id": "e-5-7",
+    "word": "e",
+    "posRaw": "[pron.]",
+    "meaningZh": "他                                      101112 13",
+    "frequencyGroup": 14,
+    "page": 5
+  },
+  {
+    "id": "hel-5-8",
+    "word": "hel",
+    "posRaw": "",
+    "meaningZh": "05 06 07 08",
+    "frequencyGroup": 9,
+    "page": 5
+  },
+  {
+    "id": "elp-5-9",
+    "word": "elp",
+    "posRaw": "[v.]",
+    "meaningZh": "tC [n.] 幫助 ; 幫手,助手",
+    "frequencyGroup": 1011121314,
+    "page": 5
+  },
+  {
+    "id": "her-5-11",
+    "word": "her",
+    "posRaw": "[pron.]",
+    "meaningZh": "(受格) 她; (所有格) 她的",
+    "frequencyGroup": 1011121314,
+    "page": 5
+  },
+  {
+    "id": "here-5-13",
+    "word": "here",
+    "posRaw": "[adv.]",
+    "meaningZh": "在這裡; [n.] 這裡 ;今世",
+    "frequencyGroup": 1011121314,
+    "page": 5
+  },
+  {
+    "id": "high-5-15",
+    "word": "high",
+    "posRaw": "[adj.]",
+    "meaningZh": "高的; [adv.] 高; [n.] 高水準",
+    "frequencyGroup": 1011121314,
+    "page": 5
+  },
+  {
+    "id": "his-5-17",
+    "word": "his",
+    "posRaw": "[pron.]",
+    "meaningZh": "(所有格) 他的; 他的(東西)",
+    "frequencyGroup": 1011121314,
+    "page": 5
+  },
+  {
+    "id": "how-5-19",
+    "word": "how",
+    "posRaw": "",
+    "meaningZh": "ladv.] 如何",
+    "frequencyGroup": 1011121314,
+    "page": 5
+  },
+  {
+    "id": "however-5-21",
+    "word": "however",
+    "posRaw": "[adv.]",
+    "meaningZh": "無論如何; [conj.] 然而;不過",
+    "frequencyGroup": 1011121314,
+    "page": 5
+  },
+  {
+    "id": "I-5-23",
+    "word": "I",
+    "posRaw": "[pron.]",
+    "meaningZh": "我",
+    "frequencyGroup": 1011121314,
+    "page": 5
+  },
+  {
+    "id": "idea-5-25",
+    "word": "idea",
+    "posRaw": "[n.]",
+    "meaningZh": "主意",
+    "frequencyGroup": 1011121314,
+    "page": 5
+  },
+  {
+    "id": "if-5-27",
+    "word": "if",
+    "posRaw": "[conj.]",
+    "meaningZh": "如果",
+    "frequencyGroup": 1011121314,
+    "page": 5
+  },
+  {
+    "id": "important-5-29",
+    "word": "important",
+    "posRaw": "",
+    "meaningZh": "| [adj.] 重要的                                   10.11 1213.14",
+    "frequencyGroup": null,
+    "page": 5
+  },
+  {
+    "id": "in-5-31",
+    "word": "in",
+    "posRaw": "[adj.]",
+    "meaningZh": "裡面的; [adv.] #2; [prep.] 在.“'之內        101112 13",
+    "frequencyGroup": 14,
+    "page": 5
+  },
+  {
+    "id": "is-5-33",
+    "word": "is",
+    "posRaw": "[v]",
+    "meaningZh": "是,在; be 動詞第三人稱,單數,現在式",
+    "frequencyGroup": 1011121314,
+    "page": 5
+  },
+  {
+    "id": "it-5-35",
+    "word": "it",
+    "posRaw": "[pron]",
+    "meaningZh": "&",
+    "frequencyGroup": 1011121314,
+    "page": 5
+  },
+  {
+    "id": "just-5-37",
+    "word": "just",
+    "posRaw": "",
+    "meaningZh": "adj.) 正直的;公平的; [adv] 正好 ; 剛才",
+    "frequencyGroup": 1011121314,
+    "page": 5
+  },
+  {
+    "id": "know-5-39",
+    "word": "know",
+    "posRaw": "[v.]",
+    "meaningZh": "知道                                        10111213",
+    "frequencyGroup": 14,
+    "page": 5
+  },
+  {
+    "id": "learn-5-41",
+    "word": "learn",
+    "posRaw": "",
+    "meaningZh": "lv. 學習                                         101112 13",
+    "frequencyGroup": 14,
+    "page": 5
+  },
+  {
+    "id": "rm-5-42",
+    "word": "rm",
+    "posRaw": "",
+    "meaningZh": "05 06 07 08",
+    "frequencyGroup": 9,
+    "page": 5
+  },
+  {
+    "id": "life-5-43",
+    "word": "life",
+    "posRaw": "",
+    "meaningZh": "巴.] 人生; 生命",
+    "frequencyGroup": 1011121314,
+    "page": 5
+  },
+  {
+    "id": "like-6-3",
+    "word": "like",
+    "posRaw": "[v]",
+    "meaningZh": "喜歡; [prep] 像;如; [n] 愛好               101112 13",
+    "frequencyGroup": 14,
+    "page": 6
+  },
+  {
+    "id": "cn-6-4",
+    "word": "cn",
+    "posRaw": "",
+    "meaningZh": "astgeen   ;       05 06 07 08",
+    "frequencyGroup": 9,
+    "page": 6
+  },
+  {
+    "id": "live-6-5",
+    "word": "live",
+    "posRaw": "[adj.]",
+    "meaningZh": "有生命的;實況播送的; [v.] 居住",
+    "frequencyGroup": 1011121314,
+    "page": 6
+  },
+  {
+    "id": "Nook-6-8",
+    "word": "Nook",
+    "posRaw": "",
+    "meaningZh": "| [n.] 看;瞥;臉色;眼神;表情         eee | OOO)",
+    "frequencyGroup": null,
+    "page": 6
+  },
+  {
+    "id": "make-6-10",
+    "word": "make",
+    "posRaw": "[v.]",
+    "meaningZh": "製造;使得                                      101112 13",
+    "frequencyGroup": 14,
+    "page": 6
+  },
+  {
+    "id": "many-6-12",
+    "word": "many",
+    "posRaw": "[adj.]",
+    "meaningZh": "很多的; [pron.] 許多                    101112 13",
+    "frequencyGroup": 14,
+    "page": 6
+  },
+  {
+    "id": "me-6-14",
+    "word": "me",
+    "posRaw": "[pron.]",
+    "meaningZh": "(受格) 我                                     1011 12 13",
+    "frequencyGroup": 14,
+    "page": 6
+  },
+  {
+    "id": "oe-6-15",
+    "word": "oe",
+    "posRaw": "",
+    "meaningZh": "mn.  ae           05 06 07 08",
+    "frequencyGroup": 9,
+    "page": 6
+  },
+  {
+    "id": "mean-6-16",
+    "word": "mean",
+    "posRaw": "[adj.]",
+    "meaningZh": "兇的; 吝玲的; [v.] 意指",
+    "frequencyGroup": 1011121314,
+    "page": 6
+  },
+  {
+    "id": "more-6-18",
+    "word": "more",
+    "posRaw": "[adj.]",
+    "meaningZh": "更多的; [adv.] 更多 ; [n.] 更多的數量",
+    "frequencyGroup": 1011121314,
+    "page": 6
+  },
+  {
+    "id": "my-6-25",
+    "word": "my",
+    "posRaw": "[pron.]",
+    "meaningZh": "(所有格) 我的                                 1011 12 13",
+    "frequencyGroup": 14,
+    "page": 6
+  },
+  {
+    "id": "need-6-27",
+    "word": "need",
+    "posRaw": "[v.]",
+    "meaningZh": "需要; [n.] 需要 ;貸窮",
+    "frequencyGroup": 1011121314,
+    "page": 6
+  },
+  {
+    "id": "new-6-29",
+    "word": "new",
+    "posRaw": "[adj.]",
+    "meaningZh": "新的1011 12 13",
+    "frequencyGroup": 14,
+    "page": 6
+  },
+  {
+    "id": "not-6-31",
+    "word": "not",
+    "posRaw": "[adv.]",
+    "meaningZh": "不                                       101112 13",
+    "frequencyGroup": 14,
+    "page": 6
+  },
+  {
+    "id": "a-6-32",
+    "word": "a",
+    "posRaw": "",
+    "meaningZh": "05 06 07 08",
+    "frequencyGroup": 9,
+    "page": 6
+  },
+  {
+    "id": "of-6-34",
+    "word": "of",
+    "posRaw": "[prep.]",
+    "meaningZh": "“的,屬於                                  101112 13",
+    "frequencyGroup": 14,
+    "page": 6
+  },
+  {
+    "id": "Copyright-7-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "@ 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 7
+  },
+  {
+    "id": "or-7-3",
+    "word": "or",
+    "posRaw": "[conj.]",
+    "meaningZh": "或",
+    "frequencyGroup": 1011121314,
+    "page": 7
+  },
+  {
+    "id": "other-7-5",
+    "word": "other",
+    "posRaw": "[adj.]",
+    "meaningZh": "其他的; [pron.] 其他的人或物                 10111213",
+    "frequencyGroup": 14,
+    "page": 7
+  },
+  {
+    "id": "out-7-7",
+    "word": "out",
+    "posRaw": "[adj.]",
+    "meaningZh": "在外的; [v.] 出現; [adv.] 在外地",
+    "frequencyGroup": 1011121314,
+    "page": 7
+  },
+  {
+    "id": "people-7-9",
+    "word": "people",
+    "posRaw": "v.",
+    "meaningZh": "] 使人住在,居住於; [n.] 人們",
+    "frequencyGroup": 1011121314,
+    "page": 7
+  },
+  {
+    "id": "picture-7-11",
+    "word": "picture",
+    "posRaw": "[v.]",
+    "meaningZh": "畫,拍攝;描述; [n.] 圖畫 ; 照片",
+    "frequencyGroup": 1011121314,
+    "page": 7
+  },
+  {
+    "id": "place-7-13",
+    "word": "place",
+    "posRaw": "[v.]",
+    "meaningZh": "BOS; fear; [n.] 地方",
+    "frequencyGroup": 1011121314,
+    "page": 7
+  },
+  {
+    "id": "plan-7-15",
+    "word": "plan",
+    "posRaw": "[v]",
+    "meaningZh": "計劃; [n.] 計畫",
+    "frequencyGroup": 1011121314,
+    "page": 7
+  },
+  {
+    "id": "read-7-17",
+    "word": "read",
+    "posRaw": "[v.]",
+    "meaningZh": "閱讀",
+    "frequencyGroup": 1011121314,
+    "page": 7
+  },
+  {
+    "id": "right-7-19",
+    "word": "right",
+    "posRaw": "",
+    "meaningZh": "lad). ov 5 對的 ; [adv.]向右;馬上 5 [nm.]權利           10111213",
+    "frequencyGroup": 14,
+    "page": 7
+  },
+  {
+    "id": "say-7-21",
+    "word": "say",
+    "posRaw": "",
+    "meaningZh": "lv.] 說                                          1011",
+    "frequencyGroup": 121314,
+    "page": 7
+  },
+  {
+    "id": "school-7-23",
+    "word": "school",
+    "posRaw": "[v.]",
+    "meaningZh": "教育,訓練; [n.] 學校",
+    "frequencyGroup": 1011121314,
+    "page": 7
+  },
+  {
+    "id": "See-7-25",
+    "word": "See",
+    "posRaw": "",
+    "meaningZh": "lv.] 看見                                         101112 13",
+    "frequencyGroup": 14,
+    "page": 7
+  },
+  {
+    "id": "she-7-27",
+    "word": "she",
+    "posRaw": "[pron.]",
+    "meaningZh": "她",
+    "frequencyGroup": 1011121314,
+    "page": 7
+  },
+  {
+    "id": "shop-7-29",
+    "word": "shop",
+    "posRaw": "[v.]",
+    "meaningZh": "購物; [m.] 商店",
+    "frequencyGroup": 1011121314,
+    "page": 7
+  },
+  {
+    "id": "show-7-32",
+    "word": "show",
+    "posRaw": "[v.]",
+    "meaningZh": "表演 ; 顯示; [n.] 展覽; 電影",
+    "frequencyGroup": 1011121314,
+    "page": 7
+  },
+  {
+    "id": "so-7-34",
+    "word": "so",
+    "posRaw": "[adv.]",
+    "meaningZh": "這麼;也如此; [conj.] 因此                   101112 13",
+    "frequencyGroup": 14,
+    "page": 7
+  },
+  {
+    "id": "some-7-36",
+    "word": "some",
+    "posRaw": "[adj.]",
+    "meaningZh": "一些的; [pron.] 一些",
+    "frequencyGroup": 1011121314,
+    "page": 7
+  },
+  {
+    "id": "Start-7-38",
+    "word": "Start",
+    "posRaw": "[v.]",
+    "meaningZh": "開始; [n.] 出發 ; 開端 ; 啟動",
+    "frequencyGroup": 1011121314,
+    "page": 7
+  },
+  {
+    "id": "Study-7-40",
+    "word": "Study",
+    "posRaw": "[v]",
+    "meaningZh": "學習; 讀書; [un.] 書房",
+    "frequencyGroup": 1011121314,
+    "page": 7
+  },
+  {
+    "id": "take-7-42",
+    "word": "take",
+    "posRaw": "[v.]",
+    "meaningZh": "5 帶;採用",
+    "frequencyGroup": 1011121314,
+    "page": 7
+  },
+  {
+    "id": "tell-8-3",
+    "word": "tell",
+    "posRaw": "[v.]",
+    "meaningZh": "告訴",
+    "frequencyGroup": 1011121314,
+    "page": 8
+  },
+  {
+    "id": "that-8-7",
+    "word": "that",
+    "posRaw": "[adj.]",
+    "meaningZh": "那個; [adv.] ABBE ; [pron.] 那人;那事",
+    "frequencyGroup": 1011121314,
+    "page": 8
+  },
+  {
+    "id": "the-8-9",
+    "word": "the",
+    "posRaw": "[art.]",
+    "meaningZh": "這                                  10111213",
+    "frequencyGroup": 14,
+    "page": 8
+  },
+  {
+    "id": "their-8-11",
+    "word": "their",
+    "posRaw": "[pron.]",
+    "meaningZh": "(所有格) 他們的",
+    "frequencyGroup": 1011121314,
+    "page": 8
+  },
+  {
+    "id": "them-8-13",
+    "word": "them",
+    "posRaw": "[pron.]",
+    "meaningZh": "(32%) 他們",
+    "frequencyGroup": 1011121314,
+    "page": 8
+  },
+  {
+    "id": "there-8-15",
+    "word": "there",
+    "posRaw": "[adv.]",
+    "meaningZh": "在那裡; [n.] 那個地方,那裡",
+    "frequencyGroup": 1011121314,
+    "page": 8
+  },
+  {
+    "id": "they-8-17",
+    "word": "they",
+    "posRaw": "[pron.]",
+    "meaningZh": "他們",
+    "frequencyGroup": 1011121314,
+    "page": 8
+  },
+  {
+    "id": "thing-8-19",
+    "word": "thing",
+    "posRaw": "",
+    "meaningZh": "巴.] 事物; 東西",
+    "frequencyGroup": 1011121314,
+    "page": 8
+  },
+  {
+    "id": "hak-8-20",
+    "word": "hak",
+    "posRaw": "",
+    "meaningZh": "7                                          05 06 07 08",
+    "frequencyGroup": 9,
+    "page": 8
+  },
+  {
+    "id": "a-8-22",
+    "word": "a",
+    "posRaw": "",
+    "meaningZh": "一            _                  05 06 07 08",
+    "frequencyGroup": 9,
+    "page": 8
+  },
+  {
+    "id": "this-8-23",
+    "word": "this",
+    "posRaw": "[adj.]",
+    "meaningZh": "這; [adv.] 這麼; [pron.] 這個            1011 12 13",
+    "frequencyGroup": 14,
+    "page": 8
+  },
+  {
+    "id": "those-8-25",
+    "word": "those",
+    "posRaw": "[adj.]",
+    "meaningZh": "那些的; AB; [pron.] 那些",
+    "frequencyGroup": 1011121314,
+    "page": 8
+  },
+  {
+    "id": "time-8-27",
+    "word": "time",
+    "posRaw": "",
+    "meaningZh": "lv.) 記錄...的時間; [n.] IFT] 5 2c",
+    "frequencyGroup": 1011121314,
+    "page": 8
+  },
+  {
+    "id": "to-8-29",
+    "word": "to",
+    "posRaw": "[prep.]",
+    "meaningZh": "到;向",
+    "frequencyGroup": 1011121314,
+    "page": 8
+  },
+  {
+    "id": "too-8-31",
+    "word": "too",
+    "posRaw": "[adv.]",
+    "meaningZh": "也是 ; 過於",
+    "frequencyGroup": 1011121314,
+    "page": 8
+  },
+  {
+    "id": "try-8-33",
+    "word": "try",
+    "posRaw": "[v.]",
+    "meaningZh": "試做; [n.] 嘗試;努力",
+    "frequencyGroup": 1011121314,
+    "page": 8
+  },
+  {
+    "id": "us-8-35",
+    "word": "us",
+    "posRaw": "[pron.]",
+    "meaningZh": "我們 (受格)",
+    "frequencyGroup": 1011121314,
+    "page": 8
+  },
+  {
+    "id": "a-8-36",
+    "word": "a",
+    "posRaw": "",
+    "meaningZh": "05 06 07 08",
+    "frequencyGroup": 9,
+    "page": 8
+  },
+  {
+    "id": "use-8-37",
+    "word": "use",
+    "posRaw": "[v.]",
+    "meaningZh": "利用; [n.] 用途",
+    "frequencyGroup": 1011121314,
+    "page": 8
+  },
+  {
+    "id": "very-8-39",
+    "word": "very",
+    "posRaw": "[adj.]",
+    "meaningZh": "HE 3 tats 5 (MES [adv.] 很;非党",
+    "frequencyGroup": 1011121314,
+    "page": 8
+  },
+  {
+    "id": "visit-8-41",
+    "word": "visit",
+    "posRaw": "[v.]",
+    "meaningZh": "訪問; [n.] 訪問",
+    "frequencyGroup": 1011121314,
+    "page": 8
+  },
+  {
+    "id": "want-8-43",
+    "word": "want",
+    "posRaw": "[v.]",
+    "meaningZh": "ABS [n.] 必需品 ; 缺乏 ; 匱乏",
+    "frequencyGroup": 1011121314,
+    "page": 8
+  },
+  {
+    "id": "Copyright-9-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "@ 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 9
+  },
+  {
+    "id": "Was-9-3",
+    "word": "Was",
+    "posRaw": "[v.]",
+    "meaningZh": "am 的過去式; [v.] is 的過去式",
+    "frequencyGroup": 1011121314,
+    "page": 9
+  },
+  {
+    "id": "way-9-5",
+    "word": "way",
+    "posRaw": "[n.]",
+    "meaningZh": "方法; 路",
+    "frequencyGroup": 1011121314,
+    "page": 9
+  },
+  {
+    "id": "We-9-7",
+    "word": "We",
+    "posRaw": "[pron.]",
+    "meaningZh": "我們",
+    "frequencyGroup": 1011121314,
+    "page": 9
+  },
+  {
+    "id": "were-9-9",
+    "word": "were",
+    "posRaw": "[v.]",
+    "meaningZh": "are 的過去式",
+    "frequencyGroup": 1011121314,
+    "page": 9
+  },
+  {
+    "id": "what-9-11",
+    "word": "what",
+    "posRaw": "[adj.]",
+    "meaningZh": "什麼;多麼,何等; [pron.] 什麼",
+    "frequencyGroup": 1011121314,
+    "page": 9
+  },
+  {
+    "id": "when-9-13",
+    "word": "when",
+    "posRaw": "[adv.]",
+    "meaningZh": "何時; [conj.] 當...時; [pron.] 那時",
+    "frequencyGroup": 1011121314,
+    "page": 9
+  },
+  {
+    "id": "which-9-15",
+    "word": "which",
+    "posRaw": "[adj.]",
+    "meaningZh": "哪一個;這個; [pron.] 哪一個",
+    "frequencyGroup": 1011121314,
+    "page": 9
+  },
+  {
+    "id": "who-9-17",
+    "word": "who",
+    "posRaw": "[pron.]",
+    "meaningZh": "誰                                      1011 1213",
+    "frequencyGroup": 14,
+    "page": 9
+  },
+  {
+    "id": "why-9-19",
+    "word": "why",
+    "posRaw": "",
+    "meaningZh": "ladv.] 為什麼; [conj.] 為什麼; [n.] 原因",
+    "frequencyGroup": 1011121314,
+    "page": 9
+  },
+  {
+    "id": "will-9-21",
+    "word": "will",
+    "posRaw": "[aux.]",
+    "meaningZh": "將; [.] 意志 ; PED) 5 EL                    101112 13",
+    "frequencyGroup": 14,
+    "page": 9
+  },
+  {
+    "id": "With-9-23",
+    "word": "With",
+    "posRaw": "[prep.]",
+    "meaningZh": "跟...在一起; 有1011121314",
+    "frequencyGroup": null,
+    "page": 9
+  },
+  {
+    "id": "work-9-25",
+    "word": "work",
+    "posRaw": "[v.]",
+    "meaningZh": "工作; 運轉; [n.] 工作,作品",
+    "frequencyGroup": 1011121314,
+    "page": 9
+  },
+  {
+    "id": "year-9-27",
+    "word": "year",
+    "posRaw": "[n.]",
+    "meaningZh": "年",
+    "frequencyGroup": 1011121314,
+    "page": 9
+  },
+  {
+    "id": "you-9-29",
+    "word": "you",
+    "posRaw": "[pron.]",
+    "meaningZh": "你; 你們",
+    "frequencyGroup": 1011121314,
+    "page": 9
+  },
+  {
+    "id": "your-9-31",
+    "word": "your",
+    "posRaw": "[pron.]",
+    "meaningZh": "(所有格) 你的;你們的                        101112 13",
+    "frequencyGroup": 14,
+    "page": 9
+  },
+  {
+    "id": "always-9-34",
+    "word": "always",
+    "posRaw": "[adv.]",
+    "meaningZh": "總是",
+    "frequencyGroup": 11121314,
+    "page": 9
+  },
+  {
+    "id": "any-9-36",
+    "word": "any",
+    "posRaw": "[adj.]",
+    "meaningZh": "任何的; [adv.] 稍微 ; [pron.] 任何一個",
+    "frequencyGroup": 10111214,
+    "page": 9
+  },
+  {
+    "id": "as-9-38",
+    "word": "as",
+    "posRaw": "[adv.|同樣地 ; 例如 ; [prep.]",
+    "meaningZh": "|作為; [conj.]當",
+    "frequencyGroup": 11121314,
+    "page": 9
+  },
+  {
+    "id": "back-9-40",
+    "word": "back",
+    "posRaw": "[adj.]",
+    "meaningZh": "後面的; [v.] 向後; [adv.] 回原處;[n.] 後面",
+    "frequencyGroup": 10111213,
+    "page": 9
+  },
+  {
+    "id": "big-10-7",
+    "word": "big",
+    "posRaw": "[adj.]",
+    "meaningZh": "大的",
+    "frequencyGroup": 11121314,
+    "page": 10
+  },
+  {
+    "id": "business-10-11",
+    "word": "business",
+    "posRaw": "",
+    "meaningZh": "[in a           finn [OOO",
+    "frequencyGroup": null,
+    "page": 10
+  },
+  {
+    "id": "city-10-17",
+    "word": "city",
+    "posRaw": "[n.]",
+    "meaningZh": "都市                                                        1012 13",
+    "frequencyGroup": 14,
+    "page": 10
+  },
+  {
+    "id": "ah-10-22",
+    "word": "ah",
+    "posRaw": "",
+    "meaningZh": "mm                                ME",
+    "frequencyGroup": null,
+    "page": 10
+  },
+  {
+    "id": "every-10-27",
+    "word": "every",
+    "posRaw": "[adj.]",
+    "meaningZh": "每一個的                                    1112 13",
+    "frequencyGroup": 14,
+    "page": 10
+  },
+  {
+    "id": "ampe-10-29",
+    "word": "ampe",
+    "posRaw": "",
+    "meaningZh": "|中嘆            ME",
+    "frequencyGroup": null,
+    "page": 10
+  },
+  {
+    "id": "find-10-31",
+    "word": "find",
+    "posRaw": "[v]",
+    "meaningZh": "找到; [n.] 發現;發現物",
+    "frequencyGroup": 11121314,
+    "page": 10
+  },
+  {
+    "id": "foot-10-33",
+    "word": "foot",
+    "posRaw": "",
+    "meaningZh": "|四全            ME",
+    "frequencyGroup": null,
+    "page": 10
+  },
+  {
+    "id": "fm-10-35",
+    "word": "fm",
+    "posRaw": "",
+    "meaningZh": "[oa mx            finn [OOO |",
+    "frequencyGroup": null,
+    "page": 10
+  },
+  {
+    "id": "teary-10-38",
+    "word": "teary",
+    "posRaw": "",
+    "meaningZh": "[oat mi           fen” [OOO|",
+    "frequencyGroup": null,
+    "page": 10
+  },
+  {
+    "id": "Copyright-11-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "@ 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 11
+  },
+  {
+    "id": "five-11-3",
+    "word": "five",
+    "posRaw": "",
+    "meaningZh": "vem fre” 000]",
+    "frequencyGroup": null,
+    "page": 11
+  },
+  {
+    "id": "made-11-11",
+    "word": "made",
+    "posRaw": "[v.]",
+    "meaningZh": "make(製造;使得) 的過去式及過去分詞",
+    "frequencyGroup": 11121314,
+    "page": 11
+  },
+  {
+    "id": "may-11-13",
+    "word": "may",
+    "posRaw": "[aux.]",
+    "meaningZh": "可能; [n.] 五月",
+    "frequencyGroup": 11121314,
+    "page": 11
+  },
+  {
+    "id": "a-11-25",
+    "word": "a",
+    "posRaw": "",
+    "meaningZh": "05 06 07 08",
+    "frequencyGroup": 9,
+    "page": 11
+  },
+  {
+    "id": "put-11-28",
+    "word": "put",
+    "posRaw": "",
+    "meaningZh": "lv.) 放置",
+    "frequencyGroup": 11121314,
+    "page": 11
+  },
+  {
+    "id": "stop-12-3",
+    "word": "stop",
+    "posRaw": "[v.]",
+    "meaningZh": "停止; [n.] 車站",
+    "frequencyGroup": 11121314,
+    "page": 12
+  },
+  {
+    "id": "Story-12-5",
+    "word": "Story",
+    "posRaw": "[n.]",
+    "meaningZh": "故事;樓層",
+    "frequencyGroup": 11121314,
+    "page": 12
+  },
+  {
+    "id": "surprise-12-7",
+    "word": "surprise",
+    "posRaw": "",
+    "meaningZh": "lv.) 使驚奇; [n.] 意外之事物",
+    "frequencyGroup": 10121314,
+    "page": 12
+  },
+  {
+    "id": "talk-12-9",
+    "word": "talk",
+    "posRaw": "[v]",
+    "meaningZh": "講話; [n.] 談話 ;話題",
+    "frequencyGroup": 11121314,
+    "page": 12
+  },
+  {
+    "id": "then-12-11",
+    "word": "then",
+    "posRaw": "[adj.]",
+    "meaningZh": "當時的; [adv.] 當時;那麼; [n.] 那時        Wi",
+    "frequencyGroup": null,
+    "page": 12
+  },
+  {
+    "id": "thought-12-13",
+    "word": "thought",
+    "posRaw": "[v.]",
+    "meaningZh": "think(想) 的過去式及過去分詞; [n.] 思想",
+    "frequencyGroup": 10111214,
+    "page": 12
+  },
+  {
+    "id": "up-12-15",
+    "word": "up",
+    "posRaw": "[adj.]",
+    "meaningZh": "向上的; [v.] 提高; fadv.] 向上 ; [In.]上升          1012 13",
+    "frequencyGroup": 14,
+    "page": 12
+  },
+  {
+    "id": "water-12-17",
+    "word": "water",
+    "posRaw": "[v.]",
+    "meaningZh": "給...澆水;加水稀釋 ;流口水; [n.] 水",
+    "frequencyGroup": 10111214,
+    "page": 12
+  },
+  {
+    "id": "Week-12-19",
+    "word": "Week",
+    "posRaw": "[n.]",
+    "meaningZh": "星期                                        101113",
+    "frequencyGroup": 14,
+    "page": 12
+  },
+  {
+    "id": "well-12-21",
+    "word": "well",
+    "posRaw": "[adj.]",
+    "meaningZh": "健康的; [adv.] 很好地; [n.] #",
+    "frequencyGroup": 10111213,
+    "page": 12
+  },
+  {
+    "id": "went-12-23",
+    "word": "went",
+    "posRaw": "",
+    "meaningZh": "lv.] go( 5 a2) 的過去式",
+    "frequencyGroup": 11121314,
+    "page": 12
+  },
+  {
+    "id": "without-12-25",
+    "word": "without",
+    "posRaw": "",
+    "meaningZh": "ladv.] 在沒有的情況下; [prep.] 沒有",
+    "frequencyGroup": 10111314,
+    "page": 12
+  },
+  {
+    "id": "woman-12-27",
+    "word": "woman",
+    "posRaw": "",
+    "meaningZh": "In] 女人",
+    "frequencyGroup": 11121314,
+    "page": 12
+  },
+  {
+    "id": "World-12-29",
+    "word": "World",
+    "posRaw": "[adj.]",
+    "meaningZh": "世界的; [n.] 世界",
+    "frequencyGroup": 10111213,
+    "page": 12
+  },
+  {
+    "id": "worry-12-31",
+    "word": "worry",
+    "posRaw": "[v.]",
+    "meaningZh": "擔心; [n.] 煩惱;焦慮;擔心                    Heid",
+    "frequencyGroup": null,
+    "page": 12
+  },
+  {
+    "id": "would-12-33",
+    "word": "would",
+    "posRaw": "[aux.]",
+    "meaningZh": "will 的過去式",
+    "frequencyGroup": 10121314,
+    "page": 12
+  },
+  {
+    "id": "become-12-37",
+    "word": "become",
+    "posRaw": "",
+    "meaningZh": "lv.] 變成; [v.] become (EK) 的過去分詞",
+    "frequencyGroup": 11121314,
+    "page": 12
+  },
+  {
+    "id": "birthday-12-39",
+    "word": "birthday",
+    "posRaw": "[n.]",
+    "meaningZh": "生日",
+    "frequencyGroup": 10111214,
+    "page": 12
+  },
+  {
+    "id": "Copyright-13-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "@ 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 13
+  },
+  {
+    "id": "die-13-17",
+    "word": "die",
+    "posRaw": "",
+    "meaningZh": "lv.] 死; [n.] BF                           09",
+    "frequencyGroup": 101213,
+    "page": 13
+  },
+  {
+    "id": "eat-13-19",
+    "word": "eat",
+    "posRaw": "",
+    "meaningZh": "蕊] 吃10111314",
+    "frequencyGroup": null,
+    "page": 13
+  },
+  {
+    "id": "enjoy-13-21",
+    "word": "enjoy",
+    "posRaw": "[v.]",
+    "meaningZh": "喜歡 ; 享受",
+    "frequencyGroup": 11121314,
+    "page": 13
+  },
+  {
+    "id": "everyone-13-23",
+    "word": "everyone",
+    "posRaw": "[pron.]",
+    "meaningZh": "每個人",
+    "frequencyGroup": 10111314,
+    "page": 13
+  },
+  {
+    "id": "fact-13-28",
+    "word": "fact",
+    "posRaw": "[n.]",
+    "meaningZh": "事實",
+    "frequencyGroup": 10111213,
+    "page": 13
+  },
+  {
+    "id": "feck-13-31",
+    "word": "feck",
+    "posRaw": "",
+    "meaningZh": "|) RAE es ak > 所       ere [ooo |",
+    "frequencyGroup": null,
+    "page": 13
+  },
+  {
+    "id": "tory-13-42",
+    "word": "tory",
+    "posRaw": "",
+    "meaningZh": "[oe           alooo|",
+    "frequencyGroup": null,
+    "page": 13
+  },
+  {
+    "id": "four-13-48",
+    "word": "four",
+    "posRaw": "",
+    "meaningZh": "oi           Jennie [COO]",
+    "frequencyGroup": null,
+    "page": 13
+  },
+  {
+    "id": "hurt-14-3",
+    "word": "hurt",
+    "posRaw": "[v.]",
+    "meaningZh": "傷害; [n.] (精神上的)創傷; 傷;痛",
+    "frequencyGroup": 11121314,
+    "page": 14
+  },
+  {
+    "id": "join-14-6",
+    "word": "join",
+    "posRaw": "",
+    "meaningZh": "Iv.) 加入; 巴.] 接合點;接之處",
+    "frequencyGroup": 11121314,
+    "page": 14
+  },
+  {
+    "id": "et-14-10",
+    "word": "et",
+    "posRaw": "",
+    "meaningZh": "已] 讓",
+    "frequencyGroup": 11121314,
+    "page": 14
+  },
+  {
+    "id": "likely-14-13",
+    "word": "likely",
+    "posRaw": "[adj.]",
+    "meaningZh": "有可能的; [adv.] 很可能                 eset [ooo |",
+    "frequencyGroup": null,
+    "page": 14
+  },
+  {
+    "id": "money-14-27",
+    "word": "money",
+    "posRaw": "[n.]",
+    "meaningZh": "錢                                         101113",
+    "frequencyGroup": 14,
+    "page": 14
+  },
+  {
+    "id": "mu-14-44",
+    "word": "mu",
+    "posRaw": "",
+    "meaningZh": "| nt            faire [O00 |",
+    "frequencyGroup": null,
+    "page": 14
+  },
+  {
+    "id": "Copyright-15-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "@ 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 15
+  },
+  {
+    "id": "we-15-3",
+    "word": "we",
+    "posRaw": "",
+    "meaningZh": "y            .        .       05 07 08",
+    "frequencyGroup": 9,
+    "page": 15
+  },
+  {
+    "id": "someone-15-6",
+    "word": "someone",
+    "posRaw": "[In]",
+    "meaningZh": "某人;有名氣的人; [pron.] 某人",
+    "frequencyGroup": 11121314,
+    "page": 15
+  },
+  {
+    "id": "ten-15-15",
+    "word": "ten",
+    "posRaw": "[adj.]",
+    "meaningZh": "十的; [n.] +",
+    "frequencyGroup": 11121314,
+    "page": 15
+  },
+  {
+    "id": "these-15-17",
+    "word": "these",
+    "posRaw": "[adj.]",
+    "meaningZh": "這些 (this 的複數); [pron.] 這些",
+    "frequencyGroup": 11121314,
+    "page": 15
+  },
+  {
+    "id": "two-15-19",
+    "word": "two",
+    "posRaw": "[adj.]",
+    "meaningZh": "二的; In.] 二                        1112 13",
+    "frequencyGroup": 14,
+    "page": 15
+  },
+  {
+    "id": "agree-15-26",
+    "word": "agree",
+    "posRaw": "[v.]",
+    "meaningZh": "同意",
+    "frequencyGroup": 111314,
+    "page": 15
+  },
+  {
+    "id": "appear-15-32",
+    "word": "appear",
+    "posRaw": "[v.]",
+    "meaningZh": "出現                                 08 12",
+    "frequencyGroup": 14,
+    "page": 15
+  },
+  {
+    "id": "around-15-34",
+    "word": "around",
+    "posRaw": "[adv.]",
+    "meaningZh": "到處 ; 週圍;大約; [prep.] 差不多; 環繞",
+    "frequencyGroup": 121314,
+    "page": 15
+  },
+  {
+    "id": "ok-16-2",
+    "word": "ok",
+    "posRaw": "",
+    "meaningZh": "06 07 08",
+    "frequencyGroup": 10,
+    "page": 16
+  },
+  {
+    "id": "became-16-3",
+    "word": "became",
+    "posRaw": "[v.]",
+    "meaningZh": "become(變成) 的過去式",
+    "frequencyGroup": 111214,
+    "page": 16
+  },
+  {
+    "id": "boty-16-5",
+    "word": "boty",
+    "posRaw": "",
+    "meaningZh": "[int            fie [O00",
+    "frequencyGroup": null,
+    "page": 16
+  },
+  {
+    "id": "bring-16-7",
+    "word": "bring",
+    "posRaw": "[v.]",
+    "meaningZh": "帶來                                                         09 12",
+    "frequencyGroup": 13,
+    "page": 16
+  },
+  {
+    "id": "came-16-9",
+    "word": "came",
+    "posRaw": "[v.]",
+    "meaningZh": "come(到來) 的過去式",
+    "frequencyGroup": 121314,
+    "page": 16
+  },
+  {
+    "id": "car-16-11",
+    "word": "car",
+    "posRaw": "[n.]",
+    "meaningZh": "汽車",
+    "frequencyGroup": 111214,
+    "page": 16
+  },
+  {
+    "id": "chance-16-13",
+    "word": "chance",
+    "posRaw": "[y]",
+    "meaningZh": "冒...的險; 賭(錢); 碰巧; [nm.] 機會",
+    "frequencyGroup": 111213,
+    "page": 16
+  },
+  {
+    "id": "a-16-14",
+    "word": "a",
+    "posRaw": "",
+    "meaningZh": ".                     06 07 08",
+    "frequencyGroup": 9,
+    "page": 16
+  },
+  {
+    "id": "clear-16-15",
+    "word": "clear",
+    "posRaw": "[adj.]",
+    "meaningZh": "清楚的;晴朗的; [v.] 收拾; [adv.] 清晰地       UDB",
+    "frequencyGroup": null,
+    "page": 16
+  },
+  {
+    "id": "cook-16-19",
+    "word": "cook",
+    "posRaw": "[v.]",
+    "meaningZh": "煮; [n.] 廚師                                              12 13",
+    "frequencyGroup": 14,
+    "page": 16
+  },
+  {
+    "id": "cover-16-21",
+    "word": "cover",
+    "posRaw": "[v.]",
+    "meaningZh": "蓋住; [n.] 封面                                           12 13",
+    "frequencyGroup": 14,
+    "page": 16
+  },
+  {
+    "id": "ah-16-23",
+    "word": "ah",
+    "posRaw": "",
+    "meaningZh": "fie [CO",
+    "frequencyGroup": null,
+    "page": 16
+  },
+  {
+    "id": "dser-16-25",
+    "word": "dser",
+    "posRaw": "",
+    "meaningZh": "[ini Be            fre [OOO",
+    "frequencyGroup": null,
+    "page": 16
+  },
+  {
+    "id": "i-16-26",
+    "word": "i",
+    "posRaw": "",
+    "meaningZh": "05 06 07",
+    "frequencyGroup": 8,
+    "page": 16
+  },
+  {
+    "id": "f-16-30",
+    "word": "f",
+    "posRaw": "",
+    "meaningZh": "A                              :                 .     x                                            05 06 07",
+    "frequencyGroup": 8,
+    "page": 16
+  },
+  {
+    "id": "a-16-32",
+    "word": "a",
+    "posRaw": "",
+    "meaningZh": "07 08 10",
+    "frequencyGroup": 11,
+    "page": 16
+  },
+  {
+    "id": "famous-16-33",
+    "word": "famous",
+    "posRaw": "[adj.]",
+    "meaningZh": "著名的                                                    12 13",
+    "frequencyGroup": 14,
+    "page": 16
+  },
+  {
+    "id": "finally-16-35",
+    "word": "finally",
+    "posRaw": "[adv.]",
+    "meaningZh": "最後,終於;決定性地                          eer | 000 |",
+    "frequencyGroup": null,
+    "page": 16
+  },
+  {
+    "id": "ah-16-37",
+    "word": "ah",
+    "posRaw": "",
+    "meaningZh": "mh a                           fee” [O00",
+    "frequencyGroup": null,
+    "page": 16
+  },
+  {
+    "id": "follow-16-39",
+    "word": "follow",
+    "posRaw": "[v.]",
+    "meaningZh": "遵循;跟隨                                        12 13",
+    "frequencyGroup": 14,
+    "page": 16
+  },
+  {
+    "id": "gift-16-41",
+    "word": "gift",
+    "posRaw": "",
+    "meaningZh": "In.] 禮物",
+    "frequencyGroup": 121314,
+    "page": 16
+  },
+  {
+    "id": "Copyright-17-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "@ 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 17
+  },
+  {
+    "id": "into-17-7",
+    "word": "into",
+    "posRaw": "[prep.]",
+    "meaningZh": "進入                                 09 10",
+    "frequencyGroup": 13,
+    "page": 17
+  },
+  {
+    "id": "ine-17-13",
+    "word": "ine",
+    "posRaw": "",
+    "meaningZh": "| a tt        ww [COO]",
+    "frequencyGroup": null,
+    "page": 17
+  },
+  {
+    "id": "mom-17-18",
+    "word": "mom",
+    "posRaw": "[n.]",
+    "meaningZh": "母親",
+    "frequencyGroup": 101314,
+    "page": 17
+  },
+  {
+    "id": "prepare-17-31",
+    "word": "prepare",
+    "posRaw": "v.",
+    "meaningZh": "] 準備                                                 1113.14",
+    "frequencyGroup": null,
+    "page": 17
+  },
+  {
+    "id": "serious-18-6",
+    "word": "serious",
+    "posRaw": "[adj.]",
+    "meaningZh": "嚴肅的; 嚴重的 5 認真的                         09 10",
+    "frequencyGroup": 13,
+    "page": 18
+  },
+  {
+    "id": "several-18-8",
+    "word": "several",
+    "posRaw": "[adj.]",
+    "meaningZh": "幾個的; [pron.] 幾個,數個",
+    "frequencyGroup": 121314,
+    "page": 18
+  },
+  {
+    "id": "share-18-10",
+    "word": "share",
+    "posRaw": "[v.]",
+    "meaningZh": "分享; [n.] 股份                          12 13",
+    "frequencyGroup": 14,
+    "page": 18
+  },
+  {
+    "id": "size-18-12",
+    "word": "size",
+    "posRaw": "",
+    "meaningZh": "In.] Ads RY                                      09",
+    "frequencyGroup": 1213,
+    "page": 18
+  },
+  {
+    "id": "speak-18-15",
+    "word": "speak",
+    "posRaw": "",
+    "meaningZh": "Lv.) 說;講",
+    "frequencyGroup": 111213,
+    "page": 18
+  },
+  {
+    "id": "spend-18-17",
+    "word": "spend",
+    "posRaw": "[v.]",
+    "meaningZh": "花費(錢或時間)",
+    "frequencyGroup": 111314,
+    "page": 18
+  },
+  {
+    "id": "strong-18-19",
+    "word": "strong",
+    "posRaw": "[adj.]",
+    "meaningZh": "強壯的",
+    "frequencyGroup": 111214,
+    "page": 18
+  },
+  {
+    "id": "jsudene-18-21",
+    "word": "jsudene",
+    "posRaw": "",
+    "meaningZh": "fine fit” 0200)",
+    "frequencyGroup": null,
+    "page": 18
+  },
+  {
+    "id": "summer-18-23",
+    "word": "summer",
+    "posRaw": "[In]",
+    "meaningZh": "夏天 ; 夏季",
+    "frequencyGroup": 111314,
+    "page": 18
+  },
+  {
+    "id": "three-18-25",
+    "word": "three",
+    "posRaw": "[adj.]",
+    "meaningZh": "三的; [n.] 三                           12 13",
+    "frequencyGroup": 14,
+    "page": 18
+  },
+  {
+    "id": "writer-18-37",
+    "word": "writer",
+    "posRaw": "",
+    "meaningZh": "[i            foie” [O09]",
+    "frequencyGroup": null,
+    "page": 18
+  },
+  {
+    "id": "Copyright-19-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "@ 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 19
+  },
+  {
+    "id": "a-19-22",
+    "word": "a",
+    "posRaw": "",
+    "meaningZh": "05 08",
+    "frequencyGroup": 10,
+    "page": 19
+  },
+  {
+    "id": "easy-19-23",
+    "word": "easy",
+    "posRaw": "[adj.]",
+    "meaningZh": "容易的",
+    "frequencyGroup": 111213,
+    "page": 19
+  },
+  {
+    "id": "fe-20-21",
+    "word": "fe",
+    "posRaw": "",
+    "meaningZh": "ft ee                      rou [O00 |",
+    "frequencyGroup": null,
+    "page": 20
+  },
+  {
+    "id": "fen-20-27",
+    "word": "fen",
+    "posRaw": "",
+    "meaningZh": "fem fn 000)",
+    "frequencyGroup": null,
+    "page": 20
+  },
+  {
+    "id": "ABN-20-31",
+    "word": "ABN",
+    "posRaw": "",
+    "meaningZh": "2 RE                  rn [000 |",
+    "frequencyGroup": null,
+    "page": 20
+  },
+  {
+    "id": "Copyright-21-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "@ 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 21
+  },
+  {
+    "id": "morning-21-5",
+    "word": "morning",
+    "posRaw": "",
+    "meaningZh": "巴.] 早晨",
+    "frequencyGroup": 111214,
+    "page": 21
+  },
+  {
+    "id": "move-21-7",
+    "word": "move",
+    "posRaw": "",
+    "meaningZh": "tee tts",
+    "frequencyGroup": 200,
+    "page": 21
+  },
+  {
+    "id": "night-21-9",
+    "word": "night",
+    "posRaw": "",
+    "meaningZh": "巴.] 夜晚",
+    "frequencyGroup": 111314,
+    "page": 21
+  },
+  {
+    "id": "see-21-25",
+    "word": "see",
+    "posRaw": "",
+    "meaningZh": "Fits",
+    "frequencyGroup": 200,
+    "page": 21
+  },
+  {
+    "id": "turn-22-6",
+    "word": "turn",
+    "posRaw": "[v.]",
+    "meaningZh": "轉; [m.] 輪到",
+    "frequencyGroup": 111314,
+    "page": 22
+  },
+  {
+    "id": "Copyright-23-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "@ 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 23
+  },
+  {
+    "id": "burn-23-4",
+    "word": "burn",
+    "posRaw": "",
+    "meaningZh": "lv.] Es 82s In.) 灼傷                              We",
+    "frequencyGroup": null,
+    "page": 23
+  },
+  {
+    "id": "cry-23-12",
+    "word": "cry",
+    "posRaw": "[v.]",
+    "meaningZh": "Sez 5 SRA 5 [|叫喊;呼叫;(一陣)哭              13",
+    "frequencyGroup": 14,
+    "page": 23
+  },
+  {
+    "id": "cup-23-14",
+    "word": "cup",
+    "posRaw": "",
+    "meaningZh": "In.) 杯子",
+    "frequencyGroup": 1114,
+    "page": 23
+  },
+  {
+    "id": "drop-23-23",
+    "word": "drop",
+    "posRaw": "[ve (便)滴落 ; EK]",
+    "meaningZh": "(一)滴; 點滴                   oe",
+    "frequencyGroup": null,
+    "page": 23
+  },
+  {
+    "id": "English-23-25",
+    "word": "English",
+    "posRaw": "[adj.]",
+    "meaningZh": "英國的;英語的; [n.] 英語                   ee | O00 |",
+    "frequencyGroup": null,
+    "page": 23
+  },
+  {
+    "id": "fexcite-23-28",
+    "word": "fexcite",
+    "posRaw": "[v.]",
+    "meaningZh": "使興奮;使激動                                        ere | O00 |",
+    "frequencyGroup": null,
+    "page": 23
+  },
+  {
+    "id": "excuse-24-5",
+    "word": "excuse",
+    "posRaw": "[v.]",
+    "meaningZh": "原諒; 巴.] 藉口                            13",
+    "frequencyGroup": 14,
+    "page": 24
+  },
+  {
+    "id": "farmer-24-8",
+    "word": "farmer",
+    "posRaw": "[n.]",
+    "meaningZh": "農夫                                  12",
+    "frequencyGroup": 13,
+    "page": 24
+  },
+  {
+    "id": "fix-24-12",
+    "word": "fix",
+    "posRaw": "[v.]",
+    "meaningZh": "修理;固定                                   13",
+    "frequencyGroup": 14,
+    "page": 24
+  },
+  {
+    "id": "i-24-13",
+    "word": "i",
+    "posRaw": "",
+    "meaningZh": "05 07",
+    "frequencyGroup": 9,
+    "page": 24
+  },
+  {
+    "id": "flower-24-15",
+    "word": "flower",
+    "posRaw": "[v.]",
+    "meaningZh": "BATE; BB WG FOR S [n.] 花                    WB",
+    "frequencyGroup": null,
+    "page": 24
+  },
+  {
+    "id": "forget-24-18",
+    "word": "forget",
+    "posRaw": "[v.]",
+    "meaningZh": "忘記",
+    "frequencyGroup": 1012,
+    "page": 24
+  },
+  {
+    "id": "four-24-21",
+    "word": "four",
+    "posRaw": "[adj.]",
+    "meaningZh": "四的; [n.] 四",
+    "frequencyGroup": 1214,
+    "page": 24
+  },
+  {
+    "id": "Friday-24-24",
+    "word": "Friday",
+    "posRaw": "",
+    "meaningZh": "巴.] 星期五",
+    "frequencyGroup": 1314,
+    "page": 24
+  },
+  {
+    "id": "fun-24-27",
+    "word": "fun",
+    "posRaw": "[adj.]",
+    "meaningZh": "有趣的; [n.] 樂趣                        bi",
+    "frequencyGroup": null,
+    "page": 24
+  },
+  {
+    "id": "girl-24-30",
+    "word": "girl",
+    "posRaw": "[n.]",
+    "meaningZh": "女孩                                        11",
+    "frequencyGroup": 12,
+    "page": 24
+  },
+  {
+    "id": "group-24-33",
+    "word": "group",
+    "posRaw": "[v.]",
+    "meaningZh": "把...分組(或歸類); [n.] 一群",
+    "frequencyGroup": 1214,
+    "page": 24
+  },
+  {
+    "id": "half-24-36",
+    "word": "half",
+    "posRaw": "[adj]",
+    "meaningZh": "一半的; [adv.] 部分地 ; 一半地; [n.] 一半",
+    "frequencyGroup": 1013,
+    "page": 24
+  },
+  {
+    "id": "head-24-39",
+    "word": "head",
+    "posRaw": "",
+    "meaningZh": "(n.] 頭; [v.] 率領;出發",
+    "frequencyGroup": 1314,
+    "page": 24
+  },
+  {
+    "id": "health-24-42",
+    "word": "health",
+    "posRaw": "",
+    "meaningZh": "巴.] 健康",
+    "frequencyGroup": 1314,
+    "page": 24
+  },
+  {
+    "id": "hear-24-45",
+    "word": "hear",
+    "posRaw": "[v.]",
+    "meaningZh": "聽見",
+    "frequencyGroup": 1214,
+    "page": 24
+  },
+  {
+    "id": "hit-24-48",
+    "word": "hit",
+    "posRaw": "",
+    "meaningZh": "lv.) 打;擊; [n.] 打擊                               12",
+    "frequencyGroup": 1,
+    "page": 24
+  },
+  {
+    "id": "inside-24-51",
+    "word": "inside",
+    "posRaw": "[adj.]",
+    "meaningZh": "裡面的; [adv.]在裡面; [prep.]7£--- #2 ; [n.] 內部    B14",
+    "frequencyGroup": null,
+    "page": 24
+  },
+  {
+    "id": "known-24-57",
+    "word": "known",
+    "posRaw": "[v.]",
+    "meaningZh": "know(知道) 的過去分詞                       09",
+    "frequencyGroup": 13,
+    "page": 24
+  },
+  {
+    "id": "Copyright-25-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "@ 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 25
+  },
+  {
+    "id": "meal-25-12",
+    "word": "meal",
+    "posRaw": "[n.]",
+    "meaningZh": "餐",
+    "frequencyGroup": 1214,
+    "page": 25
+  },
+  {
+    "id": "a-25-19",
+    "word": "a",
+    "posRaw": "",
+    "meaningZh": "i            i                                07 09",
+    "frequencyGroup": 10,
+    "page": 25
+  },
+  {
+    "id": "fpeson-25-28",
+    "word": "fpeson",
+    "posRaw": "",
+    "meaningZh": "mA F000",
+    "frequencyGroup": null,
+    "page": 25
+  },
+  {
+    "id": "i-25-31",
+    "word": "i",
+    "posRaw": "",
+    "meaningZh": "fea\" [OOO |",
+    "frequencyGroup": null,
+    "page": 25
+  },
+  {
+    "id": "ul-26-8",
+    "word": "ul",
+    "posRaw": "",
+    "meaningZh": "| ts  [n.] 拉,拖                            12 13   [000]",
+    "frequencyGroup": null,
+    "page": 26
+  },
+  {
+    "id": "femember-26-11",
+    "word": "femember",
+    "posRaw": "",
+    "meaningZh": "Joie L000",
+    "frequencyGroup": null,
+    "page": 26
+  },
+  {
+    "id": "seat-26-17",
+    "word": "seat",
+    "posRaw": "[v.]",
+    "meaningZh": "使就座; [n.] 座位                                          10",
+    "frequencyGroup": 12,
+    "page": 26
+  },
+  {
+    "id": "sng-26-21",
+    "word": "sng",
+    "posRaw": "",
+    "meaningZh": "foe RM F000",
+    "frequencyGroup": null,
+    "page": 26
+  },
+  {
+    "id": "Copyright-27-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "@ 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 27
+  },
+  {
+    "id": "PL-27-4",
+    "word": "PL",
+    "posRaw": "",
+    "meaningZh": "ne” [O00 |",
+    "frequencyGroup": null,
+    "page": 27
+  },
+  {
+    "id": "wind-27-13",
+    "word": "wind",
+    "posRaw": "[n.]",
+    "meaningZh": "風",
+    "frequencyGroup": 1214,
+    "page": 27
+  },
+  {
+    "id": "write-27-15",
+    "word": "write",
+    "posRaw": "[v.]",
+    "meaningZh": "寫",
+    "frequencyGroup": 1112,
+    "page": 27
+  },
+  {
+    "id": "baseball-27-25",
+    "word": "baseball",
+    "posRaw": "[n.]",
+    "meaningZh": "棒球                                                                  = 000]",
+    "frequencyGroup": null,
+    "page": 27
+  },
+  {
+    "id": "bey-28-3",
+    "word": "bey",
+    "posRaw": "",
+    "meaningZh": "fe fi",
+    "frequencyGroup": 0,
+    "page": 28
+  },
+  {
+    "id": "como-28-5",
+    "word": "como",
+    "posRaw": "",
+    "meaningZh": "ime fu",
+    "frequencyGroup": 0,
+    "page": 28
+  },
+  {
+    "id": "ee-28-7",
+    "word": "ee",
+    "posRaw": "",
+    "meaningZh": "iw fg [000",
+    "frequencyGroup": null,
+    "page": 28
+  },
+  {
+    "id": "Copyright-29-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "@ 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 29
+  },
+  {
+    "id": "we-30-3",
+    "word": "we",
+    "posRaw": "",
+    "meaningZh": "mira ims | 200]",
+    "frequencyGroup": null,
+    "page": 30
+  },
+  {
+    "id": "rey-30-14",
+    "word": "rey",
+    "posRaw": "",
+    "meaningZh": "few i209",
+    "frequencyGroup": null,
+    "page": 30
+  },
+  {
+    "id": "rowing-30-21",
+    "word": "rowing",
+    "posRaw": "",
+    "meaningZh": "fs] 200]",
+    "frequencyGroup": null,
+    "page": 30
+  },
+  {
+    "id": "Copyright-31-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "@ 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 31
+  },
+  {
+    "id": "paper-31-4",
+    "word": "paper",
+    "posRaw": "[v.]",
+    "meaningZh": "用紙包 ; 掩蓋; [n.] 紙張                          os",
+    "frequencyGroup": 14,
+    "page": 31
+  },
+  {
+    "id": "ready-31-15",
+    "word": "ready",
+    "posRaw": "[adj.]",
+    "meaningZh": "準備好的",
+    "frequencyGroup": 314,
+    "page": 31
+  },
+  {
+    "id": "rest-31-17",
+    "word": "rest",
+    "posRaw": "",
+    "meaningZh": "lv.] 休息; [n.] (Es BBR                          ool",
+    "frequencyGroup": null,
+    "page": 31
+  },
+  {
+    "id": "some-31-20",
+    "word": "some",
+    "posRaw": "",
+    "meaningZh": "ft f000]",
+    "frequencyGroup": null,
+    "page": 31
+  },
+  {
+    "id": "seldom-31-25",
+    "word": "seldom",
+    "posRaw": "[adv.]",
+    "meaningZh": "很少地                                   lou",
+    "frequencyGroup": null,
+    "page": 31
+  },
+  {
+    "id": "service-31-27",
+    "word": "service",
+    "posRaw": "[v.]",
+    "meaningZh": "維修,保養; [n.] 服務",
+    "frequencyGroup": 1314,
+    "page": 31
+  },
+  {
+    "id": "short-32-3",
+    "word": "short",
+    "posRaw": "[adj.]",
+    "meaningZh": "RY 5 短的                                        09",
+    "frequencyGroup": 14,
+    "page": 32
+  },
+  {
+    "id": "smile-32-6",
+    "word": "smile",
+    "posRaw": "[v.]",
+    "meaningZh": "HR 5 [n.] 微笑",
+    "frequencyGroup": 1013,
+    "page": 32
+  },
+  {
+    "id": "sold-32-8",
+    "word": "sold",
+    "posRaw": "[v.]",
+    "meaningZh": "sell(賣) 的過去式及過去分詞                      10",
+    "frequencyGroup": 13,
+    "page": 32
+  },
+  {
+    "id": "sometimes-32-10",
+    "word": "sometimes",
+    "posRaw": "",
+    "meaningZh": "| [adv.] 有時候                                 12",
+    "frequencyGroup": 14,
+    "page": 32
+  },
+  {
+    "id": "somewhere-32-12",
+    "word": "somewhere",
+    "posRaw": "",
+    "meaningZh": "「[adv.] 在某處                                           09",
+    "frequencyGroup": 11,
+    "page": 32
+  },
+  {
+    "id": "J-32-20",
+    "word": "J",
+    "posRaw": "",
+    "meaningZh": "05",
+    "frequencyGroup": 9,
+    "page": 32
+  },
+  {
+    "id": "sport-32-21",
+    "word": "sport",
+    "posRaw": "[n.]",
+    "meaningZh": "運動",
+    "frequencyGroup": 1112,
+    "page": 32
+  },
+  {
+    "id": "sports-32-23",
+    "word": "sports",
+    "posRaw": "[adj.]",
+    "meaningZh": "運動的",
+    "frequencyGroup": 1112,
+    "page": 32
+  },
+  {
+    "id": "strange-32-29",
+    "word": "strange",
+    "posRaw": "[adj.]",
+    "meaningZh": "奇怪的",
+    "frequencyGroup": 1011,
+    "page": 32
+  },
+  {
+    "id": "supermarket-32-32",
+    "word": "supermarket",
+    "posRaw": "",
+    "meaningZh": "| [n.] 超級市場                                    ni",
+    "frequencyGroup": null,
+    "page": 32
+  },
+  {
+    "id": "Taiwan-32-34",
+    "word": "Taiwan",
+    "posRaw": "[n.]",
+    "meaningZh": "台灣",
+    "frequencyGroup": 1113,
+    "page": 32
+  },
+  {
+    "id": "taste-32-36",
+    "word": "taste",
+    "posRaw": "",
+    "meaningZh": "(v.] 嘗; [n) Bee",
+    "frequencyGroup": 1114,
+    "page": 32
+  },
+  {
+    "id": "Copyright-33-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "@ 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 33
+  },
+  {
+    "id": "unhappy-33-13",
+    "word": "unhappy",
+    "posRaw": "",
+    "meaningZh": "—_| [adj.] 不快樂的                                 fer, }000 |",
+    "frequencyGroup": null,
+    "page": 33
+  },
+  {
+    "id": "eh-33-27",
+    "word": "eh",
+    "posRaw": "",
+    "meaningZh": "fe F000",
+    "frequencyGroup": null,
+    "page": 33
+  },
+  {
+    "id": "aihough-34-9",
+    "word": "aihough",
+    "posRaw": "",
+    "meaningZh": "emis dt",
+    "frequencyGroup": 0,
+    "page": 34
+  },
+  {
+    "id": "J-34-11",
+    "word": "J",
+    "posRaw": "",
+    "meaningZh": "06",
+    "frequencyGroup": 9,
+    "page": 34
+  },
+  {
+    "id": "fou-34-14",
+    "word": "fou",
+    "posRaw": "",
+    "meaningZh": "imme 000]",
+    "frequencyGroup": null,
+    "page": 34
+  },
+  {
+    "id": "foow-34-21",
+    "word": "foow",
+    "posRaw": "",
+    "meaningZh": "mame 000]",
+    "frequencyGroup": null,
+    "page": 34
+  },
+  {
+    "id": "Copyright-35-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "@ 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 35
+  },
+  {
+    "id": "ais-35-12",
+    "word": "ais",
+    "posRaw": "",
+    "meaningZh": "ne *i oo",
+    "frequencyGroup": null,
+    "page": 35
+  },
+  {
+    "id": "eo-36-10",
+    "word": "eo",
+    "posRaw": "",
+    "meaningZh": "fe fo",
+    "frequencyGroup": null,
+    "page": 36
+  },
+  {
+    "id": "feo-36-14",
+    "word": "feo",
+    "posRaw": "",
+    "meaningZh": "[wee fe [8",
+    "frequencyGroup": null,
+    "page": 36
+  },
+  {
+    "id": "ee-36-17",
+    "word": "ee",
+    "posRaw": "",
+    "meaningZh": "S                                              06",
+    "frequencyGroup": 7,
+    "page": 36
+  },
+  {
+    "id": "feet-36-18",
+    "word": "feet",
+    "posRaw": "[n.]",
+    "meaningZh": "foot(腳; BER) 的複數",
+    "frequencyGroup": 9,
+    "page": 36
+  },
+  {
+    "id": "Copyright-37-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "@ 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 37
+  },
+  {
+    "id": "ovement-37-4",
+    "word": "ovement",
+    "posRaw": "",
+    "meaningZh": "ins fi [200",
+    "frequencyGroup": null,
+    "page": 37
+  },
+  {
+    "id": "ewe-37-5",
+    "word": "ewe",
+    "posRaw": "",
+    "meaningZh": "swe fs",
+    "frequencyGroup": 0,
+    "page": 37
+  },
+  {
+    "id": "mntome-37-7",
+    "word": "mntome",
+    "posRaw": "",
+    "meaningZh": "[tearm fn” [000",
+    "frequencyGroup": null,
+    "page": 37
+  },
+  {
+    "id": "fe-37-8",
+    "word": "fe",
+    "posRaw": "",
+    "meaningZh": "rms minim [3 [000",
+    "frequencyGroup": null,
+    "page": 37
+  },
+  {
+    "id": "eve-37-9",
+    "word": "eve",
+    "posRaw": "",
+    "meaningZh": "amie: ame |” [000",
+    "frequencyGroup": null,
+    "page": 37
+  },
+  {
+    "id": "fees-37-16",
+    "word": "fees",
+    "posRaw": "",
+    "meaningZh": "aman: orm fi\" [000",
+    "frequencyGroup": null,
+    "page": 37
+  },
+  {
+    "id": "yen-37-18",
+    "word": "yen",
+    "posRaw": "",
+    "meaningZh": "fi f000",
+    "frequencyGroup": null,
+    "page": 37
+  },
+  {
+    "id": "ome-37-19",
+    "word": "ome",
+    "posRaw": "",
+    "meaningZh": "sams mse fi [000",
+    "frequencyGroup": null,
+    "page": 37
+  },
+  {
+    "id": "fie-37-20",
+    "word": "fie",
+    "posRaw": "",
+    "meaningZh": "[aormmsmeai ine [a [000",
+    "frequencyGroup": null,
+    "page": 37
+  },
+  {
+    "id": "fame-37-21",
+    "word": "fame",
+    "posRaw": "",
+    "meaningZh": "se fs",
+    "frequencyGroup": 200,
+    "page": 37
+  },
+  {
+    "id": "leg-38-4",
+    "word": "leg",
+    "posRaw": "",
+    "meaningZh": "巴:] 腿",
+    "frequencyGroup": 1,
+    "page": 38
+  },
+  {
+    "id": "letter-38-6",
+    "word": "letter",
+    "posRaw": "",
+    "meaningZh": "巴.] 信; 字母",
+    "frequencyGroup": 12,
+    "page": 38
+  },
+  {
+    "id": "machine-38-7",
+    "word": "machine",
+    "posRaw": "[v]",
+    "meaningZh": "用機器做; [n.] 機器                           es",
+    "frequencyGroup": null,
+    "page": 38
+  },
+  {
+    "id": "mark-38-11",
+    "word": "mark",
+    "posRaw": "[v.]",
+    "meaningZh": "做記號; [n.] 記號",
+    "frequencyGroup": 14,
+    "page": 38
+  },
+  {
+    "id": "join-38-12",
+    "word": "join",
+    "posRaw": "",
+    "meaningZh": "me 000)",
+    "frequencyGroup": null,
+    "page": 38
+  },
+  {
+    "id": "meeting-38-14",
+    "word": "meeting",
+    "posRaw": "[n.]",
+    "meaningZh": "會議",
+    "frequencyGroup": 13,
+    "page": 38
+  },
+  {
+    "id": "million-38-16",
+    "word": "million",
+    "posRaw": "[n.]",
+    "meaningZh": "百萬",
+    "frequencyGroup": 13,
+    "page": 38
+  },
+  {
+    "id": "music-38-19",
+    "word": "music",
+    "posRaw": "[n.]",
+    "meaningZh": "4%",
+    "frequencyGroup": 1,
+    "page": 38
+  },
+  {
+    "id": "name-38-21",
+    "word": "name",
+    "posRaw": "",
+    "meaningZh": "In.) 名字; [v.] 給...取名 ; 列舉",
+    "frequencyGroup": 12,
+    "page": 38
+  },
+  {
+    "id": "nature-38-23",
+    "word": "nature",
+    "posRaw": "[n.]",
+    "meaningZh": "BA",
+    "frequencyGroup": 1,
+    "page": 38
+  },
+  {
+    "id": "nobody-38-25",
+    "word": "nobody",
+    "posRaw": "",
+    "meaningZh": "In.] 無名小子; [pron] 無人                       B",
+    "frequencyGroup": null,
+    "page": 38
+  },
+  {
+    "id": "noon-38-27",
+    "word": "noon",
+    "posRaw": "[n.]",
+    "meaningZh": "中午",
+    "frequencyGroup": 14,
+    "page": 38
+  },
+  {
+    "id": "north-38-29",
+    "word": "north",
+    "posRaw": "[adj.]",
+    "meaningZh": "北方的; [adv.] 向北方; [.] 北方",
+    "frequencyGroup": 12,
+    "page": 38
+  },
+  {
+    "id": "note-38-31",
+    "word": "note",
+    "posRaw": "[v.]",
+    "meaningZh": "注意;記下; [n.] 筆記;音符;便條",
+    "frequencyGroup": 12,
+    "page": 38
+  },
+  {
+    "id": "Copyright-39-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "@ 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 39
+  },
+  {
+    "id": "er-39-3",
+    "word": "er",
+    "posRaw": "",
+    "meaningZh": "ise fs\" f200",
+    "frequencyGroup": null,
+    "page": 39
+  },
+  {
+    "id": "poi-39-4",
+    "word": "poi",
+    "posRaw": "",
+    "meaningZh": "msm: on eves |” [O00",
+    "frequencyGroup": null,
+    "page": 39
+  },
+  {
+    "id": "pe-39-5",
+    "word": "pe",
+    "posRaw": "",
+    "meaningZh": "sme Cf [000",
+    "frequencyGroup": null,
+    "page": 39
+  },
+  {
+    "id": "ett-39-6",
+    "word": "ett",
+    "posRaw": "",
+    "meaningZh": "see fn [000",
+    "frequencyGroup": null,
+    "page": 39
+  },
+  {
+    "id": "oem-39-7",
+    "word": "oem",
+    "posRaw": "",
+    "meaningZh": "sf F000",
+    "frequencyGroup": null,
+    "page": 39
+  },
+  {
+    "id": "point-39-8",
+    "word": "point",
+    "posRaw": "",
+    "meaningZh": "tosses: oof\" [000",
+    "frequencyGroup": null,
+    "page": 39
+  },
+  {
+    "id": "oo-39-11",
+    "word": "oo",
+    "posRaw": "",
+    "meaningZh": "|e fn [000",
+    "frequencyGroup": null,
+    "page": 39
+  },
+  {
+    "id": "ota-39-12",
+    "word": "ota",
+    "posRaw": "",
+    "meaningZh": "twtr fi [900",
+    "frequencyGroup": null,
+    "page": 39
+  },
+  {
+    "id": "oss-39-13",
+    "word": "oss",
+    "posRaw": "",
+    "meaningZh": "[tam mswsee |\" [000",
+    "frequencyGroup": null,
+    "page": 39
+  },
+  {
+    "id": "oveson-39-14",
+    "word": "oveson",
+    "posRaw": "",
+    "meaningZh": "[toss wi fi! [000",
+    "frequencyGroup": null,
+    "page": 39
+  },
+  {
+    "id": "et-39-16",
+    "word": "et",
+    "posRaw": "",
+    "meaningZh": "nse fs” [200",
+    "frequencyGroup": null,
+    "page": 39
+  },
+  {
+    "id": "vet-39-17",
+    "word": "vet",
+    "posRaw": "",
+    "meaningZh": "isms fn [000",
+    "frequencyGroup": null,
+    "page": 39
+  },
+  {
+    "id": "asta-39-18",
+    "word": "asta",
+    "posRaw": "",
+    "meaningZh": "marmany [i [000",
+    "frequencyGroup": null,
+    "page": 39
+  },
+  {
+    "id": "fey-39-22",
+    "word": "fey",
+    "posRaw": "",
+    "meaningZh": "inte fe F000",
+    "frequencyGroup": null,
+    "page": 39
+  },
+  {
+    "id": "snow-40-15",
+    "word": "snow",
+    "posRaw": "",
+    "meaningZh": "lv] 下雪; fn] 雪",
+    "frequencyGroup": 12,
+    "page": 40
+  },
+  {
+    "id": "son-40-17",
+    "word": "son",
+    "posRaw": "[n.]",
+    "meaningZh": "兒子",
+    "frequencyGroup": 10,
+    "page": 40
+  },
+  {
+    "id": "Copyright-41-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "© 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 41
+  },
+  {
+    "id": "i-41-3",
+    "word": "i",
+    "posRaw": "",
+    "meaningZh": "[inwaaiomroas wie ‘(Ss [00",
+    "frequencyGroup": null,
+    "page": 41
+  },
+  {
+    "id": "ES-41-4",
+    "word": "ES",
+    "posRaw": "",
+    "meaningZh": "ce",
+    "frequencyGroup": null,
+    "page": 41
+  },
+  {
+    "id": "oon-41-6",
+    "word": "oon",
+    "posRaw": "",
+    "meaningZh": "fae «i",
+    "frequencyGroup": 0,
+    "page": 41
+  },
+  {
+    "id": "ss-41-7",
+    "word": "ss",
+    "posRaw": "",
+    "meaningZh": "[iain ———_‘(S¥|o00",
+    "frequencyGroup": null,
+    "page": 41
+  },
+  {
+    "id": "swe-41-8",
+    "word": "swe",
+    "posRaw": "",
+    "meaningZh": "fee «i",
+    "frequencyGroup": 0,
+    "page": 41
+  },
+  {
+    "id": "fw-41-9",
+    "word": "fw",
+    "posRaw": "",
+    "meaningZh": "|iimsnariee (SP [o00",
+    "frequencyGroup": null,
+    "page": 41
+  },
+  {
+    "id": "EE-41-11",
+    "word": "EE",
+    "posRaw": "",
+    "meaningZh": "還還加加還",
+    "frequencyGroup": null,
+    "page": 41
+  },
+  {
+    "id": "nearer-41-12",
+    "word": "nearer",
+    "posRaw": "",
+    "meaningZh": "«i",
+    "frequencyGroup": 0,
+    "page": 41
+  },
+  {
+    "id": "ser-41-13",
+    "word": "ser",
+    "posRaw": "",
+    "meaningZh": "|nrexsee «(00",
+    "frequencyGroup": null,
+    "page": 41
+  },
+  {
+    "id": "et-41-15",
+    "word": "et",
+    "posRaw": "",
+    "meaningZh": "[eaionneven ‘S00",
+    "frequencyGroup": null,
+    "page": 41
+  },
+  {
+    "id": "ete-41-16",
+    "word": "ete",
+    "posRaw": "",
+    "meaningZh": "fasx SS *",
+    "frequencyGroup": 0,
+    "page": 41
+  },
+  {
+    "id": "seoe-41-17",
+    "word": "seoe",
+    "posRaw": "",
+    "meaningZh": "[atin me (S00",
+    "frequencyGroup": null,
+    "page": 41
+  },
+  {
+    "id": "swe-41-18",
+    "word": "swe",
+    "posRaw": "",
+    "meaningZh": "[ante ene =",
+    "frequencyGroup": 0,
+    "page": 41
+  },
+  {
+    "id": "remy-41-19",
+    "word": "remy",
+    "posRaw": "",
+    "meaningZh": "[a in swe ——_‘(o",
+    "frequencyGroup": 500,
+    "page": 41
+  },
+  {
+    "id": "am-41-22",
+    "word": "am",
+    "posRaw": "",
+    "meaningZh": "ewe *iOO",
+    "frequencyGroup": null,
+    "page": 41
+  },
+  {
+    "id": "fowotsie-42-22",
+    "word": "fowotsie",
+    "posRaw": "",
+    "meaningZh": "[imme [000 |",
+    "frequencyGroup": null,
+    "page": 42
+  },
+  {
+    "id": "fmt-42-25",
+    "word": "fmt",
+    "posRaw": "",
+    "meaningZh": "une +o",
+    "frequencyGroup": null,
+    "page": 42
+  },
+  {
+    "id": "Copyright-43-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "@ 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 43
+  },
+  {
+    "id": "jee-43-20",
+    "word": "jee",
+    "posRaw": "",
+    "meaningZh": "Ff",
+    "frequencyGroup": 0,
+    "page": 43
+  },
+  {
+    "id": "comoany-43-23",
+    "word": "comoany",
+    "posRaw": "",
+    "meaningZh": "[vem",
+    "frequencyGroup": 0,
+    "page": 43
+  },
+  {
+    "id": "coo-44-2",
+    "word": "coo",
+    "posRaw": "[vans namie [5]",
+    "meaningZh": "000)",
+    "frequencyGroup": null,
+    "page": 44
+  },
+  {
+    "id": "ew-44-3",
+    "word": "ew",
+    "posRaw": "[rams tacts fe]",
+    "meaningZh": "000)",
+    "frequencyGroup": null,
+    "page": 44
+  },
+  {
+    "id": "Jee-44-5",
+    "word": "Jee",
+    "posRaw": "",
+    "meaningZh": "mee Cf] 000)",
+    "frequencyGroup": null,
+    "page": 44
+  },
+  {
+    "id": "eo-44-10",
+    "word": "eo",
+    "posRaw": "",
+    "meaningZh": "[nareams posrinwrs rae [|",
+    "frequencyGroup": 0,
+    "page": 44
+  },
+  {
+    "id": "eee-44-13",
+    "word": "eee",
+    "posRaw": "",
+    "meaningZh": "fame fe]",
+    "frequencyGroup": 200,
+    "page": 44
+  },
+  {
+    "id": "me-44-16",
+    "word": "me",
+    "posRaw": "",
+    "meaningZh": "mammm mm人em Mooo|",
+    "frequencyGroup": null,
+    "page": 44
+  },
+  {
+    "id": "fon-44-17",
+    "word": "fon",
+    "posRaw": "",
+    "meaningZh": "[ratory emis e000)",
+    "frequencyGroup": null,
+    "page": 44
+  },
+  {
+    "id": "sme-44-18",
+    "word": "sme",
+    "posRaw": "",
+    "meaningZh": "ses mst [fs] O00)",
+    "frequencyGroup": null,
+    "page": 44
+  },
+  {
+    "id": "foe-44-21",
+    "word": "foe",
+    "posRaw": "",
+    "meaningZh": "me fu] 000)",
+    "frequencyGroup": null,
+    "page": 44
+  },
+  {
+    "id": "Copyright-45-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "@ 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 45
+  },
+  {
+    "id": "wwe-45-4",
+    "word": "wwe",
+    "posRaw": "[sem]",
+    "meaningZh": "000)",
+    "frequencyGroup": null,
+    "page": 45
+  },
+  {
+    "id": "jae-45-6",
+    "word": "jae",
+    "posRaw": "",
+    "meaningZh": "mre] 000)",
+    "frequencyGroup": null,
+    "page": 45
+  },
+  {
+    "id": "row-45-11",
+    "word": "row",
+    "posRaw": "[termine mee [5]",
+    "meaningZh": "200)",
+    "frequencyGroup": null,
+    "page": 45
+  },
+  {
+    "id": "ence-45-12",
+    "word": "ence",
+    "posRaw": "",
+    "meaningZh": "[ios | 200)",
+    "frequencyGroup": null,
+    "page": 45
+  },
+  {
+    "id": "mm-45-13",
+    "word": "mm",
+    "posRaw": "",
+    "meaningZh": "200)",
+    "frequencyGroup": null,
+    "page": 45
+  },
+  {
+    "id": "ets-45-14",
+    "word": "ets",
+    "posRaw": "",
+    "meaningZh": "[ranoutem sonatas | 000)",
+    "frequencyGroup": null,
+    "page": 45
+  },
+  {
+    "id": "eto-45-15",
+    "word": "eto",
+    "posRaw": "[mon em: ns acme ie]",
+    "meaningZh": "000)",
+    "frequencyGroup": null,
+    "page": 45
+  },
+  {
+    "id": "ey-45-16",
+    "word": "ey",
+    "posRaw": "",
+    "meaningZh": "on Te] 200)",
+    "frequencyGroup": null,
+    "page": 45
+  },
+  {
+    "id": "ee-45-17",
+    "word": "ee",
+    "posRaw": "[ravers teva fn]",
+    "meaningZh": "000)",
+    "frequencyGroup": null,
+    "page": 45
+  },
+  {
+    "id": "fone-45-19",
+    "word": "fone",
+    "posRaw": "",
+    "meaningZh": "me 5] 000)",
+    "frequencyGroup": null,
+    "page": 45
+  },
+  {
+    "id": "otic-45-20",
+    "word": "otic",
+    "posRaw": "",
+    "meaningZh": "000)",
+    "frequencyGroup": null,
+    "page": 45
+  },
+  {
+    "id": "Toast-46-2",
+    "word": "Toast",
+    "posRaw": "",
+    "meaningZh": "aise S«*i OO",
+    "frequencyGroup": null,
+    "page": 46
+  },
+  {
+    "id": "we-46-4",
+    "word": "we",
+    "posRaw": "",
+    "meaningZh": "[weenie ‘oo",
+    "frequencyGroup": null,
+    "page": 46
+  },
+  {
+    "id": "im-46-5",
+    "word": "im",
+    "posRaw": "",
+    "meaningZh": "|nimmenine =i",
+    "frequencyGroup": null,
+    "page": 46
+  },
+  {
+    "id": "i-46-6",
+    "word": "i",
+    "posRaw": "",
+    "meaningZh": "|mimasae =i",
+    "frequencyGroup": null,
+    "page": 46
+  },
+  {
+    "id": "IN-46-10",
+    "word": "IN",
+    "posRaw": "",
+    "meaningZh": "IT加了到",
+    "frequencyGroup": null,
+    "page": 46
+  },
+  {
+    "id": "tw-46-11",
+    "word": "tw",
+    "posRaw": "",
+    "meaningZh": "faneacie “i",
+    "frequencyGroup": null,
+    "page": 46
+  },
+  {
+    "id": "et-46-12",
+    "word": "et",
+    "posRaw": "",
+    "meaningZh": "[aaiewn =i",
+    "frequencyGroup": null,
+    "page": 46
+  },
+  {
+    "id": "it-46-13",
+    "word": "it",
+    "posRaw": "",
+    "meaningZh": "fusarmiee =i",
+    "frequencyGroup": null,
+    "page": 46
+  },
+  {
+    "id": "nin-46-14",
+    "word": "nin",
+    "posRaw": "",
+    "meaningZh": "[nanaenraeensaw ‘(loo",
+    "frequencyGroup": null,
+    "page": 46
+  },
+  {
+    "id": "mice-46-15",
+    "word": "mice",
+    "posRaw": "",
+    "meaningZh": "[mie «iO",
+    "frequencyGroup": null,
+    "page": 46
+  },
+  {
+    "id": "io-46-17",
+    "word": "io",
+    "posRaw": "",
+    "meaningZh": "[mien =i",
+    "frequencyGroup": null,
+    "page": 46
+  },
+  {
+    "id": "me-46-18",
+    "word": "me",
+    "posRaw": "",
+    "meaningZh": "[imeem =i)",
+    "frequencyGroup": null,
+    "page": 46
+  },
+  {
+    "id": "ES-46-19",
+    "word": "ES",
+    "posRaw": "",
+    "meaningZh": "cre",
+    "frequencyGroup": null,
+    "page": 46
+  },
+  {
+    "id": "tiie-46-20",
+    "word": "tiie",
+    "posRaw": "",
+    "meaningZh": "[swans wiasine ‘(soo",
+    "frequencyGroup": null,
+    "page": 46
+  },
+  {
+    "id": "min-46-21",
+    "word": "min",
+    "posRaw": "",
+    "meaningZh": "[naan =i",
+    "frequencyGroup": null,
+    "page": 46
+  },
+  {
+    "id": "say-46-22",
+    "word": "say",
+    "posRaw": "",
+    "meaningZh": "[ata =i",
+    "frequencyGroup": null,
+    "page": 46
+  },
+  {
+    "id": "Copyright-47-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "@ 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 47
+  },
+  {
+    "id": "oie-47-6",
+    "word": "oie",
+    "posRaw": "",
+    "meaningZh": "mms 5]",
+    "frequencyGroup": 200,
+    "page": 47
+  },
+  {
+    "id": "ju-47-8",
+    "word": "ju",
+    "posRaw": "",
+    "meaningZh": "fmm",
+    "frequencyGroup": 200,
+    "page": 47
+  },
+  {
+    "id": "ant-47-14",
+    "word": "ant",
+    "posRaw": "",
+    "meaningZh": "ine",
+    "frequencyGroup": 200,
+    "page": 47
+  },
+  {
+    "id": "puppy-47-19",
+    "word": "puppy",
+    "posRaw": "",
+    "meaningZh": "巴.] 小狗",
+    "frequencyGroup": 13,
+    "page": 47
+  },
+  {
+    "id": "me-48-3",
+    "word": "me",
+    "posRaw": "",
+    "meaningZh": "eem es meme [8] 000)",
+    "frequencyGroup": null,
+    "page": 48
+  },
+  {
+    "id": "sk-48-4",
+    "word": "sk",
+    "posRaw": "",
+    "meaningZh": "還人",
+    "frequencyGroup": null,
+    "page": 48
+  },
+  {
+    "id": "im-48-8",
+    "word": "im",
+    "posRaw": "",
+    "meaningZh": "mei [| 000)",
+    "frequencyGroup": null,
+    "page": 48
+  },
+  {
+    "id": "ten-48-10",
+    "word": "ten",
+    "posRaw": "[ramesmums mre [5]",
+    "meaningZh": "000)",
+    "frequencyGroup": null,
+    "page": 48
+  },
+  {
+    "id": "see-48-11",
+    "word": "see",
+    "posRaw": "",
+    "meaningZh": "[itseoonm macnn | 000)",
+    "frequencyGroup": null,
+    "page": 48
+  },
+  {
+    "id": "fewer-48-13",
+    "word": "fewer",
+    "posRaw": "",
+    "meaningZh": "meen] 000)",
+    "frequencyGroup": null,
+    "page": 48
+  },
+  {
+    "id": "sw-48-16",
+    "word": "sw",
+    "posRaw": "",
+    "meaningZh": "[vamsamie: invewime [| 000)",
+    "frequencyGroup": null,
+    "page": 48
+  },
+  {
+    "id": "soviet-48-17",
+    "word": "soviet",
+    "posRaw": "[ics at or mats mae fs]",
+    "meaningZh": "000",
+    "frequencyGroup": null,
+    "page": 48
+  },
+  {
+    "id": "Copyright-49-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "@ 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 49
+  },
+  {
+    "id": "feemees-49-4",
+    "word": "feemees",
+    "posRaw": "[immo ns]",
+    "meaningZh": "000",
+    "frequencyGroup": null,
+    "page": 49
+  },
+  {
+    "id": "raisins-50-3",
+    "word": "raisins",
+    "posRaw": "",
+    "meaningZh": "crema =i oo",
+    "frequencyGroup": null,
+    "page": 50
+  },
+  {
+    "id": "am-50-6",
+    "word": "am",
+    "posRaw": "",
+    "meaningZh": "«iio",
+    "frequencyGroup": null,
+    "page": 50
+  },
+  {
+    "id": "ret-50-7",
+    "word": "ret",
+    "posRaw": "",
+    "meaningZh": "fimminne——SSSSSSS*i (0",
+    "frequencyGroup": null,
+    "page": 50
+  },
+  {
+    "id": "am-50-8",
+    "word": "am",
+    "posRaw": "",
+    "meaningZh": "59",
+    "frequencyGroup": null,
+    "page": 50
+  },
+  {
+    "id": "fim-50-14",
+    "word": "fim",
+    "posRaw": "",
+    "meaningZh": "[mine =i",
+    "frequencyGroup": null,
+    "page": 50
+  },
+  {
+    "id": "me-50-17",
+    "word": "me",
+    "posRaw": "",
+    "meaningZh": "[mae SSSS*i",
+    "frequencyGroup": 0,
+    "page": 50
+  },
+  {
+    "id": "je-50-20",
+    "word": "je",
+    "posRaw": "",
+    "meaningZh": "[mowmwie =i",
+    "frequencyGroup": null,
+    "page": 50
+  },
+  {
+    "id": "alana-51-3",
+    "word": "alana",
+    "posRaw": "",
+    "meaningZh": "Mmm wi",
+    "frequencyGroup": 500,
+    "page": 51
+  },
+  {
+    "id": "tee-51-4",
+    "word": "tee",
+    "posRaw": "",
+    "meaningZh": "wae",
+    "frequencyGroup": 0,
+    "page": 51
+  },
+  {
+    "id": "tet-51-5",
+    "word": "tet",
+    "posRaw": "",
+    "meaningZh": "aiee0",
+    "frequencyGroup": null,
+    "page": 51
+  },
+  {
+    "id": "vet-51-6",
+    "word": "vet",
+    "posRaw": "",
+    "meaningZh": "alee",
+    "frequencyGroup": 0,
+    "page": 51
+  },
+  {
+    "id": "vot-51-7",
+    "word": "vot",
+    "posRaw": "",
+    "meaningZh": "aneesae",
+    "frequencyGroup": 0,
+    "page": 51
+  },
+  {
+    "id": "vee-51-9",
+    "word": "vee",
+    "posRaw": "",
+    "meaningZh": "lewspn",
+    "frequencyGroup": 0,
+    "page": 51
+  },
+  {
+    "id": "ieee-51-10",
+    "word": "ieee",
+    "posRaw": "",
+    "meaningZh": "0",
+    "frequencyGroup": null,
+    "page": 51
+  },
+  {
+    "id": "ato-51-11",
+    "word": "ato",
+    "posRaw": "",
+    "meaningZh": "[nia i0",
+    "frequencyGroup": null,
+    "page": 51
+  },
+  {
+    "id": "int-51-12",
+    "word": "int",
+    "posRaw": "",
+    "meaningZh": "nbz",
+    "frequencyGroup": null,
+    "page": 51
+  },
+  {
+    "id": "inthis-51-13",
+    "word": "inthis",
+    "posRaw": "",
+    "meaningZh": "amazin (foo",
+    "frequencyGroup": null,
+    "page": 51
+  },
+  {
+    "id": "os-51-16",
+    "word": "os",
+    "posRaw": "",
+    "meaningZh": "[500",
+    "frequencyGroup": null,
+    "page": 51
+  },
+  {
+    "id": "forme-51-17",
+    "word": "forme",
+    "posRaw": "",
+    "meaningZh": "sewn (00",
+    "frequencyGroup": null,
+    "page": 51
+  },
+  {
+    "id": "vee-51-18",
+    "word": "vee",
+    "posRaw": "",
+    "meaningZh": "bine",
+    "frequencyGroup": 0,
+    "page": 51
+  },
+  {
+    "id": "vie-51-19",
+    "word": "vie",
+    "posRaw": "",
+    "meaningZh": "meses",
+    "frequencyGroup": null,
+    "page": 51
+  },
+  {
+    "id": "cane-51-21",
+    "word": "cane",
+    "posRaw": "",
+    "meaningZh": "lo",
+    "frequencyGroup": null,
+    "page": 51
+  },
+  {
+    "id": "Fe-52-2",
+    "word": "Fe",
+    "posRaw": "",
+    "meaningZh": "ce",
+    "frequencyGroup": null,
+    "page": 52
+  },
+  {
+    "id": "oo-52-3",
+    "word": "oo",
+    "posRaw": "",
+    "meaningZh": "mamas miesae (00",
+    "frequencyGroup": null,
+    "page": 52
+  },
+  {
+    "id": "tine-52-5",
+    "word": "tine",
+    "posRaw": "",
+    "meaningZh": "aie",
+    "frequencyGroup": 0,
+    "page": 52
+  },
+  {
+    "id": "nt-52-7",
+    "word": "nt",
+    "posRaw": "",
+    "meaningZh": "omens ‘0",
+    "frequencyGroup": null,
+    "page": 52
+  },
+  {
+    "id": "ne-52-8",
+    "word": "ne",
+    "posRaw": "",
+    "meaningZh": "vane iawiae",
+    "frequencyGroup": 0,
+    "page": 52
+  },
+  {
+    "id": "ine-52-10",
+    "word": "ine",
+    "posRaw": "",
+    "meaningZh": "menem wee (000",
+    "frequencyGroup": null,
+    "page": 52
+  },
+  {
+    "id": "xu-52-11",
+    "word": "xu",
+    "posRaw": "",
+    "meaningZh": "niwas =i",
+    "frequencyGroup": null,
+    "page": 52
+  },
+  {
+    "id": "mie-52-12",
+    "word": "mie",
+    "posRaw": "",
+    "meaningZh": "aimee",
+    "frequencyGroup": 0,
+    "page": 52
+  },
+  {
+    "id": "oom-52-16",
+    "word": "oom",
+    "posRaw": "",
+    "meaningZh": "erie 到",
+    "frequencyGroup": null,
+    "page": 52
+  },
+  {
+    "id": "ont-52-17",
+    "word": "ont",
+    "posRaw": "",
+    "meaningZh": "obieew ——*i0",
+    "frequencyGroup": null,
+    "page": 52
+  },
+  {
+    "id": "jm-52-18",
+    "word": "jm",
+    "posRaw": "",
+    "meaningZh": "ine",
+    "frequencyGroup": null,
+    "page": 52
+  },
+  {
+    "id": "onet-52-19",
+    "word": "onet",
+    "posRaw": "",
+    "meaningZh": "iemwe wane ————i00",
+    "frequencyGroup": null,
+    "page": 52
+  },
+  {
+    "id": "hina-52-22",
+    "word": "hina",
+    "posRaw": "",
+    "meaningZh": "*i0",
+    "frequencyGroup": null,
+    "page": 52
+  },
+  {
+    "id": "Copyright-53-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "© 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 53
+  },
+  {
+    "id": "esi-53-4",
+    "word": "esi",
+    "posRaw": "",
+    "meaningZh": "niae =i",
+    "frequencyGroup": null,
+    "page": 53
+  },
+  {
+    "id": "oe-53-5",
+    "word": "oe",
+    "posRaw": "",
+    "meaningZh": "ohms me =i",
+    "frequencyGroup": null,
+    "page": 53
+  },
+  {
+    "id": "one-53-6",
+    "word": "one",
+    "posRaw": "",
+    "meaningZh": "eve (il",
+    "frequencyGroup": null,
+    "page": 53
+  },
+  {
+    "id": "oo-53-7",
+    "word": "oo",
+    "posRaw": "",
+    "meaningZh": "ieee",
+    "frequencyGroup": 0,
+    "page": 53
+  },
+  {
+    "id": "on-53-8",
+    "word": "on",
+    "posRaw": "",
+    "meaningZh": "aba",
+    "frequencyGroup": null,
+    "page": 53
+  },
+  {
+    "id": "mi-53-9",
+    "word": "mi",
+    "posRaw": "",
+    "meaningZh": "[toms aia ———*(00",
+    "frequencyGroup": null,
+    "page": 53
+  },
+  {
+    "id": "or-53-10",
+    "word": "or",
+    "posRaw": "",
+    "meaningZh": "eimei0",
+    "frequencyGroup": null,
+    "page": 53
+  },
+  {
+    "id": "jou-53-11",
+    "word": "jou",
+    "posRaw": "",
+    "meaningZh": "aise (ic",
+    "frequencyGroup": null,
+    "page": 53
+  },
+  {
+    "id": "Ee-53-14",
+    "word": "Ee",
+    "posRaw": "",
+    "meaningZh": "ee",
+    "frequencyGroup": null,
+    "page": 53
+  },
+  {
+    "id": "ve-53-16",
+    "word": "ve",
+    "posRaw": "",
+    "meaningZh": "tommemee ————i00",
+    "frequencyGroup": null,
+    "page": 53
+  },
+  {
+    "id": "ook-53-17",
+    "word": "ook",
+    "posRaw": "",
+    "meaningZh": "mse ———i0",
+    "frequencyGroup": null,
+    "page": 53
+  },
+  {
+    "id": "Ea-53-18",
+    "word": "Ea",
+    "posRaw": "",
+    "meaningZh": "eC",
+    "frequencyGroup": null,
+    "page": 53
+  },
+  {
+    "id": "cine-53-19",
+    "word": "cine",
+    "posRaw": "",
+    "meaningZh": "[nie",
+    "frequencyGroup": null,
+    "page": 53
+  },
+  {
+    "id": "et-53-21",
+    "word": "et",
+    "posRaw": "",
+    "meaningZh": "wm aoe —i0",
+    "frequencyGroup": null,
+    "page": 53
+  },
+  {
+    "id": "coal-53-22",
+    "word": "coal",
+    "posRaw": "",
+    "meaningZh": "ewer: mia",
+    "frequencyGroup": 0,
+    "page": 53
+  },
+  {
+    "id": "om-53-23",
+    "word": "om",
+    "posRaw": "",
+    "meaningZh": "ieee (a0",
+    "frequencyGroup": null,
+    "page": 53
+  },
+  {
+    "id": "cea-54-4",
+    "word": "cea",
+    "posRaw": "",
+    "meaningZh": "[emia =i",
+    "frequencyGroup": null,
+    "page": 54
+  },
+  {
+    "id": "fs-54-7",
+    "word": "fs",
+    "posRaw": "",
+    "meaningZh": "(sania maaan ‘irl",
+    "frequencyGroup": 0,
+    "page": 54
+  },
+  {
+    "id": "ao-54-8",
+    "word": "ao",
+    "posRaw": "",
+    "meaningZh": "ium «io",
+    "frequencyGroup": null,
+    "page": 54
+  },
+  {
+    "id": "face-54-9",
+    "word": "face",
+    "posRaw": "",
+    "meaningZh": "(ave SSS*i",
+    "frequencyGroup": null,
+    "page": 54
+  },
+  {
+    "id": "fot-54-11",
+    "word": "fot",
+    "posRaw": "",
+    "meaningZh": "siarmine =i",
+    "frequencyGroup": null,
+    "page": 54
+  },
+  {
+    "id": "fo-54-12",
+    "word": "fo",
+    "posRaw": "",
+    "meaningZh": "misuse —SSSSC*i OO",
+    "frequencyGroup": null,
+    "page": 54
+  },
+  {
+    "id": "fests-54-14",
+    "word": "fests",
+    "posRaw": "",
+    "meaningZh": "[simassimwain =i",
+    "frequencyGroup": 0,
+    "page": 54
+  },
+  {
+    "id": "ft-54-15",
+    "word": "ft",
+    "posRaw": "",
+    "meaningZh": "[siowpesmias——*ifoo",
+    "frequencyGroup": null,
+    "page": 54
+  },
+  {
+    "id": "foe-54-17",
+    "word": "foe",
+    "posRaw": "",
+    "meaningZh": "[komm eens [ol",
+    "frequencyGroup": 50,
+    "page": 54
+  },
+  {
+    "id": "fee-54-20",
+    "word": "fee",
+    "posRaw": "",
+    "meaningZh": "[min *i",
+    "frequencyGroup": null,
+    "page": 54
+  },
+  {
+    "id": "et-54-22",
+    "word": "et",
+    "posRaw": "",
+    "meaningZh": "iow so",
+    "frequencyGroup": null,
+    "page": 54
+  },
+  {
+    "id": "Copyright-55-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "© 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 55
+  },
+  {
+    "id": "mane-55-5",
+    "word": "mane",
+    "posRaw": "",
+    "meaningZh": "io",
+    "frequencyGroup": null,
+    "page": 55
+  },
+  {
+    "id": "one-55-6",
+    "word": "one",
+    "posRaw": "",
+    "meaningZh": "nnawe ic",
+    "frequencyGroup": null,
+    "page": 55
+  },
+  {
+    "id": "ics-55-7",
+    "word": "ics",
+    "posRaw": "",
+    "meaningZh": "[aime",
+    "frequencyGroup": 0,
+    "page": 55
+  },
+  {
+    "id": "me-55-8",
+    "word": "me",
+    "posRaw": "",
+    "meaningZh": "sea =i",
+    "frequencyGroup": null,
+    "page": 55
+  },
+  {
+    "id": "ets-55-9",
+    "word": "ets",
+    "posRaw": "",
+    "meaningZh": "obimaw",
+    "frequencyGroup": 0,
+    "page": 55
+  },
+  {
+    "id": "eo-55-10",
+    "word": "eo",
+    "posRaw": "",
+    "meaningZh": "ata",
+    "frequencyGroup": null,
+    "page": 55
+  },
+  {
+    "id": "wre-55-11",
+    "word": "wre",
+    "posRaw": "",
+    "meaningZh": "00",
+    "frequencyGroup": null,
+    "page": 55
+  },
+  {
+    "id": "io-55-12",
+    "word": "io",
+    "posRaw": "",
+    "meaningZh": "siemens (i000",
+    "frequencyGroup": null,
+    "page": 55
+  },
+  {
+    "id": "top-55-13",
+    "word": "top",
+    "posRaw": "",
+    "meaningZh": "ROR wma —_[[500",
+    "frequencyGroup": null,
+    "page": 55
+  },
+  {
+    "id": "to-55-14",
+    "word": "to",
+    "posRaw": "",
+    "meaningZh": "meeeANRW: mi [000",
+    "frequencyGroup": null,
+    "page": 55
+  },
+  {
+    "id": "oe-55-15",
+    "word": "oe",
+    "posRaw": "",
+    "meaningZh": "ams ewene ‘00",
+    "frequencyGroup": null,
+    "page": 55
+  },
+  {
+    "id": "set-55-16",
+    "word": "set",
+    "posRaw": "",
+    "meaningZh": "i-x",
+    "frequencyGroup": 0,
+    "page": 55
+  },
+  {
+    "id": "toate-55-17",
+    "word": "toate",
+    "posRaw": "",
+    "meaningZh": "0",
+    "frequencyGroup": null,
+    "page": 55
+  },
+  {
+    "id": "too-55-20",
+    "word": "too",
+    "posRaw": "",
+    "meaningZh": "imacas =i",
+    "frequencyGroup": null,
+    "page": 55
+  },
+  {
+    "id": "feat-55-21",
+    "word": "feat",
+    "posRaw": "",
+    "meaningZh": "omeee io",
+    "frequencyGroup": null,
+    "page": 55
+  },
+  {
+    "id": "a-55-22",
+    "word": "a",
+    "posRaw": "",
+    "meaningZh": "ianinn i",
+    "frequencyGroup": null,
+    "page": 55
+  },
+  {
+    "id": "ene-56-3",
+    "word": "ene",
+    "posRaw": "",
+    "meaningZh": "“i",
+    "frequencyGroup": null,
+    "page": 56
+  },
+  {
+    "id": "tne-56-5",
+    "word": "tne",
+    "posRaw": "",
+    "meaningZh": "[nbawinw",
+    "frequencyGroup": 0,
+    "page": 56
+  },
+  {
+    "id": "ene-56-7",
+    "word": "ene",
+    "posRaw": "",
+    "meaningZh": "nnwe ‘ia",
+    "frequencyGroup": null,
+    "page": 56
+  },
+  {
+    "id": "nh-56-8",
+    "word": "nh",
+    "posRaw": "",
+    "meaningZh": "eae i",
+    "frequencyGroup": null,
+    "page": 56
+  },
+  {
+    "id": "tee-56-13",
+    "word": "tee",
+    "posRaw": "",
+    "meaningZh": "0",
+    "frequencyGroup": null,
+    "page": 56
+  },
+  {
+    "id": "tee-56-14",
+    "word": "tee",
+    "posRaw": "",
+    "meaningZh": "awe",
+    "frequencyGroup": 0,
+    "page": 56
+  },
+  {
+    "id": "thar-56-15",
+    "word": "thar",
+    "posRaw": "",
+    "meaningZh": "pata 還還加DE到",
+    "frequencyGroup": null,
+    "page": 56
+  },
+  {
+    "id": "mt-56-16",
+    "word": "mt",
+    "posRaw": "",
+    "meaningZh": "hiasawinen",
+    "frequencyGroup": 0,
+    "page": 56
+  },
+  {
+    "id": "mith-56-17",
+    "word": "mith",
+    "posRaw": "",
+    "meaningZh": "teas min —i0",
+    "frequencyGroup": null,
+    "page": 56
+  },
+  {
+    "id": "te-56-18",
+    "word": "te",
+    "posRaw": "",
+    "meaningZh": "ohne mimeawe",
+    "frequencyGroup": 0,
+    "page": 56
+  },
+  {
+    "id": "mane-56-19",
+    "word": "mane",
+    "posRaw": "",
+    "meaningZh": "(0",
+    "frequencyGroup": null,
+    "page": 56
+  },
+  {
+    "id": "tenia-56-20",
+    "word": "tenia",
+    "posRaw": "",
+    "meaningZh": "0",
+    "frequencyGroup": null,
+    "page": 56
+  },
+  {
+    "id": "nie-56-21",
+    "word": "nie",
+    "posRaw": "",
+    "meaningZh": "ntae =i",
+    "frequencyGroup": null,
+    "page": 56
+  },
+  {
+    "id": "Copyright-57-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "© 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 57
+  },
+  {
+    "id": "ibe-57-5",
+    "word": "ibe",
+    "posRaw": "",
+    "meaningZh": "anee",
+    "frequencyGroup": 0,
+    "page": 57
+  },
+  {
+    "id": "ime-57-8",
+    "word": "ime",
+    "posRaw": "",
+    "meaningZh": "vai",
+    "frequencyGroup": null,
+    "page": 57
+  },
+  {
+    "id": "ime-57-9",
+    "word": "ime",
+    "posRaw": "",
+    "meaningZh": "aaseervowne",
+    "frequencyGroup": 0,
+    "page": 57
+  },
+  {
+    "id": "oni-57-10",
+    "word": "oni",
+    "posRaw": "",
+    "meaningZh": "aime ‘i",
+    "frequencyGroup": null,
+    "page": 57
+  },
+  {
+    "id": "ime-57-11",
+    "word": "ime",
+    "posRaw": "",
+    "meaningZh": "abana ic",
+    "frequencyGroup": null,
+    "page": 57
+  },
+  {
+    "id": "mt-57-12",
+    "word": "mt",
+    "posRaw": "",
+    "meaningZh": "nme io",
+    "frequencyGroup": null,
+    "page": 57
+  },
+  {
+    "id": "tot-57-13",
+    "word": "tot",
+    "posRaw": "",
+    "meaningZh": "sawsaeer mie —i00",
+    "frequencyGroup": null,
+    "page": 57
+  },
+  {
+    "id": "tow-57-14",
+    "word": "tow",
+    "posRaw": "",
+    "meaningZh": "nee simesewins—io00",
+    "frequencyGroup": null,
+    "page": 57
+  },
+  {
+    "id": "toe-57-15",
+    "word": "toe",
+    "posRaw": "",
+    "meaningZh": "an: mie —i00",
+    "frequencyGroup": null,
+    "page": 57
+  },
+  {
+    "id": "oe-57-17",
+    "word": "oe",
+    "posRaw": "",
+    "meaningZh": "bias minis ————00",
+    "frequencyGroup": null,
+    "page": 57
+  },
+  {
+    "id": "ie-57-19",
+    "word": "ie",
+    "posRaw": "",
+    "meaningZh": "sree",
+    "frequencyGroup": 0,
+    "page": 57
+  },
+  {
+    "id": "Es-57-20",
+    "word": "Es",
+    "posRaw": "",
+    "meaningZh": "mamisiin",
+    "frequencyGroup": 500,
+    "page": 57
+  },
+  {
+    "id": "ee-58-3",
+    "word": "ee",
+    "posRaw": "",
+    "meaningZh": "ate",
+    "frequencyGroup": 0,
+    "page": 58
+  },
+  {
+    "id": "eed-58-5",
+    "word": "eed",
+    "posRaw": "",
+    "meaningZh": "ntwan (0",
+    "frequencyGroup": null,
+    "page": 58
+  },
+  {
+    "id": "ES-58-6",
+    "word": "ES",
+    "posRaw": "",
+    "meaningZh": "到",
+    "frequencyGroup": null,
+    "page": 58
+  },
+  {
+    "id": "cohen-58-7",
+    "word": "cohen",
+    "posRaw": "",
+    "meaningZh": "mane",
+    "frequencyGroup": 0,
+    "page": 58
+  },
+  {
+    "id": "Ee-58-8",
+    "word": "Ee",
+    "posRaw": "",
+    "meaningZh": "還一補神罰罰罰國神",
+    "frequencyGroup": null,
+    "page": 58
+  },
+  {
+    "id": "ese-58-10",
+    "word": "ese",
+    "posRaw": "",
+    "meaningZh": "ata",
+    "frequencyGroup": null,
+    "page": 58
+  },
+  {
+    "id": "ie-58-11",
+    "word": "ie",
+    "posRaw": "",
+    "meaningZh": "ohinewr wine",
+    "frequencyGroup": 0,
+    "page": 58
+  },
+  {
+    "id": "oe-58-13",
+    "word": "oe",
+    "posRaw": "",
+    "meaningZh": "ieeeniwnsen——*ioo",
+    "frequencyGroup": null,
+    "page": 58
+  },
+  {
+    "id": "ots-58-17",
+    "word": "ots",
+    "posRaw": "",
+    "meaningZh": "esas (500",
+    "frequencyGroup": null,
+    "page": 58
+  },
+  {
+    "id": "om-58-18",
+    "word": "om",
+    "posRaw": "",
+    "meaningZh": "tee “ic",
+    "frequencyGroup": null,
+    "page": 58
+  },
+  {
+    "id": "i-58-20",
+    "word": "i",
+    "posRaw": "",
+    "meaningZh": "ieee =i",
+    "frequencyGroup": null,
+    "page": 58
+  },
+  {
+    "id": "ie-58-22",
+    "word": "ie",
+    "posRaw": "",
+    "meaningZh": "nina",
+    "frequencyGroup": 0,
+    "page": 58
+  },
+  {
+    "id": "Copyright-59-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "© 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 59
+  },
+  {
+    "id": "oe-59-3",
+    "word": "oe",
+    "posRaw": "",
+    "meaningZh": "[wwe wma ‘0",
+    "frequencyGroup": null,
+    "page": 59
+  },
+  {
+    "id": "FS-59-4",
+    "word": "FS",
+    "posRaw": "",
+    "meaningZh": "Ce",
+    "frequencyGroup": null,
+    "page": 59
+  },
+  {
+    "id": "sh-59-5",
+    "word": "sh",
+    "posRaw": "",
+    "meaningZh": "nbs singsnowe—————*(0",
+    "frequencyGroup": null,
+    "page": 59
+  },
+  {
+    "id": "iv-59-6",
+    "word": "iv",
+    "posRaw": "",
+    "meaningZh": "nian =i",
+    "frequencyGroup": null,
+    "page": 59
+  },
+  {
+    "id": "se-59-7",
+    "word": "se",
+    "posRaw": "",
+    "meaningZh": "snmewninae——*i0",
+    "frequencyGroup": null,
+    "page": 59
+  },
+  {
+    "id": "sao-59-9",
+    "word": "sao",
+    "posRaw": "",
+    "meaningZh": "naass",
+    "frequencyGroup": 0,
+    "page": 59
+  },
+  {
+    "id": "st-59-10",
+    "word": "st",
+    "posRaw": "",
+    "meaningZh": "ohimewmewe mee (0",
+    "frequencyGroup": null,
+    "page": 59
+  },
+  {
+    "id": "wwe-59-11",
+    "word": "wwe",
+    "posRaw": "",
+    "meaningZh": "0",
+    "frequencyGroup": null,
+    "page": 59
+  },
+  {
+    "id": "som-59-13",
+    "word": "som",
+    "posRaw": "",
+    "meaningZh": "ohiewrmie",
+    "frequencyGroup": 0,
+    "page": 59
+  },
+  {
+    "id": "eect-59-14",
+    "word": "eect",
+    "posRaw": "",
+    "meaningZh": "rere io",
+    "frequencyGroup": null,
+    "page": 59
+  },
+  {
+    "id": "eine-59-16",
+    "word": "eine",
+    "posRaw": "",
+    "meaningZh": "0",
+    "frequencyGroup": null,
+    "page": 59
+  },
+  {
+    "id": "sie-59-18",
+    "word": "sie",
+    "posRaw": "",
+    "meaningZh": "enews mie",
+    "frequencyGroup": 0,
+    "page": 59
+  },
+  {
+    "id": "fee-59-22",
+    "word": "fee",
+    "posRaw": "",
+    "meaningZh": "ieee",
+    "frequencyGroup": null,
+    "page": 59
+  },
+  {
+    "id": "set-59-23",
+    "word": "set",
+    "posRaw": "",
+    "meaningZh": "Fawr —i0",
+    "frequencyGroup": null,
+    "page": 59
+  },
+  {
+    "id": "aise-60-4",
+    "word": "aise",
+    "posRaw": "",
+    "meaningZh": "=i",
+    "frequencyGroup": null,
+    "page": 60
+  },
+  {
+    "id": "sie-60-6",
+    "word": "sie",
+    "posRaw": "",
+    "meaningZh": "seein",
+    "frequencyGroup": null,
+    "page": 60
+  },
+  {
+    "id": "roster-60-7",
+    "word": "roster",
+    "posRaw": "",
+    "meaningZh": "iine loo",
+    "frequencyGroup": null,
+    "page": 60
+  },
+  {
+    "id": "aie-60-8",
+    "word": "aie",
+    "posRaw": "",
+    "meaningZh": "simi =i",
+    "frequencyGroup": null,
+    "page": 60
+  },
+  {
+    "id": "ce-60-9",
+    "word": "ce",
+    "posRaw": "",
+    "meaningZh": "[mie =i",
+    "frequencyGroup": null,
+    "page": 60
+  },
+  {
+    "id": "ssi-60-11",
+    "word": "ssi",
+    "posRaw": "",
+    "meaningZh": "[ohinewszan =i",
+    "frequencyGroup": null,
+    "page": 60
+  },
+  {
+    "id": "sas-60-12",
+    "word": "sas",
+    "posRaw": "",
+    "meaningZh": "a-aee Ci",
+    "frequencyGroup": null,
+    "page": 60
+  },
+  {
+    "id": "Ea-60-14",
+    "word": "Ea",
+    "posRaw": "",
+    "meaningZh": "Sc)",
+    "frequencyGroup": null,
+    "page": 60
+  },
+  {
+    "id": "sme-60-15",
+    "word": "sme",
+    "posRaw": "",
+    "meaningZh": "[mia nimwa =i",
+    "frequencyGroup": null,
+    "page": 60
+  },
+  {
+    "id": "sae-60-16",
+    "word": "sae",
+    "posRaw": "",
+    "meaningZh": "sem Ka ma |s|",
+    "frequencyGroup": 50,
+    "page": 60
+  },
+  {
+    "id": "time-60-17",
+    "word": "time",
+    "posRaw": "",
+    "meaningZh": "fo",
+    "frequencyGroup": null,
+    "page": 60
+  },
+  {
+    "id": "osm-60-20",
+    "word": "osm",
+    "posRaw": "",
+    "meaningZh": "‘al o50",
+    "frequencyGroup": null,
+    "page": 60
+  },
+  {
+    "id": "stone-60-21",
+    "word": "stone",
+    "posRaw": "",
+    "meaningZh": "S*i",
+    "frequencyGroup": 0,
+    "page": 60
+  },
+  {
+    "id": "int-60-22",
+    "word": "int",
+    "posRaw": "",
+    "meaningZh": "mel",
+    "frequencyGroup": 50,
+    "page": 60
+  },
+  {
+    "id": "Copyright-61-1",
+    "word": "Copyright",
+    "posRaw": "",
+    "meaningZh": "© 2025 Top Academy",
+    "frequencyGroup": null,
+    "page": 61
+  },
+  {
+    "id": "we-61-3",
+    "word": "we",
+    "posRaw": "",
+    "meaningZh": "[vee «iO",
+    "frequencyGroup": null,
+    "page": 61
+  },
+  {
+    "id": "tone-61-4",
+    "word": "tone",
+    "posRaw": "",
+    "meaningZh": "‘oo",
+    "frequencyGroup": null,
+    "page": 61
+  },
+  {
+    "id": "Ee-61-5",
+    "word": "Ee",
+    "posRaw": "",
+    "meaningZh": "I)",
+    "frequencyGroup": null,
+    "page": 61
+  },
+  {
+    "id": "ot-61-7",
+    "word": "ot",
+    "posRaw": "",
+    "meaningZh": "|oseosrwee ‘loo",
+    "frequencyGroup": null,
+    "page": 61
+  },
+  {
+    "id": "tie-61-8",
+    "word": "tie",
+    "posRaw": "",
+    "meaningZh": "[aster ise ‘elo",
+    "frequencyGroup": null,
+    "page": 61
+  },
+  {
+    "id": "ry-61-11",
+    "word": "ry",
+    "posRaw": "",
+    "meaningZh": "nem ‘lo",
+    "frequencyGroup": null,
+    "page": 61
+  },
+  {
+    "id": "tee-61-12",
+    "word": "tee",
+    "posRaw": "",
+    "meaningZh": "mee io",
+    "frequencyGroup": null,
+    "page": 61
+  },
+  {
+    "id": "ite-61-13",
+    "word": "ite",
+    "posRaw": "",
+    "meaningZh": "evieaam wien ———‘fel00",
+    "frequencyGroup": null,
+    "page": 61
+  },
+  {
+    "id": "oe-61-15",
+    "word": "oe",
+    "posRaw": "",
+    "meaningZh": "ieee loo",
+    "frequencyGroup": null,
+    "page": 61
+  },
+  {
+    "id": "it-61-16",
+    "word": "it",
+    "posRaw": "",
+    "meaningZh": "vas wineioe ———eo00",
+    "frequencyGroup": null,
+    "page": 61
+  },
+  {
+    "id": "desman-61-17",
+    "word": "desman",
+    "posRaw": "",
+    "meaningZh": "wee lo",
+    "frequencyGroup": null,
+    "page": 61
+  },
+  {
+    "id": "i-61-18",
+    "word": "i",
+    "posRaw": "",
+    "meaningZh": "isinweseae ‘elo",
+    "frequencyGroup": null,
+    "page": 61
+  },
+  {
+    "id": "rane-61-19",
+    "word": "rane",
+    "posRaw": "",
+    "meaningZh": "‘io",
+    "frequencyGroup": null,
+    "page": 61
+  },
+  {
+    "id": "riety-61-20",
+    "word": "riety",
+    "posRaw": "",
+    "meaningZh": "nee ‘oo",
+    "frequencyGroup": null,
+    "page": 61
+  },
+  {
+    "id": "im-61-21",
+    "word": "im",
+    "posRaw": "",
+    "meaningZh": "wie io",
+    "frequencyGroup": null,
+    "page": 61
+  },
+  {
+    "id": "om-61-22",
+    "word": "om",
+    "posRaw": "",
+    "meaningZh": "wens ‘oo",
+    "frequencyGroup": null,
+    "page": 61
+  },
+  {
+    "id": "wwe-61-23",
+    "word": "wwe",
+    "posRaw": "",
+    "meaningZh": "nme loo",
+    "frequencyGroup": null,
+    "page": 61
+  },
+  {
+    "id": "we-62-2",
+    "word": "we",
+    "posRaw": "",
+    "meaningZh": "ane =i",
+    "frequencyGroup": null,
+    "page": 62
+  },
+  {
+    "id": "sy-62-5",
+    "word": "sy",
+    "posRaw": "",
+    "meaningZh": "akan aims Ke ———_—(500",
+    "frequencyGroup": null,
+    "page": 62
+  },
+  {
+    "id": "sie-62-6",
+    "word": "sie",
+    "posRaw": "",
+    "meaningZh": "nae",
+    "frequencyGroup": 0,
+    "page": 62
+  },
+  {
+    "id": "ies-62-7",
+    "word": "ies",
+    "posRaw": "",
+    "meaningZh": "naeee (0",
+    "frequencyGroup": null,
+    "page": 62
+  },
+  {
+    "id": "smn-62-8",
+    "word": "smn",
+    "posRaw": "",
+    "meaningZh": "0",
+    "frequencyGroup": null,
+    "page": 62
+  },
+  {
+    "id": "sie-62-10",
+    "word": "sie",
+    "posRaw": "",
+    "meaningZh": "ans amine",
+    "frequencyGroup": 0,
+    "page": 62
+  },
+  {
+    "id": "sme-62-11",
+    "word": "sme",
+    "posRaw": "",
+    "meaningZh": "ems nak io",
+    "frequencyGroup": null,
+    "page": 62
+  },
+  {
+    "id": "ok-62-12",
+    "word": "ok",
+    "posRaw": "",
+    "meaningZh": "bie io",
+    "frequencyGroup": null,
+    "page": 62
+  },
+  {
+    "id": "ty-62-13",
+    "word": "ty",
+    "posRaw": "",
+    "meaningZh": "nni@ io",
+    "frequencyGroup": null,
+    "page": 62
+  },
+  {
+    "id": "seit-62-16",
+    "word": "seit",
+    "posRaw": "",
+    "meaningZh": "[nina",
+    "frequencyGroup": 0,
+    "page": 62
+  },
+  {
+    "id": "ymin-62-20",
+    "word": "ymin",
+    "posRaw": "",
+    "meaningZh": "0",
+    "frequencyGroup": null,
+    "page": 62
+  }
+]

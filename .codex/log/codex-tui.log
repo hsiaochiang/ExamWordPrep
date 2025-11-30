@@ -1,0 +1,2373 @@
+[2m2025-11-29T14:31:53.975089Z[0m [32m INFO[0m cwd not set, using current dir
+[2m2025-11-29T14:36:05.465223Z[0m [32m INFO[0m spawning ghost snapshot task
+[2m2025-11-29T14:36:05.473996Z[0m [32m INFO[0m skipping ghost snapshot because current directory is not a Git repository [3msub_id[0m[2m=[0m"1"
+[2m2025-11-29T14:36:05.474084Z[0m [32m INFO[0m ghost snapshot gate marked ready
+[2m2025-11-29T14:36:22.538873Z[0m [32m INFO[0m ToolCall: shell_command {"command":"pwd","workdir":"/mnt/d/program/ExamWordPrep"}
+[2m2025-11-29T14:36:28.732616Z[0m [32m INFO[0m ToolCall: shell_command {"command":"ls","workdir":"/mnt/d/program/ExamWordPrep"}
+[2m2025-11-29T14:36:33.254716Z[0m [32m INFO[0m ToolCall: shell_command {"command":"cat AGENTS.md","workdir":"/mnt/d/program/ExamWordPrep"}
+[2m2025-11-29T14:36:38.824738Z[0m [32m INFO[0m ToolCall: shell_command {"command":"cat 0source/會考單字學習網站.prompt.md","workdir":"/mnt/d/program/ExamWordPrep"}
+[2m2025-11-29T14:36:47.170580Z[0m [32m INFO[0m ToolCall: update_plan {"plan":[{"status":"in_progress","step":"檢視需求與專案結構，選擇技術棧與基本設定（TS/JS、React+Vite）"},{"status":"pending","step":"建立專案骨架與共用基礎：package.json、Vite 設定、基本樣式與路由框架"},{"status":"pending","step":"實作前端核心：Context、工具、頁面與元件（使用者端與管理者端）"},{"status":"pending","step":"加入 sample 資料、Node CLI PDF→JSON 工具與 README 說明"},{"status":"pending","step":"簡單自我檢查，回報進度與後續建議"}]}
+[2m2025-11-29T14:36:56.043597Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: package.json
++{
++  "name": "會考單字學習網站",
++  "version": "0.1.0",
++  "private": true,
++  "type": "module",
++  "scripts": {
++    "dev": "vite",
++    "build": "vite build",
++    "preview": "vite preview",
++    "convert-pdf": "node tools/convert-top-pdf-to-json.mjs sample.pdf public/data/words.json || true"
++  },
++  "dependencies": {
++    "nanoid": "^5.0.7",
++    "react": "^18.3.1",
++    "react-dom": "^18.3.1",
++    "react-router-dom": "^6.22.3"
++  },
++  "devDependencies": {
++    "@types/node": "^22.0.0",
++    "@types/react": "^18.3.4",
++    "@types/react-dom": "^18.3.0",
++    "@vitejs/plugin-react": "^4.3.1",
++    "typescript": "^5.5.4",
++    "vite": "^5.3.4",
++    "pdf-parse": "^1.1.1"
++  }
++}
+*** End Patch
+[2m2025-11-29T14:37:03.123277Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: tsconfig.json
++{
++  "compilerOptions": {
++    "target": "ES2020",
++    "useDefineForClassFields": true,
++    "lib": ["DOM", "DOM.Iterable", "ES2020"],
++    "module": "ESNext",
++    "skipLibCheck": true,
++    "moduleResolution": "Bundler",
++    "allowImportingTsExtensions": true,
++    "resolveJsonModule": true,
++    "isolatedModules": true,
++    "noEmit": true,
++    "jsx": "react-jsx",
++    "strict": true,
++    "esModuleInterop": true,
++    "forceConsistentCasingInFileNames": true
++  },
++  "include": ["src"],
++  "references": [{ "path": "./tsconfig.node.json" }]
++}
+*** End Patch
+[2m2025-11-29T14:37:09.066643Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: tsconfig.node.json
++{
++  "compilerOptions": {
++    "composite": true,
++    "skipLibCheck": true,
++    "module": "ESNext",
++    "moduleResolution": "Bundler",
++    "allowSyntheticDefaultImports": true
++  },
++  "include": ["vite.config.ts", "tools"]
++}
+*** End Patch
+[2m2025-11-29T14:37:13.702540Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: vite.config.ts
++import { defineConfig } from 'vite';
++import react from '@vitejs/plugin-react';
++
++export default defineConfig({
++  plugins: [react()],
++  server: {
++    port: 5173
++  }
++});
+*** End Patch
+[2m2025-11-29T14:37:19.005031Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: index.html
++<!DOCTYPE html>
++<html lang="zh-Hant">
++  <head>
++    <meta charset="UTF-8" />
++    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
++    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <title>會考單字學習網站</title>
++  </head>
++  <body>
++    <div id="root"></div>
++    <script type="module" src="/src/main.tsx"></script>
++  </body>
++</html>
+*** End Patch
+[2m2025-11-29T14:37:36.515636Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: src/main.tsx
++import React from 'react';
++import ReactDOM from 'react-dom/client';
++import { HashRouter } from 'react-router-dom';
++import App from './App';
++import './index.css';
++import { AuthProvider } from './store/AuthContext';
++import { WordSetProvider } from './store/WordSetContext';
++
++ReactDOM.createRoot(document.getElementById('root')!).render(
++  <React.StrictMode>
++    <HashRouter>
++      <AuthProvider>
++        <WordSetProvider>
++          <App />
++        </WordSetProvider>
++      </AuthProvider>
++    </HashRouter>
++  </React.StrictMode>
++);
+*** End Patch
+[2m2025-11-29T14:37:42.775604Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: src/App.tsx
++import { Outlet } from 'react-router-dom';
++import AppRouter from './router';
++import Navbar from './components/Navbar';
++import Footer from './components/Footer';
++import { useAuth } from './store/AuthContext';
++
++function Shell() {
++  const { currentUser } = useAuth();
++  return (
++    <div className="app-shell">
++      {currentUser && <Navbar />}
++      <main className="app-main">
++        <Outlet />
++      </main>
++      <Footer />
++    </div>
++  );
++}
++
++function App() {
++  return <AppRouter shell={<Shell />} />;
++}
++
++export default App;
+*** End Patch
+[2m2025-11-29T14:37:54.405574Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: src/router/index.tsx
++import { Navigate, Route, Routes } from 'react-router-dom';
++import LoginPage from '../pages/LoginPage';
++import UserDashboard from '../pages/UserDashboard';
++import WordListPage from '../pages/WordListPage';
++import FlashcardPage from '../pages/FlashcardPage';
++import QuizPage from '../pages/QuizPage';
++import HistoryPage from '../pages/HistoryPage';
++import SettingsPage from '../pages/SettingsPage';
++import AdminUsersPage from '../pages/AdminUsersPage';
++import AdminUserRecordsPage from '../pages/AdminUserRecordsPage';
++import { useAuth } from '../store/AuthContext';
++
++type Props = {
++  shell: JSX.Element;
++};
++
++function ProtectedRoute({ children }: { children: JSX.Element }) {
++  const { currentUser } = useAuth();
++  if (!currentUser) {
++    return <Navigate to="/login" replace />;
++  }
++  return children;
++}
++
++function AdminRoute({ children }: { children: JSX.Element }) {
++  const { currentUser } = useAuth();
++  if (!currentUser) return <Navigate to="/login" replace />;
++  if (!currentUser.isAdmin) return <Navigate to="/dashboard" replace />;
++  return children;
++}
++
++export default function AppRouter({ shell }: Props) {
++  return (
++    <Routes>
++      <Route path="/" element={<Navigate to="/login" replace />} />
++      <Route path="/login" element={<LoginPage />} />
++      <Route element={<ProtectedRoute>{shell}</ProtectedRoute>}>
++        <Route path="/dashboard" element={<UserDashboard />} />
++        <Route path="/words" element={<WordListPage />} />
++        <Route path="/flashcards" element={<FlashcardPage />} />
++        <Route path="/quiz" element={<QuizPage />} />
++        <Route path="/history" element={<HistoryPage />} />
++        <Route path="/settings" element={<SettingsPage />} />
++      </Route>
++      <Route
++        element={
++          <AdminRoute>
++            {shell}
++          </AdminRoute>
++        }
++      >
++        <Route path="/admin/users" element={<AdminUsersPage />} />
++        <Route path="/admin/records" element={<AdminUserRecordsPage />} />
++      </Route>
++      <Route path="*" element={<Navigate to="/login" replace />} />
++    </Routes>
++  );
++}
+*** End Patch
+[2m2025-11-29T14:38:03.821062Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: src/index.css
++:root {
++  font-family: 'Noto Sans TC', 'Microsoft JhengHei', system-ui, -apple-system, sans-serif;
++  line-height: 1.5;
++  color: #1f2933;
++  background-color: #f6f7fb;
++}
++
++* {
++  box-sizing: border-box;
++}
++
++body {
++  margin: 0;
++  background-color: #f6f7fb;
++}
++
++.app-shell {
++  min-height: 100vh;
++  display: flex;
++  flex-direction: column;
++}
++
++.app-main {
++  flex: 1;
++  padding: 16px;
++}
++
++.card {
++  background: #ffffff;
++  border-radius: 12px;
++  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
++  padding: 16px;
++  margin-bottom: 16px;
++}
++
++.btn {
++  padding: 10px 14px;
++  background: #2563eb;
++  color: #fff;
++  border: none;
++  border-radius: 8px;
++  cursor: pointer;
++  transition: background 0.2s;
++}
++
++.btn:hover {
++  background: #1d4ed8;
++}
++
++.btn.secondary {
++  background: #eef2ff;
++  color: #1d4ed8;
++}
++
++.btn.danger {
++  background: #dc2626;
++}
++
++.input {
++  width: 100%;
++  padding: 10px;
++  border: 1px solid #d1d5db;
++  border-radius: 8px;
++}
++
++.grid {
++  display: grid;
++  gap: 12px;
++}
++
++@media (min-width: 900px) {
++  .grid.two {
++    grid-template-columns: repeat(2, minmax(0, 1fr));
++  }
++}
+*** End Patch
+[2m2025-11-29T14:38:21.570871Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: src/components/Navbar.tsx
++import { useState } from 'react';
++import { Link, useLocation } from 'react-router-dom';
++import { useAuth } from '../store/AuthContext';
++
++const links = [
++  { to: '/dashboard', label: '單字範圍選擇' },
++  { to: '/words', label: '單字總覽' },
++  { to: '/flashcards', label: '學習卡' },
++  { to: '/quiz', label: '測驗' },
++  { to: '/history', label: '歷史紀錄' },
++  { to: '/settings', label: '設定' }
++];
++
++export default function Navbar() {
++  const { currentUser, logout } = useAuth();
++  const { pathname } = useLocation();
++  const [open, setOpen] = useState(false);
++  const isAdmin = currentUser?.isAdmin;
++
++  return (
++    <header className="nav">
++      <div className="nav-brand">
++        <Link to="/dashboard">會考單字學習網站</Link>
++        <button className="nav-toggle" onClick={() => setOpen(!open)} aria-label="開啟選單">
++          ☰
++        </button>
++      </div>
++      <nav className={`nav-links ${open ? 'open' : ''}`}>
++        {links.map(link => (
++          <Link key={link.to} to={link.to} className={pathname === link.to ? 'active' : ''} onClick={() => setOpen(false)}>
++            {link.label}
++          </Link>
++        ))}
++        {isAdmin && (
++          <>
++            <Link to="/admin/users" className={pathname === '/admin/users' ? 'active' : ''} onClick={() => setOpen(false)}>
++              使用者管理
++            </Link>
++            <Link to="/admin/records" className={pathname === '/admin/records' ? 'active' : ''} onClick={() => setOpen(false)}>
++              使用者紀錄
++            </Link>
++          </>
++        )}
++        <button className="btn secondary" onClick={() => logout()} style={{ marginLeft: 8 }}>
++          登出
++        </button>
++      </nav>
++      <style>{`
++        .nav {
++          background: #ffffff;
++          border-bottom: 1px solid #e5e7eb;
++          padding: 12px 16px;
++          display: flex;
++          align-items: center;
++          justify-content: space-between;
++          position: sticky;
++          top: 0;
++          z-index: 10;
++        }
++        .nav-brand {
++          font-weight: 700;
++          display: flex;
++          align-items: center;
++          gap: 12px;
++        }
++        .nav-brand a {
++          text-decoration: none;
++          color: #111827;
++        }
++        .nav-links {
++          display: flex;
++          align-items: center;
++          gap: 12px;
++        }
++        .nav-links a {
++          text-decoration: none;
++          color: #1f2937;
++          padding: 6px 8px;
++          border-radius: 8px;
++        }
++        .nav-links a.active {
++          background: #eef2ff;
++          color: #1d4ed8;
++        }
++        .nav-toggle {
++          display: none;
++          background: none;
++          border: none;
++          font-size: 20px;
++          cursor: pointer;
++        }
++        @media (max-width: 820px) {
++          .nav {
++            flex-wrap: wrap;
++          }
++          .nav-toggle {
++            display: inline-block;
++          }
++          .nav-links {
++            display: ${open ? 'flex' : 'none'};
++            flex-direction: column;
++            width: 100%;
++            margin-top: 8px;
++            align-items: flex-start;
++          }
++        }
++      `}</style>
++    </header>
++  );
++}
+*** End Patch
+[2m2025-11-29T14:38:28.486736Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: src/components/Footer.tsx
++export default function Footer() {
++  return (
++    <footer style={{ textAlign: 'center', padding: '12px 16px', color: '#6b7280' }}>
++      會考單字學習網站 © 2025
++    </footer>
++  );
++}
+*** End Patch
+[2m2025-11-29T14:38:38.417126Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: src/utils/jsonSchema.ts
++export type SelectionType = 'pageRange' | 'frequency' | 'alphabet' | 'customList';
++export type QuizMode = 'enToZh' | 'zhToEn';
++export type Familiarity = 'unmarked' | 'known' | 'unknown';
++
++export interface WordItem {
++  id: string;
++  word: string;
++  posRaw: string;
++  meaningZh: string;
++  frequencyGroup: number;
++  page: number;
++}
++
++export interface User {
++  username: string;
++  password: string;
++  isAdmin: boolean;
++  createdAt: string;
++  lastLoginAt: string | null;
++}
++
++export interface SelectionCondition {
++  type: SelectionType;
++  pages?: [number, number];
++  frequencyGroup?: number | null;
++  alphabetRange?: [string, string];
++  customWords?: string[];
++}
++
++export interface QuizRecord {
++  mode: QuizMode;
++  totalQuestions: number;
++  correctCount: number;
++  accuracy: number;
++}
++
++export interface RecordItem {
++  username: string;
++  sessionId: string;
++  createdAt: string;
++  selectionCondition: SelectionCondition;
++  wordCount: number;
++  quiz: QuizRecord;
++  wrongWords: string[];
++}
++
++export interface UserSettings {
++  username: string;
++  maxWordsPerSession: number;
++  defaultSelectionType: SelectionType;
++  defaultQuizMode: QuizMode;
++  defaultTtsMode: 'wordOnly' | 'wordAndMeaning';
++  defaultTtsIntervalSec: number;
++}
++
++export interface AppData {
++  users: User[];
++  records: RecordItem[];
++  userSettings: UserSettings[];
++}
+*** End Patch
+[2m2025-11-29T14:38:47.903155Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: src/utils/localStorageHelpers.ts
++import { AppData, UserSettings } from './jsonSchema';
++
++const APP_KEY = 'wordsite:appdata';
++
++export function loadAppData(): AppData {
++  const raw = localStorage.getItem(APP_KEY);
++  if (!raw) {
++    return {
++      users: [
++        {
++          username: 'admin',
++          password: 'admin',
++          isAdmin: true,
++          createdAt: new Date().toISOString(),
++          lastLoginAt: null
++        }
++      ],
++      records: [],
++      userSettings: []
++    };
++  }
++  try {
++    return JSON.parse(raw) as AppData;
++  } catch (e) {
++    console.warn('LocalStorage 資料格式錯誤，重置為預設', e);
++    localStorage.removeItem(APP_KEY);
++    return loadAppData();
++  }
++}
++
++export function saveAppData(data: AppData) {
++  localStorage.setItem(APP_KEY, JSON.stringify(data));
++}
++
++export function upsertUserSettings(settings: UserSettings, data: AppData): AppData {
++  const idx = data.userSettings.findIndex(s => s.username === settings.username);
++  if (idx >= 0) {
++    data.userSettings[idx] = settings;
++  } else {
++    data.userSettings.push(settings);
++  }
++  return data;
++}
+*** End Patch
+[2m2025-11-29T14:38:56.385182Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: src/utils/tts.ts
++import { WordItem } from './jsonSchema';
++
++function ensureVoice(): SpeechSynthesisVoice | undefined {
++  const voices = speechSynthesis.getVoices();
++  return voices.find(v => v.lang.startsWith('en')) ?? voices[0];
++}
++
++export function speakWord(word: WordItem, withMeaning: boolean) {
++  if (!('speechSynthesis' in window)) {
++    alert('目前瀏覽器不支援語音朗讀，請改用其他瀏覽器。');
++    return;
++  }
++  speechSynthesis.cancel();
++  const wordUtter = new SpeechSynthesisUtterance(word.word);
++  wordUtter.voice = ensureVoice();
++  speechSynthesis.speak(wordUtter);
++  if (withMeaning) {
++    const meaningUtter = new SpeechSynthesisUtterance(word.meaningZh);
++    speechSynthesis.speak(meaningUtter);
++  }
++}
+*** End Patch
+[2m2025-11-29T14:39:06.800879Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: src/utils/quizGenerator.ts
++import { QuizMode, WordItem } from './jsonSchema';
++
++export interface QuizQuestionItem {
++  id: string;
++  prompt: string;
++  options: string[];
++  answer: string;
++  mode: QuizMode;
++}
++
++export function generateQuizQuestions(words: WordItem[], mode: QuizMode): QuizQuestionItem[] {
++  const shuffled = [...words].sort(() => Math.random() - 0.5);
++  return shuffled.map(word => {
++    const distractors = pickDistractors(words, word, mode);
++    const correct = mode === 'enToZh' ? word.meaningZh : word.word;
++    const prompt = mode === 'enToZh' ? word.word : word.meaningZh;
++    const options = shuffle([correct, ...distractors]);
++    return {
++      id: word.id,
++      prompt,
++      options,
++      answer: correct,
++      mode
++    };
++  });
++}
++
++function pickDistractors(words: WordItem[], target: WordItem, mode: QuizMode): string[] {
++  const pool = words.filter(w => w.id !== target.id);
++  const shuffled = shuffle(pool).slice(0, 3);
++  return shuffled.map(w => (mode === 'enToZh' ? w.meaningZh : w.word));
++}
++
++function shuffle<T>(arr: T[]): T[] {
++  const copied = [...arr];
++  for (let i = copied.length - 1; i > 0; i -= 1) {
++    const j = Math.floor(Math.random() * (i + 1));
++    [copied[i], copied[j]] = [copied[j], copied[i]];
++  }
++  return copied;
++}
+*** End Patch
+[2m2025-11-29T14:39:25.533401Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: src/components/WordTable.tsx
++import { useMemo, useState } from 'react';
++import { Familiarity, WordItem } from '../utils/jsonSchema';
++
++type Props = {
++  words: WordItem[];
++  familiarity: Record<string, Familiarity>;
++  onMark: (id: string, value: Familiarity) => void;
++};
++
++export default function WordTable({ words, familiarity, onMark }: Props) {
++  const [sortBy, setSortBy] = useState<'word' | 'frequency'>('word');
++  const [asc, setAsc] = useState(true);
++  const [onlyUnknown, setOnlyUnknown] = useState(false);
++
++  const viewWords = useMemo(() => {
++    let list = [...words];
++    if (onlyUnknown) {
++      list = list.filter(w => familiarity[w.id] === 'unknown');
++    }
++    list.sort((a, b) => {
++      const dir = asc ? 1 : -1;
++      if (sortBy === 'word') return a.word.localeCompare(b.word) * dir;
++      return (a.frequencyGroup - b.frequencyGroup) * dir;
++    });
++    return list;
++  }, [words, sortBy, asc, onlyUnknown, familiarity]);
++
++  return (
++    <div className="card">
++      <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 8 }}>
++        <button className="btn secondary" onClick={() => { setSortBy('word'); setAsc(!asc); }}>
++          字母排序 {asc ? '↑' : '↓'}
++        </button>
++        <button className="btn secondary" onClick={() => { setSortBy('frequency'); setAsc(!asc); }}>
++          出現次數排序 {asc ? '↑' : '↓'}
++        </button>
++        <label style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
++          <input type="checkbox" checked={onlyUnknown} onChange={e => setOnlyUnknown(e.target.checked)} />
++          僅顯示不熟單字
++        </label>
++      </div>
++      <div className="table-scroll">
++        <table className="word-table">
++          <thead>
++            <tr>
++              <th>單字</th>
++              <th>詞性</th>
++              <th>中文解釋</th>
++              <th>出現次數等級</th>
++              <th>熟悉度</th>
++            </tr>
++          </thead>
++          <tbody>
++            {viewWords.map(word => (
++              <tr key={word.id}>
++                <td>{word.word}</td>
++                <td>{word.posRaw}</td>
++                <td>{word.meaningZh}</td>
++                <td style={{ textAlign: 'center' }}>{word.frequencyGroup}</td>
++                <td>
++                  <div style={{ display: 'flex', gap: 6 }}>
++                    <button className="btn secondary" onClick={() => onMark(word.id, 'known')}>
++                      熟悉
++                    </button>
++                    <button className="btn secondary" onClick={() => onMark(word.id, 'unknown')}>
++                      不熟
++                    </button>
++                    <span>{familiarity[word.id] ?? '未標記'}</span>
++                  </div>
++                </td>
++              </tr>
++            ))}
++          </tbody>
++        </table>
++      </div>
++      <style>{`
++        .table-scroll { overflow-x: auto; }
++        .word-table { width: 100%; border-collapse: collapse; }
++        .word-table th, .word-table td { padding: 10px; border-bottom: 1px solid #e5e7eb; text-align: left; }
++        @media (max-width: 720px) {
++          .word-table, .word-table thead { display: none; }
++          .word-table tr { display: block; border: 1px solid #e5e7eb; border-radius: 8px; padding: 8px; margin-bottom: 10px; }
++          .word-table td { display: flex; justify-content: space-between; align-items: center; }
++          .word-table td::before { content: attr(data-label); font-weight: 600; margin-right: 6px; }
++        }
++      `}</style>
++    </div>
++  );
++}
+*** End Patch
+[2m2025-11-29T14:39:38.589298Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: src/components/WordCard.tsx
++import { Familiarity, WordItem } from '../utils/jsonSchema';
++
++type Props = {
++  word: WordItem;
++  flipped: boolean;
++  mode: 'enToZh' | 'zhToEn';
++  familiarity: Familiarity;
++  onFlip: () => void;
++  onMark: (value: Familiarity) => void;
++};
++
++export default function WordCard({ word, flipped, mode, familiarity, onFlip, onMark }: Props) {
++  const front = mode === 'enToZh' ? word.word : word.meaningZh;
++  const back = mode === 'enToZh' ? `${word.posRaw} ${word.meaningZh}` : `${word.word} (${word.posRaw})`;
++
++  return (
++    <div className="card" style={{ textAlign: 'center' }}>
++      <div className={`flash-card ${flipped ? 'flipped' : ''}`} onClick={onFlip}>
++        <div className="face front">{front}</div>
++        <div className="face back">{back}</div>
++      </div>
++      <div style={{ marginTop: 12, display: 'flex', justifyContent: 'center', gap: 8 }}>
++        <button className="btn secondary" onClick={onFlip}>翻面</button>
++        <button className="btn secondary" onClick={() => onMark('known')}>標記熟悉</button>
++        <button className="btn secondary" onClick={() => onMark('unknown')}>標記不熟</button>
++        <span>目前標記：{familiarity ?? '未標記'}</span>
++      </div>
++      <style>{`
++        .flash-card {
++          perspective: 1000px;
++          width: 100%;
++          min-height: 180px;
++          cursor: pointer;
++          position: relative;
++        }
++        .flash-card .face {
++          position: absolute;
++          inset: 0;
++          display: flex;
++          align-items: center;
++          justify-content: center;
++          font-size: 24px;
++          border: 1px solid #e5e7eb;
++          border-radius: 12px;
++          backface-visibility: hidden;
++          transition: transform 0.6s;
++          padding: 24px;
++        }
++        .flash-card .back {
++          transform: rotateY(180deg);
++          background: #f8fafc;
++        }
++        .flash-card.flipped .front {
++          transform: rotateY(180deg);
++        }
++        .flash-card.flipped .back {
++          transform: rotateY(360deg);
++        }
++      `}</style>
++    </div>
++  );
++}
+*** End Patch
+[2m2025-11-29T14:39:48.452188Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: src/components/QuizQuestion.tsx
++import { QuizQuestionItem } from '../utils/quizGenerator';
++
++type Props = {
++  question: QuizQuestionItem;
++  selected?: string;
++  onSelect: (option: string) => void;
++  showAnswer: boolean;
++};
++
++export default function QuizQuestion({ question, selected, onSelect, showAnswer }: Props) {
++  return (
++    <div className="card">
++      <h3 style={{ marginTop: 0 }}>題目：{question.prompt}</h3>
++      <div className="grid two">
++        {question.options.map(opt => {
++          const isCorrect = opt === question.answer;
++          const isSelected = selected === opt;
++          const state = showAnswer
++            ? isCorrect
++              ? 'correct'
++              : isSelected
++                ? 'wrong'
++                : ''
++            : isSelected
++              ? 'picked'
++              : '';
++          return (
++            <button
++              key={opt}
++              className={`btn secondary quiz-option ${state}`}
++              onClick={() => onSelect(opt)}
++              disabled={showAnswer}
++            >
++              {opt}
++            </button>
++          );
++        })}
++      </div>
++      <style>{`
++        .quiz-option { width: 100%; text-align: left; }
++        .quiz-option.correct { background: #dcfce7; color: #065f46; }
++        .quiz-option.wrong { background: #fee2e2; color: #991b1b; }
++        .quiz-option.picked { outline: 2px solid #1d4ed8; }
++      `}</style>
++    </div>
++  );
++}
+*** End Patch
+[2m2025-11-29T14:40:01.494703Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: src/components/FileImportExport.tsx
++import { ChangeEvent } from 'react';
++import { AppData } from '../utils/jsonSchema';
++
++type Props = {
++  data: AppData;
++  onImport: (data: AppData, mode: 'merge' | 'replace') => void;
++};
++
++export default function FileImportExport({ data, onImport }: Props) {
++  const handleFile = async (e: ChangeEvent<HTMLInputElement>) => {
++    const file = e.target.files?.[0];
++    if (!file) return;
++    const text = await file.text();
++    try {
++      const parsed = JSON.parse(text) as AppData;
++      const mode = window.confirm('要覆蓋現有資料嗎？按「確定」覆蓋，按「取消」進行合併。') ? 'replace' : 'merge';
++      onImport(parsed, mode);
++    } catch (err) {
++      alert('檔案解析失敗，請確認 JSON 格式。');
++    }
++  };
++
++  const handleExport = () => {
++    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
++    const url = URL.createObjectURL(blob);
++    const a = document.createElement('a');
++    const ts = new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-');
++    a.href = url;
++    a.download = `wordsite-backup-${ts}.json`;
++    a.click();
++    URL.revokeObjectURL(url);
++  };
++
++  return (
++    <div className="card">
++      <h3>匯入 / 匯出 JSON</h3>
++      <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
++        <input type="file" accept="application/json" onChange={handleFile} />
++        <button className="btn secondary" onClick={handleExport}>匯出目前資料</button>
++      </div>
++      <p style={{ color: '#6b7280' }}>匯入會將 users / records / userSettings 一併處理，請定期匯出備份。</p>
++    </div>
++  );
++}
+*** End Patch
+[2m2025-11-29T14:40:19.994679Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: src/store/AuthContext.tsx
++import { createContext, ReactNode, useContext, useEffect, useState } from 'react';
++import { AppData, RecordItem, User, UserSettings } from '../utils/jsonSchema';
++import { loadAppData, saveAppData, upsertUserSettings } from '../utils/localStorageHelpers';
++import { nanoid } from 'nanoid';
++
++type AuthContextValue = {
++  currentUser: User | null;
++  appData: AppData;
++  login: (username: string, password: string) => boolean;
++  register: (username: string, password: string) => { ok: boolean; message?: string };
++  logout: () => void;
++  updateAppData: (updater: (data: AppData) => AppData) => void;
++  upsertSettings: (settings: UserSettings) => void;
++  addRecord: (record: Omit<RecordItem, 'sessionId'>) => void;
++};
++
++const AuthContext = createContext<AuthContextValue | undefined>(undefined);
++
++export function AuthProvider({ children }: { children: ReactNode }) {
++  const [appData, setAppData] = useState<AppData>(() => loadAppData());
++  const [currentUser, setCurrentUser] = useState<User | null>(() => {
++    const raw = localStorage.getItem('wordsite:currentUser');
++    return raw ? (JSON.parse(raw) as User) : null;
++  });
++
++  useEffect(() => {
++    saveAppData(appData);
++  }, [appData]);
++
++  const login = (username: string, password: string) => {
++    const user = appData.users.find(u => u.username === username && u.password === password);
++    if (!user) return false;
++    const updatedUser: User = { ...user, lastLoginAt: new Date().toISOString() };
++    const updatedUsers = appData.users.map(u => (u.username === user.username ? updatedUser : u));
++    const next = { ...appData, users: updatedUsers };
++    setAppData(next);
++    setCurrentUser(updatedUser);
++    localStorage.setItem('wordsite:currentUser', JSON.stringify(updatedUser));
++    return true;
++  };
++
++  const register = (username: string, password: string) => {
++    if (!username.trim()) return { ok: false, message: '帳號不可為空' };
++    if (appData.users.some(u => u.username === username)) return { ok: false, message: '帳號已存在' };
++    const now = new Date().toISOString();
++    const newUser: User = {
++      username,
++      password,
++      isAdmin: false,
++      createdAt: now,
++      lastLoginAt: now
++    };
++    const next = { ...appData, users: [...appData.users, newUser] };
++    setAppData(next);
++    setCurrentUser(newUser);
++    localStorage.setItem('wordsite:currentUser', JSON.stringify(newUser));
++    return { ok: true };
++  };
++
++  const logout = () => {
++    setCurrentUser(null);
++    localStorage.removeItem('wordsite:currentUser');
++  };
++
++  const updateAppData = (updater: (data: AppData) => AppData) => {
++    setAppData(prev => updater({ ...prev, users: [...prev.users], records: [...prev.records], userSettings: [...prev.userSettings] }));
++  };
++
++  const upsertSettings = (settings: UserSettings) => {
++    updateAppData(data => upsertUserSettings(settings, data));
++  };
++
++  const addRecord = (record: Omit<RecordItem, 'sessionId'>) => {
++    const sessionId = `${record.username}-${nanoid(6)}`;
++    const item: RecordItem = { ...record, sessionId };
++    updateAppData(data => ({ ...data, records: [item, ...data.records] }));
++  };
++
++  const value: AuthContextValue = {
++    currentUser,
++    appData,
++    login,
++    register,
++    logout,
++    updateAppData,
++    upsertSettings,
++    addRecord
++  };
++
++  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
++}
++
++export function useAuth() {
++  const ctx = useContext(AuthContext);
++  if (!ctx) throw new Error('AuthContext not ready');
++  return ctx;
++}
+*** End Patch
+[2m2025-11-29T14:40:45.208902Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: src/store/WordSetContext.tsx
++import { createContext, ReactNode, useContext, useEffect, useMemo, useState } from 'react';
++import { Familiarity, SelectionCondition, UserSettings, WordItem } from '../utils/jsonSchema';
++import { useAuth } from './AuthContext';
++
++type WordSetContextValue = {
++  words: WordItem[];
++  loading: boolean;
++  selection: SelectionCondition | null;
++  sessionWords: WordItem[];
++  familiarity: Record<string, Familiarity>;
++  setSelection: (condition: SelectionCondition | null) => void;
++  buildSession: (condition: SelectionCondition, max?: number) => WordItem[];
++  markFamiliarity: (id: string, value: Familiarity) => void;
++  resetSession: () => void;
++};
++
++const WordSetContext = createContext<WordSetContextValue | undefined>(undefined);
++
++const defaultSettings: UserSettings = {
++  username: '__default__',
++  maxWordsPerSession: 25,
++  defaultSelectionType: 'pageRange',
++  defaultQuizMode: 'enToZh',
++  defaultTtsMode: 'wordOnly',
++  defaultTtsIntervalSec: 2
++};
++
++export function WordSetProvider({ children }: { children: ReactNode }) {
++  const { currentUser, appData } = useAuth();
++  const [words, setWords] = useState<WordItem[]>([]);
++  const [loading, setLoading] = useState(true);
++  const [selection, setSelection] = useState<SelectionCondition | null>(null);
++  const [sessionWords, setSessionWords] = useState<WordItem[]>([]);
++  const [familiarity, setFamiliarity] = useState<Record<string, Familiarity>>({});
++
++  const userSettings = useMemo(() => {
++    if (!currentUser) return defaultSettings;
++    return appData.userSettings.find(s => s.username === currentUser.username) ?? defaultSettings;
++  }, [currentUser, appData.userSettings]);
++
++  useEffect(() => {
++    const fetchWords = async () => {
++      try {
++        const res = await fetch('/data/words-sample.json');
++        const json = (await res.json()) as WordItem[];
++        setWords(json);
++      } catch (err) {
++        console.error('載入單字檔失敗', err);
++        setWords([]);
++      } finally {
++        setLoading(false);
++      }
++    };
++    fetchWords();
++  }, []);
++
++  useEffect(() => {
++    // 登出後清空 session
++    if (!currentUser) {
++      setSessionWords([]);
++      setSelection(null);
++      setFamiliarity({});
++    }
++  }, [currentUser]);
++
++  const buildSession = (condition: SelectionCondition, max?: number) => {
++    const filtered = filterWords(words, condition);
++    const maxCount = max ?? userSettings.maxWordsPerSession;
++    const chosen = filtered.slice(0, maxCount);
++    setSessionWords(chosen);
++    setSelection(condition);
++    return chosen;
++  };
++
++  const markFamiliarity = (id: string, value: Familiarity) => {
++    setFamiliarity(prev => ({ ...prev, [id]: value }));
++  };
++
++  const resetSession = () => {
++    setSessionWords([]);
++    setSelection(null);
++    setFamiliarity({});
++  };
++
++  const value: WordSetContextValue = {
++    words,
++    loading,
++    selection,
++    sessionWords,
++    familiarity,
++    setSelection,
++    buildSession,
++    markFamiliarity,
++    resetSession
++  };
++
++  return <WordSetContext.Provider value={value}>{children}</WordSetContext.Provider>;
++}
++
++export function useWordSet() {
++  const ctx = useContext(WordSetContext);
++  if (!ctx) throw new Error('WordSetContext not ready');
++  return ctx;
++}
++
++function filterWords(words: WordItem[], condition: SelectionCondition) {
++  switch (condition.type) {
++    case 'pageRange': {
++      const [start, end] = condition.pages ?? [1, 999];
++      return words.filter(w => w.page >= start && w.page <= end);
++    }
++    case 'frequency':
++      return words.filter(w => w.frequencyGroup === condition.frequencyGroup);
++    case 'alphabet': {
++      const [from, to] = condition.alphabetRange ?? ['a', 'z'];
++      return words.filter(w => {
++        const first = w.word[0]?.toLowerCase() ?? '';
++        return first >= from.toLowerCase() && first <= to.toLowerCase();
++      });
++    }
++    case 'customList':
++      return words.filter(w => condition.customWords?.includes(w.word));
++    default:
++      return words;
++  }
++}
+*** End Patch
+[2m2025-11-29T14:41:03.831505Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: src/pages/LoginPage.tsx
++import { FormEvent, useState } from 'react';
++import { useNavigate } from 'react-router-dom';
++import { useAuth } from '../store/AuthContext';
++
++export default function LoginPage() {
++  const { login, register } = useAuth();
++  const nav = useNavigate();
++  const [mode, setMode] = useState<'login' | 'register'>('login');
++  const [username, setUsername] = useState('');
++  const [password, setPassword] = useState('');
++  const [confirm, setConfirm] = useState('');
++  const [error, setError] = useState('');
++
++  const handleLogin = (e: FormEvent) => {
++    e.preventDefault();
++    const ok = login(username.trim(), password.trim());
++    if (!ok) {
++      setError('帳號或密碼錯誤，請再試一次');
++      return;
++    }
++    setError('');
++    if (username === 'admin') {
++      nav('/admin/users');
++    } else {
++      nav('/dashboard');
++    }
++  };
++
++  const handleRegister = (e: FormEvent) => {
++    e.preventDefault();
++    if (password !== confirm) {
++      setError('密碼與確認密碼不一致');
++      return;
++    }
++    const res = register(username.trim(), password.trim());
++    if (!res.ok) {
++      setError(res.message ?? '註冊失敗');
++      return;
++    }
++    setError('');
++    nav('/dashboard');
++  };
++
++  return (
++    <div className="card" style={{ maxWidth: 560, margin: '40px auto' }}>
++      <h1 style={{ marginTop: 0 }}>會考單字學習網站</h1>
++      <div style={{ display: 'flex', gap: 12, marginBottom: 12 }}>
++        <button className={`btn secondary ${mode === 'login' ? 'active' : ''}`} onClick={() => setMode('login')}>登入</button>
++        <button className={`btn secondary ${mode === 'register' ? 'active' : ''}`} onClick={() => setMode('register')}>註冊</button>
++      </div>
++      {error && <div style={{ color: '#b91c1c', marginBottom: 8 }}>{error}</div>}
++      {mode === 'login' ? (
++        <form className="grid" onSubmit={handleLogin}>
++          <input className="input" placeholder="帳號" value={username} onChange={e => setUsername(e.target.value)} />
++          <input className="input" type="password" placeholder="密碼" value={password} onChange={e => setPassword(e.target.value)} />
++          <button className="btn" type="submit">登入</button>
++        </form>
++      ) : (
++        <form className="grid" onSubmit={handleRegister}>
++          <input className="input" placeholder="帳號" value={username} onChange={e => setUsername(e.target.value)} />
++          <input className="input" type="password" placeholder="密碼" value={password} onChange={e => setPassword(e.target.value)} />
++          <input className="input" type="password" placeholder="確認密碼" value={confirm} onChange={e => setConfirm(e.target.value)} />
++          <button className="btn" type="submit">建立新帳號</button>
++        </form>
++      )}
++      <p style={{ color: '#6b7280', marginTop: 8 }}>預設管理者帳號：admin / admin</p>
++    </div>
++  );
++}
+*** End Patch
+[2m2025-11-29T14:41:27.967596Z[0m [33m WARN[0m stream disconnected - retrying turn (1/5 in 214ms)...
+[2m2025-11-29T14:41:52.236904Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: src/pages/UserDashboard.tsx
++import { FormEvent, useMemo, useState } from 'react';
++import { useNavigate } from 'react-router-dom';
++import { useAuth } from '../store/AuthContext';
++import { useWordSet } from '../store/WordSetContext';
++import { SelectionCondition, SelectionType } from '../utils/jsonSchema';
++
++export default function UserDashboard() {
++  const { currentUser, appData } = useAuth();
++  const { words, buildSession } = useWordSet();
++  const nav = useNavigate();
++
++  const [type, setType] = useState<SelectionType>('pageRange');
++  const [pageStart, setPageStart] = useState(1);
++  const [pageEnd, setPageEnd] = useState(2);
++  const [frequency, setFrequency] = useState<number>(10);
++  const [alphaFrom, setAlphaFrom] = useState('a');
++  const [alphaTo, setAlphaTo] = useState('c');
++  const [customList, setCustomList] = useState<string>('');
++  const [maxCount, setMaxCount] = useState(25);
++
++  const customWrongWords = useMemo(() => {
++    if (!currentUser) return [];
++    const wrongMap = new Map<string, number>();
++    appData.records
++      .filter(r => r.username === currentUser.username)
++      .forEach(r => r.wrongWords.forEach(w => wrongMap.set(w, (wrongMap.get(w) ?? 0) + 1)));
++    return Array.from(wrongMap.entries())
++      .sort((a, b) => b[1] - a[1])
++      .map(([word]) => word);
++  }, [appData.records, currentUser]);
++
++  const handleBuild = (e?: FormEvent, redirect?: string) => {
++    e?.preventDefault();
++    const condition: SelectionCondition = (() => {
++      switch (type) {
++        case 'pageRange':
++          return { type, pages: [pageStart, pageEnd] };
++        case 'frequency':
++          return { type, frequencyGroup: frequency };
++        case 'alphabet':
++          return { type, alphabetRange: [alphaFrom, alphaTo] };
++        case 'customList':
++          return { type, customWords: customList.split(',').map(s => s.trim()).filter(Boolean) || customWrongWords };
++        default:
++          return { type: 'pageRange', pages: [pageStart, pageEnd] };
++      }
++    })();
++    const list = buildSession(condition, maxCount);
++    if (list.length === 0) {
++      alert('沒有符合條件的單字，請調整範圍');
++      return;
++    }
++    if (redirect) nav(redirect);
++  };
++
++  return (
++    <div className="grid two">
++      <div className="card">
++        <h2 style={{ marginTop: 0 }}>選擇本回合單字範圍</h2>
++        <form className="grid" onSubmit={handleBuild}>
++          <label>
++            方式：
++            <select className="input" value={type} onChange={e => setType(e.target.value as SelectionType)}>
++              <option value="pageRange">依頁碼</option>
++              <option value="frequency">依出現次數分級</option>
++              <option value="alphabet">依字母區間</option>
++              <option value="customList">常錯單字 / 自訂清單</option>
++            </select>
++          </label>
++          {type === 'pageRange' && (
++            <div className="grid two">
++              <input className="input" type="number" min={1} value={pageStart} onChange={e => setPageStart(Number(e.target.value))} placeholder="起始頁碼" />
++              <input className="input" type="number" min={pageStart} value={pageEnd} onChange={e => setPageEnd(Number(e.target.value))} placeholder="結束頁碼" />
++            </div>
++          )}
++          {type === 'frequency' && (
++            <input className="input" type="number" min={1} max={10} value={frequency} onChange={e => setFrequency(Number(e.target.value))} placeholder="出現次數分級" />
++          )}
++          {type === 'alphabet' && (
++            <div className="grid two">
++              <input className="input" value={alphaFrom} onChange={e => setAlphaFrom(e.target.value)} placeholder="起始字母" />
++              <input className="input" value={alphaTo} onChange={e => setAlphaTo(e.target.value)} placeholder="結束字母" />
++            </div>
++          )}
++          {type === 'customList' && (
++            <>
++              <textarea className="input" rows={3} placeholder="用逗號分隔的單字，例如 apple,banana" value={customList} onChange={e => setCustomList(e.target.value)} />
++              {customWrongWords.length > 0 && <div style={{ color: '#6b7280' }}>常錯單字：{customWrongWords.slice(0, 10).join(', ')}</div>}
++            </>
++          )}
++          <label>
++            最大單字數（10–50）
++            <input className="input" type="number" min={10} max={50} value={maxCount} onChange={e => setMaxCount(Number(e.target.value))} />
++          </label>
++          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
++            <button className="btn" type="submit">建立本次學習清單</button>
++            <button className="btn secondary" type="button" onClick={e => handleBuild(e as unknown as FormEvent, '/words')}>前往單字總覽</button>
++            <button className="btn secondary" type="button" onClick={e => handleBuild(e as unknown as FormEvent, '/flashcards')}>直接進入學習卡</button>
++            <button className="btn secondary" type="button" onClick={e => handleBuild(e as unknown as FormEvent, '/quiz')}>直接進入測驗</button>
++          </div>
++        </form>
++      </div>
++      <div className="card">
++        <h3 style={{ marginTop: 0 }}>目前符合條件的單字數</h3>
++        <p>本次單字庫總數：{words.length}</p>
++        <p>常錯單字數：{customWrongWords.length}</p>
++        <p>建立清單後即可在「單字總覽 / 學習卡 / 測驗」使用。</p>
++      </div>
++    </div>
++  );
++}
+*** End Patch
+[2m2025-11-29T14:42:08.886761Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: src/pages/WordListPage.tsx
++import { useEffect, useState } from 'react';
++import WordTable from '../components/WordTable';
++import { useWordSet } from '../store/WordSetContext';
++import { speakWord } from '../utils/tts';
++
++export default function WordListPage() {
++  const { sessionWords, familiarity, markFamiliarity, selection } = useWordSet();
++  const [index, setIndex] = useState(0);
++  const [play, setPlay] = useState(false);
++  const [withMeaning, setWithMeaning] = useState(false);
++  const [intervalSec, setIntervalSec] = useState(2);
++
++  useEffect(() => {
++    if (!play) return;
++    if (sessionWords.length === 0) return;
++    const timer = setTimeout(() => {
++      const word = sessionWords[index];
++      if (word) {
++        speakWord(word, withMeaning);
++        const next = (index + 1) % sessionWords.length;
++        setIndex(next);
++      }
++    }, intervalSec * 1000);
++    return () => clearTimeout(timer);
++  }, [play, index, intervalSec, sessionWords, withMeaning]);
++
++  if (sessionWords.length === 0) {
++    return <div className="card">尚未建立本回合單字集，請先到「單字範圍選擇」建立。</div>;
++  }
++
++  return (
++    <div className="grid">
++      <div className="card">
++        <h2 style={{ marginTop: 0 }}>單字總覽</h2>
++        <p style={{ color: '#6b7280' }}>目前條件：{selection?.type ?? '未設定'}，共 {sessionWords.length} 個單字</p>
++        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center', marginBottom: 8 }}>
++          <button className="btn secondary" onClick={() => setPlay(p => !p)}>{play ? '暫停朗讀' : '播放朗讀'}</button>
++          <button className="btn secondary" onClick={() => setIndex(i => (i - 1 + sessionWords.length) % sessionWords.length)}>上一個</button>
++          <button className="btn secondary" onClick={() => setIndex(i => (i + 1) % sessionWords.length)}>下一個</button>
++          <label style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
++            <input type="checkbox" checked={withMeaning} onChange={e => setWithMeaning(e.target.checked)} /> 英文 + 中文
++          </label>
++          <label>
++            間隔秒數
++            <input className="input" type="number" min={1} max={5} value={intervalSec} onChange={e => setIntervalSec(Number(e.target.value))} style={{ width: 80 }} />
++          </label>
++        </div>
++      </div>
++      <WordTable words={sessionWords} familiarity={familiarity} onMark={markFamiliarity} />
++    </div>
++  );
++}
+*** End Patch
+[2m2025-11-29T14:42:22.905218Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: src/pages/FlashcardPage.tsx
++import { useEffect, useState } from 'react';
++import WordCard from '../components/WordCard';
++import { useWordSet } from '../store/WordSetContext';
++
++export default function FlashcardPage() {
++  const { sessionWords, familiarity, markFamiliarity } = useWordSet();
++  const [index, setIndex] = useState(0);
++  const [flipped, setFlipped] = useState(false);
++  const [mode, setMode] = useState<'enToZh' | 'zhToEn'>('enToZh');
++
++  useEffect(() => {
++    setIndex(0);
++  }, [sessionWords]);
++
++  if (sessionWords.length === 0) {
++    return <div className="card">尚未建立本回合單字集，請先到「單字範圍選擇」建立。</div>;
++  }
++
++  const word = sessionWords[index];
++  const familiarityState = familiarity[word.id] ?? 'unmarked';
++
++  const go = (delta: number) => {
++    setFlipped(false);
++    setIndex(i => (i + delta + sessionWords.length) % sessionWords.length);
++  };
++
++  return (
++    <div className="card">
++      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
++        <h2 style={{ marginTop: 0 }}>學習卡模式</h2>
++        <select className="input" value={mode} onChange={e => setMode(e.target.value as 'enToZh' | 'zhToEn')} style={{ width: 180 }}>
++          <option value="enToZh">英 → 中</option>
++          <option value="zhToEn">中 → 英</option>
++        </select>
++      </div>
++      <p>進度：第 {index + 1} / {sessionWords.length} 個</p>
++      <WordCard
++        word={word}
++        flipped={flipped}
++        mode={mode}
++        familiarity={familiarityState}
++        onFlip={() => setFlipped(f => !f)}
++        onMark={value => markFamiliarity(word.id, value)}
++      />
++      <div style={{ display: 'flex', gap: 8, justifyContent: 'center' }}>
++        <button className="btn secondary" onClick={() => go(-1)}>上一個</button>
++        <button className="btn secondary" onClick={() => go(1)}>下一個</button>
++      </div>
++    </div>
++  );
++}
+*** End Patch
+[2m2025-11-29T14:42:45.910158Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: src/pages/QuizPage.tsx
++import { useEffect, useMemo, useState } from 'react';
++import QuizQuestion from '../components/QuizQuestion';
++import { useAuth } from '../store/AuthContext';
++import { useWordSet } from '../store/WordSetContext';
++import { QuizMode } from '../utils/jsonSchema';
++import { generateQuizQuestions, QuizQuestionItem } from '../utils/quizGenerator';
++
++export default function QuizPage() {
++  const { sessionWords } = useWordSet();
++  const { currentUser, addRecord } = useAuth();
++  const [mode, setMode] = useState<QuizMode>('enToZh');
++  const [questions, setQuestions] = useState<QuizQuestionItem[]>([]);
++  const [index, setIndex] = useState(0);
++  const [selected, setSelected] = useState<string | undefined>();
++  const [showAnswer, setShowAnswer] = useState(false);
++  const [correctCount, setCorrectCount] = useState(0);
++  const [wrongWords, setWrongWords] = useState<string[]>([]);
++
++  useEffect(() => {
++    if (sessionWords.length > 0) {
++      const qs = generateQuizQuestions(sessionWords, mode);
++      setQuestions(qs);
++      setIndex(0);
++      setSelected(undefined);
++      setShowAnswer(false);
++      setCorrectCount(0);
++      setWrongWords([]);
++    }
++  }, [sessionWords, mode]);
++
++  const current = questions[index];
++  const finished = useMemo(() => index >= questions.length, [index, questions.length]);
++
++  const handleSelect = (option: string) => {
++    if (!current) return;
++    setSelected(option);
++    setShowAnswer(true);
++    if (option === current.answer) {
++      setCorrectCount(c => c + 1);
++    } else {
++      setWrongWords(list => Array.from(new Set([...list, current.mode === 'enToZh' ? current.prompt : current.answer])));
++    }
++  };
++
++  const goNext = () => {
++    setSelected(undefined);
++    setShowAnswer(false);
++    setIndex(i => i + 1);
++  };
++
++  const handleFinish = () => {
++    if (!currentUser) return;
++    addRecord({
++      username: currentUser.username,
++      createdAt: new Date().toISOString(),
++      selectionCondition: { type: 'pageRange', pages: [1, 1] },
++      wordCount: sessionWords.length,
++      quiz: {
++        mode,
++        totalQuestions: questions.length,
++        correctCount,
++        accuracy: questions.length ? correctCount / questions.length : 0
++      },
++      wrongWords
++    });
++    alert('結果已寫入歷史紀錄');
++  };
++
++  if (sessionWords.length === 0) {
++    return <div className="card">尚未建立本回合單字集，請先到「單字範圍選擇」建立。</div>;
++  }
++
++  if (finished) {
++    const accuracy = questions.length ? Math.round((correctCount / questions.length) * 100) : 0;
++    return (
++      <div className="card">
++        <h2 style={{ marginTop: 0 }}>測驗完成</h2>
++        <p>總題數：{questions.length}</p>
++        <p>答對：{correctCount}</p>
++        <p>正確率：{accuracy}%</p>
++        <p>本回合答錯單字：{wrongWords.join(', ') || '無'}</p>
++        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
++          <button className="btn secondary" onClick={handleFinish}>將結果寫入歷史紀錄</button>
++          <button className="btn" onClick={() => setIndex(0)}>再測一次</button>
++        </div>
++      </div>
++    );
++  }
++
++  return (
++    <div className="card">
++      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
++        <h2 style={{ marginTop: 0 }}>測驗模式</h2>
++        <select className="input" value={mode} onChange={e => setMode(e.target.value as QuizMode)} style={{ width: 200 }}>
++          <option value="enToZh">英 → 中</option>
++          <option value="zhToEn">中 → 英</option>
++        </select>
++      </div>
++      <p>進度：第 {index + 1} / {questions.length}</p>
++      {current && (
++        <QuizQuestion
++          question={current}
++          selected={selected}
++          onSelect={handleSelect}
++          showAnswer={showAnswer}
++        />
++      )}
++      {showAnswer && <button className="btn" onClick={goNext}>下一題</button>}
++    </div>
++  );
++}
+*** End Patch
+[2m2025-11-29T14:43:00.797469Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: src/pages/HistoryPage.tsx
++import { useMemo } from 'react';
++import { useAuth } from '../store/AuthContext';
++
++export default function HistoryPage() {
++  const { currentUser, appData } = useAuth();
++  if (!currentUser) return null;
++
++  const records = appData.records.filter(r => r.username === currentUser.username);
++  const wrongList = useMemo(() => {
++    const map = new Map<string, number>();
++    records.forEach(r => r.wrongWords.forEach(w => map.set(w, (map.get(w) ?? 0) + 1)));
++    return Array.from(map.entries()).sort((a, b) => b[1] - a[1]);
++  }, [records]);
++
++  return (
++    <div className="grid two">
++      <div className="card">
++        <h2 style={{ marginTop: 0 }}>歷史紀錄</h2>
++        {records.length === 0 && <p>尚無紀錄</p>}
++        {records.map(r => (
++          <div key={r.sessionId} style={{ borderBottom: '1px solid #e5e7eb', padding: '8px 0' }}>
++            <div>日期：{new Date(r.createdAt).toLocaleString()}</div>
++            <div>條件：{r.selectionCondition.type}</div>
++            <div>單字數：{r.wordCount}</div>
++            <div>答對/題數：{r.quiz.correctCount} / {r.quiz.totalQuestions}（{Math.round(r.quiz.accuracy * 100)}%）</div>
++            <div>錯誤單字：{r.wrongWords.join(', ') || '無'}</div>
++          </div>
++        ))}
++      </div>
++      <div className="card">
++        <h3 style={{ marginTop: 0 }}>常錯單字</h3>
++        {wrongList.length === 0 && <p>目前沒有常錯單字。</p>}
++        {wrongList.map(([word, count]) => (
++          <div key={word} style={{ display: 'flex', justifyContent: 'space-between', padding: '6px 0' }}>
++            <span>{word}</span>
++            <span>錯 {count} 次</span>
++          </div>
++        ))}
++      </div>
++    </div>
++  );
++}
+*** End Patch
+[2m2025-11-29T14:43:19.696405Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: src/pages/SettingsPage.tsx
++import { FormEvent, useEffect, useState } from 'react';
++import { useAuth } from '../store/AuthContext';
++import { QuizMode, SelectionType, UserSettings } from '../utils/jsonSchema';
++
++export default function SettingsPage() {
++  const { currentUser, appData, upsertSettings } = useAuth();
++  const [settings, setSettings] = useState<UserSettings | null>(null);
++
++  useEffect(() => {
++    if (!currentUser) return;
++    const found = appData.userSettings.find(s => s.username === currentUser.username);
++    setSettings(
++      found ?? {
++        username: currentUser.username,
++        maxWordsPerSession: 25,
++        defaultSelectionType: 'pageRange',
++        defaultQuizMode: 'enToZh',
++        defaultTtsMode: 'wordOnly',
++        defaultTtsIntervalSec: 2
++      }
++    );
++  }, [currentUser, appData.userSettings]);
++
++  if (!currentUser || !settings) return null;
++
++  const handleSubmit = (e: FormEvent) => {
++    e.preventDefault();
++    upsertSettings(settings);
++    alert('設定已儲存');
++  };
++
++  const update = <K extends keyof UserSettings>(key: K, value: UserSettings[K]) => {
++    setSettings(prev => (prev ? { ...prev, [key]: value } : prev));
++  };
++
++  return (
++    <div className="card">
++      <h2 style={{ marginTop: 0 }}>個人設定</h2>
++      <form className="grid" onSubmit={handleSubmit}>
++        <label>
++          每回合最大單字數量（10–50）
++          <input className="input" type="number" min={10} max={50} value={settings.maxWordsPerSession} onChange={e => update('maxWordsPerSession', Number(e.target.value))} />
++        </label>
++        <label>
++          預設選字方式
++          <select className="input" value={settings.defaultSelectionType} onChange={e => update('defaultSelectionType', e.target.value as SelectionType)}>
++            <option value="pageRange">頁碼範圍</option>
++            <option value="frequency">出現次數</option>
++            <option value="alphabet">字母區間</option>
++            <option value="customList">常錯單字</option>
++          </select>
++        </label>
++        <label>
++          預設測驗模式
++          <select className="input" value={settings.defaultQuizMode} onChange={e => update('defaultQuizMode', e.target.value as QuizMode)}>
++            <option value="enToZh">英 → 中</option>
++            <option value="zhToEn">中 → 英</option>
++          </select>
++        </label>
++        <label>
++          朗讀模式
++          <select className="input" value={settings.defaultTtsMode} onChange={e => update('defaultTtsMode', e.target.value as 'wordOnly' | 'wordAndMeaning')}>
++            <option value="wordOnly">只念英文</option>
++            <option value="wordAndMeaning">英文 + 中文</option>
++          </select>
++        </label>
++        <label>
++          朗讀間隔秒數
++          <input className="input" type="number" min={1} max={5} value={settings.defaultTtsIntervalSec} onChange={e => update('defaultTtsIntervalSec', Number(e.target.value))} />
++        </label>
++        <button className="btn" type="submit">儲存設定</button>
++      </form>
++    </div>
++  );
++}
+*** End Patch
+[2m2025-11-29T14:43:47.016861Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: src/pages/AdminUsersPage.tsx
++import { useState } from 'react';
++import FileImportExport from '../components/FileImportExport';
++import { useAuth } from '../store/AuthContext';
++import { AppData, User } from '../utils/jsonSchema';
++
++export default function AdminUsersPage() {
++  const { appData, updateAppData, currentUser } = useAuth();
++  const [showForm, setShowForm] = useState(false);
++  const [editingUser, setEditingUser] = useState<User | null>(null);
++  const [form, setForm] = useState({ username: '', password: '', isAdmin: false });
++
++  const openNew = () => {
++    setForm({ username: '', password: '', isAdmin: false });
++    setEditingUser(null);
++    setShowForm(true);
++  };
++
++  const openEdit = (user: User) => {
++    setForm({ username: user.username, password: user.password, isAdmin: user.isAdmin });
++    setEditingUser(user);
++    setShowForm(true);
++  };
++
++  const save = () => {
++    updateAppData(data => {
++      if (editingUser) {
++        const users = data.users.map(u => (u.username === editingUser.username ? { ...u, ...form } : u));
++        return { ...data, users };
++      }
++      const now = new Date().toISOString();
++      const newUser: User = { ...form, createdAt: now, lastLoginAt: null };
++      return { ...data, users: [...data.users, newUser] };
++    });
++    setShowForm(false);
++  };
++
++  const remove = (user: User) => {
++    if (!window.confirm(`確定要刪除使用者 ${user.username}？相關紀錄也會被移除。`)) return;
++    updateAppData(data => ({
++      ...data,
++      users: data.users.filter(u => u.username !== user.username),
++      records: data.records.filter(r => r.username !== user.username),
++      userSettings: data.userSettings.filter(s => s.username !== user.username)
++    }));
++  };
++
++  const resetRecords = (user: User) => {
++    if (!window.confirm(`要清空 ${user.username} 的歷史紀錄與常錯單字嗎？`)) return;
++    updateAppData(data => ({ ...data, records: data.records.filter(r => r.username !== user.username) }));
++  };
++
++  const mergeImport = (incoming: AppData, mode: 'merge' | 'replace') => {
++    if (mode === 'replace') {
++      updateAppData(() => incoming);
++      return;
++    }
++    updateAppData(data => {
++      const users = mergeByKey(data.users, incoming.users, 'username');
++      const records = [...incoming.records, ...data.records];
++      const userSettings = mergeByKey(data.userSettings, incoming.userSettings, 'username');
++      return { users, records, userSettings };
++    });
++  };
++
++  return (
++    <div className="grid">
++      <div className="card">
++        <h2 style={{ marginTop: 0 }}>使用者帳號管理</h2>
++        <button className="btn" onClick={openNew}>新增使用者</button>
++        <div className="table-scroll" style={{ marginTop: 12 }}>
++          <table className="word-table">
++            <thead>
++              <tr>
++                <th>帳號</th>
++                <th>密碼</th>
++                <th>管理者</th>
++                <th>建立時間</th>
++                <th>最近登入</th>
++                <th>操作</th>
++              </tr>
++            </thead>
++            <tbody>
++              {appData.users.map(u => (
++                <tr key={u.username}>
++                  <td>{u.username}</td>
++                  <td>{u.password}</td>
++                  <td>{u.isAdmin ? '是' : '否'}</td>
++                  <td>{u.createdAt && new Date(u.createdAt).toLocaleString()}</td>
++                  <td>{u.lastLoginAt ? new Date(u.lastLoginAt).toLocaleString() : '尚未登入'}</td>
++                  <td style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
++                    <button className="btn secondary" onClick={() => openEdit(u)}>編輯</button>
++                    <button className="btn secondary" onClick={() => resetRecords(u)}>重設紀錄</button>
++                    {currentUser?.username !== u.username && (
++                      <button className="btn danger" onClick={() => remove(u)}>刪除</button>
++                    )}
++                  </td>
++                </tr>
++              ))}
++            </tbody>
++          </table>
++        </div>
++      </div>
++      <FileImportExport data={appData} onImport={mergeImport} />
++      {showForm && (
++        <div className="card">
++          <h3>{editingUser ? '編輯使用者' : '新增使用者'}</h3>
++          <div className="grid">
++            <input className="input" placeholder="帳號" value={form.username} onChange={e => setForm({ ...form, username: e.target.value })} disabled={!!editingUser} />
++            <input className="input" placeholder="密碼" value={form.password} onChange={e => setForm({ ...form, password: e.target.value })} />
++            <label>
++              <input type="checkbox" checked={form.isAdmin} onChange={e => setForm({ ...form, isAdmin: e.target.checked })} /> 管理者
++            </label>
++            <div style={{ display: 'flex', gap: 8 }}>
++              <button className="btn" onClick={save}>儲存</button>
++              <button className="btn secondary" onClick={() => setShowForm(false)}>取消</button>
++            </div>
++          </div>
++        </div>
++      )}
++    </div>
++  );
++}
++
++function mergeByKey<T extends Record<string, any>>(base: T[], incoming: T[], key: keyof T) {
++  const map = new Map<string, T>();
++  base.forEach(item => map.set(String(item[key]), item));
++  incoming.forEach(item => map.set(String(item[key]), item));
++  return Array.from(map.values());
++}
+*** End Patch
+[2m2025-11-29T14:44:05.323500Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: src/pages/AdminUserRecordsPage.tsx
++import { useMemo, useState } from 'react';
++import { useAuth } from '../store/AuthContext';
++import { User } from '../utils/jsonSchema';
++
++export default function AdminUserRecordsPage() {
++  const { appData } = useAuth();
++  const [selected, setSelected] = useState<User | null>(appData.users[0] ?? null);
++  const records = useMemo(() => {
++    if (!selected) return [];
++    return appData.records.filter(r => r.username === selected.username);
++  }, [selected, appData.records]);
++
++  const wrongList = useMemo(() => {
++    const map = new Map<string, number>();
++    records.forEach(r => r.wrongWords.forEach(w => map.set(w, (map.get(w) ?? 0) + 1)));
++    return Array.from(map.entries()).sort((a, b) => b[1] - a[1]);
++  }, [records]);
++
++  return (
++    <div className="grid two">
++      <div className="card">
++        <h3 style={{ marginTop: 0 }}>使用者列表</h3>
++        <input className="input" placeholder="搜尋帳號" onChange={e => {
++          const val = e.target.value.toLowerCase();
++          const found = appData.users.find(u => u.username.toLowerCase().includes(val));
++          if (found) setSelected(found);
++        }} />
++        <div style={{ maxHeight: 360, overflowY: 'auto', marginTop: 8 }}>
++          {appData.users.map(u => (
++            <div key={u.username} style={{ padding: 8, borderBottom: '1px solid #e5e7eb', cursor: 'pointer', background: selected?.username === u.username ? '#eef2ff' : undefined }} onClick={() => setSelected(u)}>
++              {u.username} {u.isAdmin && '(管理者)'}
++            </div>
++          ))}
++        </div>
++      </div>
++      <div className="card">
++        <h3 style={{ marginTop: 0 }}>學習紀錄</h3>
++        {selected ? <p>目前查看：{selected.username}</p> : <p>請選擇使用者</p>}
++        {records.length === 0 && <p>尚無紀錄</p>}
++        {records.map(r => (
++          <div key={r.sessionId} style={{ borderBottom: '1px solid #e5e7eb', padding: '8px 0' }}>
++            <div>日期：{new Date(r.createdAt).toLocaleString()}</div>
++            <div>條件：{r.selectionCondition.type}</div>
++            <div>單字數：{r.wordCount}</div>
++            <div>得分：{r.quiz.correctCount}/{r.quiz.totalQuestions}（{Math.round(r.quiz.accuracy * 100)}%）</div>
++            <div>錯誤單字：{r.wrongWords.join(', ') || '無'}</div>
++          </div>
++        ))}
++        <h4>常錯單字</h4>
++        {wrongList.length === 0 && <p>目前沒有常錯統計。</p>}
++        {wrongList.map(([word, count]) => (
++          <div key={word} style={{ display: 'flex', justifyContent: 'space-between', padding: '6px 0' }}>
++            <span>{word}</span>
++            <span>錯 {count} 次</span>
++          </div>
++        ))}
++      </div>
++    </div>
++  );
++}
+*** End Patch
+[2m2025-11-29T14:44:18.010146Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: public/data/words-sample.json
++[
++  {
++    "id": "a-1",
++    "word": "apple",
++    "posRaw": "[n.] 名詞",
++    "meaningZh": "蘋果",
++    "frequencyGroup": 10,
++    "page": 1
++  },
++  {
++    "id": "b-1",
++    "word": "banana",
++    "posRaw": "[n.] 名詞",
++    "meaningZh": "香蕉",
++    "frequencyGroup": 9,
++    "page": 2
++  },
++  {
++    "id": "c-1",
++    "word": "carry",
++    "posRaw": "[v.] 動詞",
++    "meaningZh": "攜帶；搬運",
++    "frequencyGroup": 8,
++    "page": 3
++  },
++  {
++    "id": "d-1",
++    "word": "delicious",
++    "posRaw": "[adj.] 形容詞",
++    "meaningZh": "美味的",
++    "frequencyGroup": 7,
++    "page": 4
++  },
++  {
++    "id": "e-1",
++    "word": "energy",
++    "posRaw": "[n.] 名詞",
++    "meaningZh": "能量；精力",
++    "frequencyGroup": 6,
++    "page": 5
++  }
++]
+*** End Patch
+[2m2025-11-29T14:44:34.228062Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: tools/convert-top-pdf-to-json.mjs
++#!/usr/bin/env node
++import fs from 'fs';
++import pdf from 'pdf-parse';
++
++/**
++ * 簡易轉換工具：將固定格式 TOP 單字 PDF 轉為 words.json
++ * 使用方式：node tools/convert-top-pdf-to-json.mjs input.pdf output.json
++ */
++async function main() {
++  const [, , input, output = 'public/data/words.json'] = process.argv;
++  if (!input) {
++    console.log('用法：node tools/convert-top-pdf-to-json.mjs input.pdf [output.json]');
++    process.exit(1);
++  }
++  if (!fs.existsSync(input)) {
++    console.error('找不到輸入檔案：', input);
++    process.exit(1);
++  }
++
++  const buffer = fs.readFileSync(input);
++  const data = await pdf(buffer);
++  const words = parsePdfText(data.text);
++
++  if (words.length === 0) {
++    console.warn('警告：未解析出任何單字，請確認 PDF 格式是否與 TOP 字表一致。');
++  }
++
++  fs.writeFileSync(output, JSON.stringify(words, null, 2), 'utf-8');
++  console.log(`已寫出 ${words.length} 筆單字至 ${output}`);
++}
++
++/**
++ * 依簡化格式解析 PDF 文字，實務上可依實際排版調整
++ */
++function parsePdfText(text) {
++  const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
++  const words = [];
++  let page = 1;
++  lines.forEach(line => {
++    // 假設每行格式：word pos meaning freq
++    const match = line.match(/^([A-Za-z-]+)\s+(\[.+?\])\s+(.+?)\s+(\d{1,2})$/);
++    if (match) {
++      const [, word, posRaw, meaningZh, freqStr] = match;
++      words.push({
++        id: `${word}-${words.length + 1}`,
++        word,
++        posRaw,
++        meaningZh,
++        frequencyGroup: Number(freqStr),
++        page
++      });
++    }
++    if (line.toLowerCase().includes('page')) {
++      page += 1;
++    }
++  });
++  return words;
++}
++
++main().catch(err => {
++  console.error('轉換失敗：', err);
++  process.exit(1);
++});
+*** End Patch
+[2m2025-11-29T14:44:51.342818Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Add File: README.md
++# 會考單字學習網站
++
++專為會考高頻單字練習打造的前端網站，提供登入、單字範圍選擇、學習卡、測驗、歷史紀錄與管理者後台。使用 React + Vite（HashRouter），資料全存在瀏覽器端（LocalStorage 與可匯入/匯出的 JSON）。
++
++## 安裝環境
++1. 安裝 [Node.js](https://nodejs.org/)（建議 LTS）。
++2. 下載/clone 專案後，在根目錄執行：
++   ```bash
++   npm install
++   ```
++
++## 開發模式
++```bash
++npm run dev
++```
++啟動後於終端顯示的網址開啟瀏覽器（預設 http://localhost:5173/）。
++
++## 轉換 TOP 單字 PDF → JSON
++1. 將 TOP 單字 PDF 放在專案根目錄（名稱不限）。
++2. 執行：
++   ```bash
++   node tools/convert-top-pdf-to-json.mjs input.pdf public/data/words.json
++   ```
++   - 第一個參數為輸入 PDF 路徑。
++   - 第二個參數為輸出 JSON 路徑（可省略，預設 `public/data/words.json`）。
++3. `words.json` 欄位：
++   - `id`: 唯一識別碼
++   - `word`: 英文單字
++   - `posRaw`: 原始詞性標註
++   - `meaningZh`: 中文解釋
++   - `frequencyGroup`: 出現次數分級（1–10）
++   - `page`: PDF 頁碼
++
++## 建置與部署
++```bash
++npm run build
++```
++輸出在 `dist/`，可直接部署到 GitHub Pages / Netlify / Vercel 等靜態主機。
++- GitHub Pages：可搭配 `gh-pages` 套件或直接上傳 `dist`。
++- Netlify / Vercel：將 `dist/` 作為靜態輸出目錄即可。
++
++## 匯入／匯出使用者資料
++- 管理者登入（預設帳號密碼 `admin/admin`），進入「使用者管理」使用匯入/匯出功能。
++- 匯出會下載包含 `users` / `records` / `userSettings` 的 JSON 備份。
++- 匯入可選擇「覆蓋」或「合併」現有資料，方便在不同裝置間同步。
++
++## 專案目錄重點
++- `src/`：前端 React 原始碼（HashRouter）
++- `public/data/words-sample.json`：示範單字檔，正式使用可覆蓋為轉換後的 `words.json`
++- `tools/convert-top-pdf-to-json.mjs`：本機 PDF 轉 JSON 的 Node CLI
++
++所有頁面文案使用繁體中文，並考量 RWD；同裝置多使用者的設定與紀錄皆以帳號為單位存放。
+*** End Patch
+[2m2025-11-29T14:45:04.142137Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Update File: src/components/WordTable.tsx
+@@
+-            {viewWords.map(word => (
+-              <tr key={word.id}>
+-                <td>{word.word}</td>
+-                <td>{word.posRaw}</td>
+-                <td>{word.meaningZh}</td>
+-                <td style={{ textAlign: 'center' }}>{word.frequencyGroup}</td>
+-                <td>
++            {viewWords.map(word => (
++              <tr key={word.id}>
++                <td data-label="單字">{word.word}</td>
++                <td data-label="詞性">{word.posRaw}</td>
++                <td data-label="中文解釋">{word.meaningZh}</td>
++                <td data-label="出現次數" style={{ textAlign: 'center' }}>{word.frequencyGroup}</td>
++                <td data-label="熟悉度">
+*** End Patch
+[2m2025-11-29T14:45:15.294732Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Update File: src/pages/QuizPage.tsx
+@@
+-  const { sessionWords } = useWordSet();
++  const { sessionWords, selection } = useWordSet();
+@@
+-      selectionCondition: { type: 'pageRange', pages: [1, 1] },
++      selectionCondition: selection ?? { type: 'pageRange', pages: [1, 1] },
+*** End Patch
+[2m2025-11-29T14:45:31.238628Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Update File: src/pages/WordListPage.tsx
+@@
+   const { sessionWords, familiarity, markFamiliarity, selection } = useWordSet();
+   const [index, setIndex] = useState(0);
+@@
+   useEffect(() => {
+     if (!play) return;
+     if (sessionWords.length === 0) return;
+@@
+     return () => clearTimeout(timer);
+-  }, [play, index, intervalSec, sessionWords, withMeaning]);
++  }, [play, index, intervalSec, sessionWords, withMeaning]);
++
++  useEffect(() => {
++    setIndex(0);
++  }, [sessionWords]);
+*** End Patch
+[2m2025-11-29T14:45:46.353094Z[0m [32m INFO[0m ToolCall: update_plan {"plan":[{"status":"completed","step":"檢視需求與專案結構，選擇技術棧與基本設定（TS/JS、React+Vite）"},{"status":"completed","step":"建立專案骨架與共用基礎：package.json、Vite 設定、基本樣式與路由框架"},{"status":"completed","step":"實作前端核心：Context、工具、頁面與元件（使用者端與管理者端）"},{"status":"in_progress","step":"加入 sample 資料、Node CLI PDF→JSON 工具與 README 說明"},{"status":"pending","step":"簡單自我檢查，回報進度與後續建議"}]}
+[2m2025-11-29T14:46:00.501251Z[0m [32m INFO[0m ToolCall: shell_command {"command":"rg \"//\" src tools","workdir":"/mnt/d/program/ExamWordPrep"}
+[2m2025-11-29T14:46:09.777538Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Update File: tools/convert-top-pdf-to-json.mjs
+@@
+-    // 假設每行格式：word pos meaning freq
++    // 假設每行格式：單字 詞性 中文解釋 出現次數
+*** End Patch
+[2m2025-11-29T14:46:20.890681Z[0m [32m INFO[0m ToolCall: update_plan {"plan":[{"status":"completed","step":"檢視需求與專案結構，選擇技術棧與基本設定（TS/JS、React+Vite）"},{"status":"completed","step":"建立專案骨架與共用基礎：package.json、Vite 設定、基本樣式與路由框架"},{"status":"completed","step":"實作前端核心：Context、工具、頁面與元件（使用者端與管理者端）"},{"status":"completed","step":"加入 sample 資料、Node CLI PDF→JSON 工具與 README 說明"},{"status":"in_progress","step":"簡單自我檢查，回報進度與後續建議"}]}
+[2m2025-11-29T15:22:22.406396Z[0m [32m INFO[0m spawning ghost snapshot task
+[2m2025-11-29T15:22:22.424754Z[0m [32m INFO[0m skipping ghost snapshot because current directory is not a Git repository [3msub_id[0m[2m=[0m"3"
+[2m2025-11-29T15:22:22.424792Z[0m [32m INFO[0m ghost snapshot gate marked ready
+[2m2025-11-29T15:38:14.500858Z[0m [32m INFO[0m spawning ghost snapshot task
+[2m2025-11-29T15:38:14.536056Z[0m [32m INFO[0m skipping ghost snapshot because current directory is not a Git repository [3msub_id[0m[2m=[0m"5"
+[2m2025-11-29T15:38:14.536149Z[0m [32m INFO[0m ghost snapshot gate marked ready
+[2m2025-11-29T15:38:25.707261Z[0m [32m INFO[0m ToolCall: shell_command {"command":"ls -l top2025.pdf","workdir":"/mnt/d/program/ExamWordPrep"}
+[2m2025-11-29T15:38:32.139592Z[0m [32m INFO[0m ToolCall: shell_command {"command":"node -e \"import pdf from 'pdf-parse';import fs from 'fs';const b=fs.readFileSync('top2025.pdf');pdf(b).then(d=>{console.log(d.text.slice(0,4000));});\"","workdir":"/mnt/d/program/ExamWordPrep","timeout_ms":120000}
+[2m2025-11-29T15:38:42.350291Z[0m [32m INFO[0m ToolCall: shell_command {"command":"node -e \"import pdf from 'pdf-parse';import fs from 'fs';const b=fs.readFileSync('top2025.pdf');pdf(b).then(d=>{console.log(d.text.includes('中文')? 'has zh': '');console.log(d.text.slice(4000,8000));});\"","workdir":"/mnt/d/program/ExamWordPrep","timeout_ms":120000}
+[2m2025-11-29T15:39:06.014757Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Update File: tools/convert-top-pdf-to-json.mjs
+@@
+-import fs from 'fs';
+-import pdf from 'pdf-parse';
++import fs from 'fs';
++import pdf from 'pdf-parse';
+@@
+-  const words = parsePdfText(data.text);
++  const words = parseTopText(data.text);
+@@
+- * 依簡化格式解析 PDF 文字，實務上可依實際排版調整
++ * 解析 Top Academy 會考高頻率單字表（文字版），依「出現次數：X」區塊標示 frequencyGroup，
++ * 以頁碼行（單獨數字）推估 page，並抓取字母行作為單字。
++ * 原始 PDF 未含詞性/中文解釋，posRaw、meaningZh 以空字串輸出，後續可由外部補齊。
+  */
+-function parsePdfText(text) {
+-  const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
+-  const words = [];
+-  let page = 1;
+-  lines.forEach(line => {
+-    // 假設每行格式：單字 詞性 中文解釋 出現次數
+-    const match = line.match(/^([A-Za-z-]+)\s+(\[.+?\])\s+(.+?)\s+(\d{1,2})$/);
+-    if (match) {
+-      const [, word, posRaw, meaningZh, freqStr] = match;
+-      words.push({
+-        id: `${word}-${words.length + 1}`,
+-        word,
+-        posRaw,
+-        meaningZh,
+-        frequencyGroup: Number(freqStr),
+-        page
+-      });
+-    }
+-    if (line.toLowerCase().includes('page')) {
+-      page += 1;
+-    }
+-  });
+-  return words;
++function parseTopText(text) {
++  const lines = text.split('\n').map(l => l.trim());
++  const words = [];
++  let freqGroup = 0;
++  let page = 0;
++  const seen = new Set();
++
++  for (const raw of lines) {
++    if (!raw) continue;
++    const freqMatch = raw.match(/出現次數：\s*(\d+)/);
++    if (freqMatch) {
++      freqGroup = Number(freqMatch[1]);
++      continue;
++    }
++    if (/^\d+$/.test(raw)) {
++      page = Number(raw);
++      continue;
++    }
++    if (/copyright/i.test(raw) || /Top Academy/i.test(raw) || raw === '○○○') continue;
++    if (/^[A-Za-z][A-Za-z'\\-\\s]*$/.test(raw) && raw.length <= 24) {
++      const word = raw.replace(/\s+/g, ' ').trim();
++      if (!word || seen.has(word.toLowerCase())) continue;
++      seen.add(word.toLowerCase());
++      words.push({
++        id: `${word.toLowerCase()}-${words.length + 1}`,
++        word,
++        posRaw: '',
++        meaningZh: '',
++        frequencyGroup: freqGroup || null,
++        page
++      });
++    }
++  }
++  return words;
+ }
+*** End Patch
+[2m2025-11-29T15:39:12.044875Z[0m [32m INFO[0m ToolCall: shell_command {"command":"node tools/convert-top-pdf-to-json.mjs top2025.pdf public/data/words.json && head -n 20 public/data/words.json","workdir":"/mnt/d/program/ExamWordPrep","timeout_ms":120000}
+[2m2025-11-29T15:39:30.762125Z[0m [32m INFO[0m ToolCall: shell_command {"command":"node - <<'NODE'\nimport pdf from 'pdf-parse';import fs from 'fs';const b=fs.readFileSync('top2025.pdf');pdf(b).then(d=>{const lines=d.text.split('\\n').map(l=>l.trim()).filter(Boolean);lines.slice(0,80).forEach((l,i)=>console.log(i+1, l));});\nNODE","workdir":"/mnt/d/program/ExamWordPrep","timeout_ms":120000}
+[2m2025-11-29T15:39:41.972489Z[0m [32m INFO[0m ToolCall: shell_command {"command":"node - <<'NODE'\nimport pdf from 'pdf-parse';import fs from 'fs';const b=fs.readFileSync('top2025.pdf');pdf(b).then(d=>{const lines=d.text.split('\\n').map(l=>l.trim());lines.forEach((l,i)=>{if(l.includes('出現次數')) console.log(i+1, l);});});\nNODE","workdir":"/mnt/d/program/ExamWordPrep","timeout_ms":120000}
+[2m2025-11-29T15:40:02.655627Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Update File: tools/convert-top-pdf-to-json.mjs
+@@
+ function parseTopText(text) {
+-  const lines = text.split('\n').map(l => l.trim());
++  const lines = text.split('\n').map(l => l.trim());
++  const freqList = [];
++  const pageStarts = [];
++
++  for (const raw of lines) {
++    const freqMatch = raw.match(/出現次數：\s*(\d+)/);
++    if (freqMatch) freqList.push(Number(freqMatch[1]));
++    const pageMatch = raw.match(/^P(\d+)$/i);
++    if (pageMatch) pageStarts.push(Number(pageMatch[1]));
++  }
++
++  const freqRanges = pageStarts
++    .map((start, idx) => ({ start, freq: freqList[idx] ?? null }))
++    .sort((a, b) => a.start - b.start);
++
++  const inferFreq = (pageNum) => {
++    if (!freqRanges.length || !pageNum) return null;
++    let current = freqRanges[0].freq;
++    for (const item of freqRanges) {
++      if (pageNum >= item.start) current = item.freq;
++    }
++    return current ?? null;
++  };
++
+   const words = [];
+-  let freqGroup = 0;
+   let page = 0;
+   const seen = new Set();
+ 
+   for (const raw of lines) {
+     if (!raw) continue;
+-    const freqMatch = raw.match(/出現次數：\s*(\d+)/);
+-    if (freqMatch) {
+-      freqGroup = Number(freqMatch[1]);
+-      continue;
+-    }
+     if (/^\d+$/.test(raw)) {
+       page = Number(raw);
+       continue;
+@@
+       seen.add(word.toLowerCase());
+       words.push({
+         id: `${word.toLowerCase()}-${words.length + 1}`,
+         word,
+         posRaw: '',
+         meaningZh: '',
+-        frequencyGroup: freqGroup || null,
++        frequencyGroup: inferFreq(page),
+         page
+       });
+     }
+   }
+*** End Patch
+[2m2025-11-29T15:40:07.326833Z[0m [32m INFO[0m ToolCall: shell_command {"command":"node tools/convert-top-pdf-to-json.mjs top2025.pdf public/data/words.json && head -n 20 public/data/words.json","workdir":"/mnt/d/program/ExamWordPrep","timeout_ms":120000}
+[2m2025-11-29T15:40:14.152395Z[0m [32m INFO[0m ToolCall: shell_command {"command":"node - <<'NODE'\nimport fs from 'fs';const data=JSON.parse(fs.readFileSync('public/data/words.json','utf-8'));const sample=data.filter(w=>w.page===7).slice(0,5);console.log(sample);\nNODE","workdir":"/mnt/d/program/ExamWordPrep"}
+[2m2025-11-29T15:46:27.140129Z[0m [32m INFO[0m spawning ghost snapshot task
+[2m2025-11-29T15:46:27.150306Z[0m [32m INFO[0m skipping ghost snapshot because current directory is not a Git repository [3msub_id[0m[2m=[0m"7"
+[2m2025-11-29T15:46:27.150345Z[0m [32m INFO[0m ghost snapshot gate marked ready
+[2m2025-11-29T15:46:36.122256Z[0m [32m INFO[0m ToolCall: shell_command {"command":"node - <<'NODE'\nimport pdf from 'pdf-parse';import fs from 'fs';const b=fs.readFileSync('top2025.pdf');pdf(b).then(d=>{\n  const lines=d.text.split('\\n').map(l=>l.trim()).filter(Boolean);\n  const zh=lines.filter(l=>/[\\u4e00-\\u9fff]/.test(l)).slice(0,50);\n  console.log(zh);\n});\nNODE","workdir":"/mnt/d/program/ExamWordPrep","timeout_ms":120000}
+[2m2025-11-29T15:46:47.639578Z[0m [32m INFO[0m ToolCall: shell_command {"command":"pdftotext -f 3 -l 3 top2025.pdf - | head","workdir":"/mnt/d/program/ExamWordPrep"}
+[2m2025-11-29T15:47:00.221397Z[0m [32m INFO[0m ToolCall: shell_command {"command":"node - <<'NODE'\nimport pdf from 'pdf-parse';import fs from 'fs';const b=fs.readFileSync('top2025.pdf');pdf(b).then(d=>{const text=d.text;console.log(text.includes('[n'));console.log(text.match(/\\[.*?\\]/g)?.slice(0,20));});\nNODE","workdir":"/mnt/d/program/ExamWordPrep"}
+[2m2025-11-29T15:47:09.170412Z[0m [32m INFO[0m ToolCall: shell_command {"command":"node - <<'NODE'\nimport pdf from 'pdf-parse';import fs from 'fs';const b=fs.readFileSync('top2025.pdf');pdf(b).then(d=>{const text=d.text;const chars=new Set([...text].filter(ch=>ch.charCodeAt(0)>127));console.log([...chars].slice(0,100));console.log('count',chars.size);\n});\nNODE","workdir":"/mnt/d/program/ExamWordPrep"}
+[2m2025-11-29T15:47:26.803205Z[0m [32m INFO[0m ToolCall: shell_command {"command":"node - <<'NODE'\nimport pdf from 'pdf-parse';import fs from 'fs';const b=fs.readFileSync('top2025.pdf');pdf(b).then(d=>{const lines=d.text.split('\\n').map(l=>l.trim());for(let i=250;i<330;i++){console.log(i+1, lines[i]);}\n});\nNODE","workdir":"/mnt/d/program/ExamWordPrep","timeout_ms":120000}
+[2m2025-11-29T15:47:36.972709Z[0m [32m INFO[0m ToolCall: shell_command {"command":"node - <<'NODE'\nimport pdf from 'pdf-parse';import fs from 'fs';const b=fs.readFileSync('top2025.pdf');pdf(b).then(d=>{console.log(d.text.includes('apple'));\n});\nNODE","workdir":"/mnt/d/program/ExamWordPrep"}
+[2m2025-11-29T15:47:44.241986Z[0m [32m INFO[0m ToolCall: shell_command {"command":"node - <<'NODE'\nimport pdf from 'pdf-parse';import fs from 'fs';const b=fs.readFileSync('top2025.pdf');pdf(b).then(d=>{const lines=d.text.split('\\n');lines.forEach((l,i)=>{if(l.includes('apple')){for(let j=i-2;j<i+5;j++){console.log(j+1, lines[j]);}}});});\nNODE","workdir":"/mnt/d/program/ExamWordPrep"}
+[2m2025-11-29T15:48:00.208302Z[0m [32m INFO[0m ToolCall: shell_command {"command":"node - <<'NODE'\nimport pdf from 'pdf-parse';import fs from 'fs';const b=fs.readFileSync('top2025.pdf');pdf(b).then(d=>{const lines=d.text.split('\\n');for(let i=4076;i<=4083;i++){const line=lines[i];console.log(i+1, JSON.stringify(line), line.length);\n}\n});\nNODE","workdir":"/mnt/d/program/ExamWordPrep","timeout_ms":120000}
+[2m2025-11-29T15:51:27.112167Z[0m [32m INFO[0m spawning ghost snapshot task
+[2m2025-11-29T15:51:27.123416Z[0m [32m INFO[0m skipping ghost snapshot because current directory is not a Git repository [3msub_id[0m[2m=[0m"9"
+[2m2025-11-29T15:51:27.123457Z[0m [32m INFO[0m ghost snapshot gate marked ready
+[2m2025-11-29T15:52:09.204262Z[0m [32m INFO[0m ToolCall: apply_patch *** Begin Patch
+*** Update File: tools/convert-top-pdf-to-json.mjs
+@@
+-import fs from 'fs';
+-import pdf from 'pdf-parse';
++import fs from 'fs';
++import { execSync } from 'child_process';
+ 
+ /**
+- * 簡易轉換工具：將固定格式 TOP 單字 PDF 轉為 words.json
+- * 使用方式：node tools/convert-top-pdf-to-json.mjs input.pdf output.json
++ * OCR 版轉換工具：針對無文字層 PDF（影像掃描）
++ * 需要已安裝：pdftoppm（Poppler）與 tesseract（含 eng+chi_tra 語言包）
++ * 使用方式：node tools/convert-top-pdf-to-json.mjs input.pdf output.json
+  */
+ async function main() {
+   const [, , input, output = 'public/data/words.json'] = process.argv;
+   if (!input) {
+     console.log('用法：node tools/convert-top-pdf-to-json.mjs input.pdf [output.json]');
+@@
+-  const buffer = fs.readFileSync(input);
+-  const data = await pdf(buffer);
+-  const words = parseTopText(data.text);
+-
+-  if (words.length === 0) {
+-    console.warn('警告：未解析出任何單字，請確認 PDF 格式是否與 TOP 字表一致。');
+-  }
+-
+-  fs.writeFileSync(output, JSON.stringify(words, null, 2), 'utf-8');
+-  console.log(`已寫出 ${words.length} 筆單字至 ${output}`);
++  const words = await ocrAndParse(input);
++  fs.writeFileSync(output, JSON.stringify(words, null, 2), 'utf-8');
++  console.log(`已寫出 ${words.length} 筆單字至 ${output}`);
+ }
+ 
+-/**
+- * 解析 Top Academy 會考高頻率單字表（文字版），依「出現次數：X」區塊標示 frequencyGroup，
+- * 以頁碼行（單獨數字）推估 page，並抓取字母行作為單字。
+- * 原始 PDF 未含詞性/中文解釋，posRaw、meaningZh 以空字串輸出，後續可由外部補齊。
+- */
+-function parseTopText(text) {
+-  const lines = text.split('\n').map(l => l.trim());
+-  const freqList = [];
+-  const pageStarts = [];
+-
+-  for (const raw of lines) {
+-    const freqMatch = raw.match(/出現次數：\s*(\d+)/);
+-    if (freqMatch) freqList.push(Number(freqMatch[1]));
+-    const pageMatch = raw.match(/^P(\d+)$/i);
+-    if (pageMatch) pageStarts.push(Number(pageMatch[1]));
+-  }
+-
+-  const freqRanges = pageStarts
+-    .map((start, idx) => ({ start, freq: freqList[idx] ?? null }))
+-    .sort((a, b) => a.start - b.start);
+-
+-  const inferFreq = (pageNum) => {
+-    if (!freqRanges.length || !pageNum) return null;
+-    let current = freqRanges[0].freq;
+-    for (const item of freqRanges) {
+-      if (pageNum >= item.start) current = item.freq;
+-    }
+-    return current ?? null;
+-  };
+-
+-  const words = [];
+-  let page = 0;
+-  const seen = new Set();
+-
+-  for (const raw of lines) {
+-    if (!raw) continue;
+-    if (/^\d+$/.test(raw)) {
+-      page = Number(raw);
+-      continue;
+-    }
+-    if (/copyright/i.test(raw) || /Top Academy/i.test(raw) || raw === '○○○') continue;
+-    if (/^[A-Za-z][A-Za-z'\\-\\s]*$/.test(raw) && raw.length <= 24) {
+-      const word = raw.replace(/\s+/g, ' ').trim();
+-      if (!word || seen.has(word.toLowerCase())) continue;
+-      seen.add(word.toLowerCase());
+-      words.push({
+-        id: `${word.toLowerCase()}-${words.length + 1}`,
+-        word,
+-        posRaw: '',
+-        meaningZh: '',
+-        frequencyGroup: inferFreq(page),
+-        page
+-      });
+-    }
+-  }
+-  return words;
++async function ocrAndParse(input) {
++  const tmpDir = './tmp-ocr';
++  if (!fs.existsSync(tmpDir)) fs.mkdirSync(tmpDir);
++  // 封面與目錄兩頁忽略，從第 3 頁開始 ( -f 3 )
++  const ppmPrefix = `${tmpDir}/page`;
++  try {
++    execSync(`pdftoppm -f 3 -png "${input}" "${ppmPrefix}"`, { stdio: 'inherit' });
++  } catch (err) {
++    console.error('pdftoppm 轉檔失敗，請確認已安裝 Poppler 且指令可用');
++    process.exit(1);
++  }
++
++  const files = fs.readdirSync(tmpDir)
++    .filter(f => f.endsWith('.png'))
++    .sort((a, b) => a.localeCompare(b));
++
++  if (!files.length) {
++    console.warn('未產生任何影像，停止處理。');
++    return [];
++  }
++
++  const words = [];
++  const seen = new Set();
++  for (let i = 0; i < files.length; i += 1) {
++    const file = `${tmpDir}/${files[i]}`;
++    const logicalPage = i + 1; // 視為 P1 起算
++    const freq = inferFreqByPage(logicalPage);
++    let tsv = '';
++    try {
++      tsv = execSync(`tesseract "${file}" stdout -l eng+chi_tra tsv`, { encoding: 'utf-8' });
++    } catch (err) {
++      console.error(`tesseract 執行失敗於 ${file}，請確認已安裝 tesseract 與語言包。`);
++      continue;
++    }
++    const tokens = extractWordsFromTsv(tsv);
++    tokens.forEach(word => {
++      const key = word.toLowerCase();
++      if (seen.has(key)) return;
++      seen.add(key);
++      words.push({
++        id: `${key}-${words.length + 1}`,
++        word,
++        posRaw: '',
++        meaningZh: '',
++        frequencyGroup: freq,
++        page: logicalPage
++      });
++    });
++  }
++  return words;
+ }
++
++function extractWordsFromTsv(tsv) {
++  const lines = tsv.split('\n').slice(1); // 去除表頭
++  const words = [];
++  for (const line of lines) {
++    if (!line.trim()) continue;
++    const cols = line.split('\t');
++    if (cols.length < 12) continue;
++    const level = Number(cols[0]);
++    const conf = Number(cols[10]);
++    const text = cols[11]?.trim() ?? '';
++    if (level === 5 && conf >= 70 && /^[A-Za-z][A-Za-z'\\-]*$/.test(text) && text.length <= 20) {
++      words.push(text);
++    }
++  }
++  return words;
++}
++
++// 依目錄頁面設計的出現次數區間：P1 10 次、P7 9 次、P10 8 次…，10 區間
++function inferFreqByPage(page) {
++  const map = [
++    { start: 1, freq: 10 },
++    { start: 7, freq: 9 },
++    { start: 10, freq: 8 },
++    { start: 13, freq: 7 },
++    { start: 17, freq: 6 },
++    { start: 20, freq: 5 },
++    { start: 25, freq: 4 },
++    { start: 32, freq: 3 },
++    { start: 39, freq: 2 },
++    { start: 48, freq: 1 }
++  ];
++  let current = map[0].freq;
++  for (const m of map) {
++    if (page >= m.start) current = m.freq;
++  }
++  return current;
++}
++
++process.on('exit', () => {
++  // 清除暫存資料夾
++  if (fs.existsSync('./tmp-ocr')) {
++    fs.readdirSync('./tmp-ocr').forEach(f => fs.unlinkSync(`./tmp-ocr/${f}`));
++    fs.rmdirSync('./tmp-ocr');
++  }
++});
+*** End Patch
+[2m2025-11-29T15:52:15.241301Z[0m [32m INFO[0m ToolCall: shell_command {"command":"node tools/convert-top-pdf-to-json.mjs top2025.pdf public/data/words.json","workdir":"/mnt/d/program/ExamWordPrep","timeout_ms":120000}
