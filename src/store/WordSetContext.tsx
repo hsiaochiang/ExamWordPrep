@@ -126,6 +126,11 @@ function filterWords(words: WordItem[], condition: SelectionCondition) {
       const [start, end] = condition.pages ?? [1, 999];
       return words.filter(w => w.page >= start && w.page <= end);
     }
+    case 'singlePage': {
+      const page = condition.pages?.[0];
+      if (!page) return words;
+      return words.filter(w => w.page === page);
+    }
     case 'frequency': {
       const target = condition.frequencyGroup;
       if (target == null) return words;
@@ -149,18 +154,25 @@ function getWordDataCandidates(): string[] {
   const urls = new Set<string>();
   const override = import.meta.env.VITE_WORD_DATA_URL;
   if (override) urls.add(override);
-  if (import.meta.env.DEV) {
-    urls.add('/data/words.json');
-    return Array.from(urls);
-  }
+
   const base = (import.meta.env.BASE_URL ?? '/').replace(/\/+$/, '');
-  if (base) {
-    urls.add(`${base}/data/words.json`);
-    if (typeof window !== 'undefined') {
-      urls.add(`${window.location.origin}${base}/data/words.json`);
+  const appendPath = (path: string) => {
+    if (!path.startsWith('/')) path = `/${path}`;
+    if (base) {
+      urls.add(`${base}${path}`);
+      if (typeof window !== 'undefined') {
+        urls.add(`${window.location.origin}${base}${path}`);
+      }
     }
+    urls.add(path);
+    urls.add(path.replace(/^\//, ''));
+  };
+
+  appendPath('data/words.json');
+
+  if (import.meta.env.DEV) {
+    appendPath('data/words-sample.json');
   }
-  urls.add('/data/words.json');
-  urls.add('data/words.json');
+
   return Array.from(urls);
 }

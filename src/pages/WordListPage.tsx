@@ -8,7 +8,7 @@ export default function WordListPage() {
   const [index, setIndex] = useState(0);
   const [play, setPlay] = useState(false);
   const [withMeaning, setWithMeaning] = useState(false);
-  const [intervalSec, setIntervalSec] = useState(2);
+  const [intervalSec, setIntervalSec] = useState(5);
 
   useEffect(() => {
     if (!play) return;
@@ -37,16 +37,14 @@ export default function WordListPage() {
       <div className="card">
         <h2 style={{ marginTop: 0 }}>單字總覽</h2>
         <p style={{ color: '#6b7280' }}>目前條件：{selection?.type ?? '未設定'}，共 {sessionWords.length} 個單字</p>
-        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center', marginBottom: 8 }}>
+        <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center', marginBottom: 8 }}>
           <button className="btn secondary" onClick={() => setPlay(p => !p)}>{play ? '暫停朗讀' : '播放朗讀'}</button>
-          <button className="btn secondary" onClick={() => setIndex(i => (i - 1 + sessionWords.length) % sessionWords.length)}>上一個</button>
-          <button className="btn secondary" onClick={() => setIndex(i => (i + 1) % sessionWords.length)}>下一個</button>
           <label style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
             <input type="checkbox" checked={withMeaning} onChange={e => setWithMeaning(e.target.checked)} /> 英文 + 中文
           </label>
           <label>
             間隔秒數
-            <input className="input" type="number" min={1} max={5} value={intervalSec} onChange={e => setIntervalSec(Number(e.target.value))} style={{ width: 80 }} />
+            <input className="input" type="number" min={1} max={5} value={intervalSec} onChange={e => setIntervalSec(Number(e.target.value) || 1)} style={{ width: 80 }} />
           </label>
         </div>
       </div>

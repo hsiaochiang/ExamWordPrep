@@ -1,4 +1,4 @@
-export type SelectionType = 'pageRange' | 'frequency' | 'alphabet' | 'customList';
+export type SelectionType = 'pageRange' | 'singlePage' | 'frequency' | 'alphabet' | 'customList';
 export type QuizMode = 'enToZh' | 'zhToEn';
 export type Familiarity = 'unmarked' | 'known' | 'unknown';
 
