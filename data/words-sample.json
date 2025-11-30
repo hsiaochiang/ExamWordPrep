@@ -1,0 +1,42 @@
+[
+  {
+    "id": "a-1",
+    "word": "apple",
+    "posRaw": "[n.] 名詞",
+    "meaningZh": "蘋果",
+    "frequencyGroup": 10,
+    "page": 1
+  },
+  {
+    "id": "b-1",
+    "word": "banana",
+    "posRaw": "[n.] 名詞",
+    "meaningZh": "香蕉",
+    "frequencyGroup": 9,
+    "page": 2
+  },
+  {
+    "id": "c-1",
+    "word": "carry",
+    "posRaw": "[v.] 動詞",
+    "meaningZh": "攜帶；搬運",
+    "frequencyGroup": 8,
+    "page": 3
+  },
+  {
+    "id": "d-1",
+    "word": "delicious",
+    "posRaw": "[adj.] 形容詞",
+    "meaningZh": "美味的",
+    "frequencyGroup": 7,
+    "page": 4
+  },
+  {
+    "id": "e-1",
+    "word": "energy",
+    "posRaw": "[n.] 名詞",
+    "meaningZh": "能量；精力",
+    "frequencyGroup": 6,
+    "page": 5
+  }
+]
