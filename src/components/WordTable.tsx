@@ -1,10 +1,10 @@
 import { useMemo, useState } from 'react';
-import { Familiarity, WordItem } from '../utils/jsonSchema';
+import { Familiarity, WordItem, getMeaningDisplay, getPosDisplay } from '../utils/jsonSchema';
 
 type Props = {
   words: WordItem[];
-  familiarity: Record<string, Familiarity>;
-  onMark: (id: string, value: Familiarity) => void;
+  familiarity: Partial<Record<number, Familiarity>>;
+  onMark: (id: number, value: Familiarity) => void;
 };
 
 export default function WordTable({ words, familiarity, onMark }: Props) {
@@ -20,7 +20,9 @@ export default function WordTable({ words, familiarity, onMark }: Props) {
     list.sort((a, b) => {
       const dir = asc ? 1 : -1;
       if (sortBy === 'word') return a.word.localeCompare(b.word) * dir;
-      return (a.frequencyGroup - b.frequencyGroup) * dir;
+      const freqA = a.frequencyCount ?? a.frequencyGroup?.length ?? 0;
+      const freqB = b.frequencyCount ?? b.frequencyGroup?.length ?? 0;
+      return (freqA - freqB) * dir;
     });
     return list;
   }, [words, sortBy, asc, onlyUnknown, familiarity]);
@@ -54,9 +56,9 @@ export default function WordTable({ words, familiarity, onMark }: Props) {
             {viewWords.map(word => (
               <tr key={word.id}>
                 <td data-label="單字">{word.word}</td>
-                <td data-label="詞性">{word.posRaw}</td>
-                <td data-label="中文解釋">{word.meaningZh}</td>
-                <td data-label="出現次數" style={{ textAlign: 'center' }}>{word.frequencyGroup}</td>
+                <td data-label="詞性">{getPosDisplay(word) || '—'}</td>
+                <td data-label="中文解釋">{getMeaningDisplay(word) || '—'}</td>
+                <td data-label="出現次數等級" style={{ textAlign: 'center' }}>{word.frequencyCount ?? word.frequencyGroup?.length ?? 0}</td>
                 <td data-label="熟悉度">
                   <div style={{ display: 'flex', gap: 6 }}>
                     <button className="btn secondary" onClick={() => onMark(word.id, 'known')}>

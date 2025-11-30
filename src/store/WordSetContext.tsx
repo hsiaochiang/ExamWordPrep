@@ -7,10 +7,10 @@ type WordSetContextValue = {
   loading: boolean;
   selection: SelectionCondition | null;
   sessionWords: WordItem[];
-  familiarity: Record<string, Familiarity>;
+  familiarity: Partial<Record<number, Familiarity>>;
   setSelection: (condition: SelectionCondition | null) => void;
   buildSession: (condition: SelectionCondition, max?: number) => WordItem[];
-  markFamiliarity: (id: string, value: Familiarity) => void;
+  markFamiliarity: (id: number, value: Familiarity) => void;
   resetSession: () => void;
 };
 
@@ -31,7 +31,7 @@ export function WordSetProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true);
   const [selection, setSelection] = useState<SelectionCondition | null>(null);
   const [sessionWords, setSessionWords] = useState<WordItem[]>([]);
-  const [familiarity, setFamiliarity] = useState<Record<string, Familiarity>>({});
+  const [familiarity, setFamiliarity] = useState<Partial<Record<number, Familiarity>>>({});
 
   const userSettings = useMemo(() => {
     if (!currentUser) return defaultSettings;
@@ -41,7 +41,8 @@ export function WordSetProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const fetchWords = async () => {
       try {
-        const res = await fetch('/data/words-sample.json');
+        const dataFile = import.meta.env.DEV ? '/data/words.json' : '/data/words-sample.json';
+        const res = await fetch(dataFile);
         const json = (await res.json()) as WordItem[];
         setWords(json);
       } catch (err) {
@@ -72,7 +73,7 @@ export function WordSetProvider({ children }: { children: ReactNode }) {
     return chosen;
   };
 
-  const markFamiliarity = (id: string, value: Familiarity) => {
+  const markFamiliarity = (id: number, value: Familiarity) => {
     setFamiliarity(prev => ({ ...prev, [id]: value }));
   };
 
@@ -109,8 +110,11 @@ function filterWords(words: WordItem[], condition: SelectionCondition) {
       const [start, end] = condition.pages ?? [1, 999];
       return words.filter(w => w.page >= start && w.page <= end);
     }
-    case 'frequency':
-      return words.filter(w => w.frequencyGroup === condition.frequencyGroup);
+    case 'frequency': {
+      const target = condition.frequencyGroup;
+      if (target == null) return words;
+      return words.filter(w => Array.isArray(w.frequencyGroup) && w.frequencyGroup.includes(target));
+    }
     case 'alphabet': {
       const [from, to] = condition.alphabetRange ?? ['a', 'z'];
       return words.filter(w => {

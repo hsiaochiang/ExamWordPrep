@@ -1,4 +1,4 @@
-import { WordItem } from './jsonSchema';
+import { WordItem, getMeaningDisplay } from './jsonSchema';
 
 function ensureVoice(): SpeechSynthesisVoice | undefined {
   const voices = speechSynthesis.getVoices();
@@ -15,7 +15,7 @@ export function speakWord(word: WordItem, withMeaning: boolean) {
   wordUtter.voice = ensureVoice();
   speechSynthesis.speak(wordUtter);
   if (withMeaning) {
-    const meaningUtter = new SpeechSynthesisUtterance(word.meaningZh);
+    const meaningUtter = new SpeechSynthesisUtterance(getMeaningDisplay(word) || word.word);
     speechSynthesis.speak(meaningUtter);
   }
 }

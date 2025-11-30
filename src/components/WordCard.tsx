@@ -1,4 +1,4 @@
-import { Familiarity, WordItem } from '../utils/jsonSchema';
+import { Familiarity, WordItem, getMeaningDisplay, getPosDisplay } from '../utils/jsonSchema';
 
 type Props = {
   word: WordItem;
@@ -10,8 +10,13 @@ type Props = {
 };
 
 export default function WordCard({ word, flipped, mode, familiarity, onFlip, onMark }: Props) {
-  const front = mode === 'enToZh' ? word.word : word.meaningZh;
-  const back = mode === 'enToZh' ? `${word.posRaw} ${word.meaningZh}` : `${word.word} (${word.posRaw})`;
+  const meaningText = getMeaningDisplay(word) || word.word;
+  const posText = getPosDisplay(word);
+  const front = mode === 'enToZh' ? word.word : meaningText;
+  const back =
+    mode === 'enToZh'
+      ? [posText, meaningText].filter(Boolean).join(' ')
+      : `${word.word}${posText ? ` (${posText})` : ''}`;
 
   return (
     <div className="card" style={{ textAlign: 'center' }}>

@@ -2,13 +2,30 @@ export type SelectionType = 'pageRange' | 'frequency' | 'alphabet' | 'customList
 export type QuizMode = 'enToZh' | 'zhToEn';
 export type Familiarity = 'unmarked' | 'known' | 'unknown';
 
-export interface WordItem {
-  id: string;
-  word: string;
-  posRaw: string;
+export interface WordDefinition {
+  pos: string;
   meaningZh: string;
-  frequencyGroup: number;
+}
+
+export interface WordItem {
+  id: number;
+  word: string;
+  posList: WordDefinition[];
+  frequencyGroup: number[];
+  frequencyCount: number;
   page: number;
+  needsReview: boolean;
+  status: string;
+}
+
+export function getPosDisplay(word: WordItem): string {
+  if (!word.posList || word.posList.length === 0) return '';
+  return word.posList.map(item => item.pos).join('、');
+}
+
+export function getMeaningDisplay(word: WordItem): string {
+  if (!word.posList || word.posList.length === 0) return '';
+  return word.posList.map(item => item.meaningZh).join('；');
 }
 
 export interface User {
