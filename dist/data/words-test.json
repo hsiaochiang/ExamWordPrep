@@ -1,0 +1,374 @@
+[
+  {
+    "word": "about",
+    "posList": [
+      {
+        "pos": "",
+        "meaningZh": "約"
+      },
+      {
+        "pos": "[prep.]",
+        "meaningZh": "大大 附近； ；"
+      }
+    ],
+    "frequencyGroup": [
+      110,
+      111,
+      113,
+      114
+    ],
+    "page": 1,
+    "id": 1
+  },
+  {
+    "word": "after",
+    "posList": [
+      {
+        "pos": "",
+        "meaningZh": "；在"
+      },
+      {
+        "pos": "",
+        "meaningZh": "[prep.]"
+      },
+      {
+        "pos": "[conj.]",
+        "meaningZh": "；後 .''"
+      }
+    ],
+    "frequencyGroup": [
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      113,
+      114
+    ],
+    "page": 1,
+    "id": 2
+  },
+  {
+    "word": "all",
+    "posList": [
+      {
+        "pos": "",
+        "meaningZh": "；地完全"
+      },
+      {
+        "pos": "[adv.]",
+        "meaningZh": "全"
+      },
+      {
+        "pos": "[n.]",
+        "meaningZh": "；"
+      }
+    ],
+    "frequencyGroup": [
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      113,
+      114
+    ],
+    "page": 1,
+    "id": 3
+  },
+  {
+    "word": "also",
+    "posList": [
+      {
+        "pos": "",
+        "meaningZh": ""
+      }
+    ],
+    "frequencyGroup": [
+      110,
+      111,
+      113,
+      114
+    ],
+    "page": 1,
+    "id": 4
+  },
+  {
+    "word": "an",
+    "posList": [
+      {
+        "pos": "",
+        "meaningZh": "個種 一；"
+      }
+    ],
+    "frequencyGroup": [
+      110,
+      111,
+      113,
+      114
+    ],
+    "page": 1,
+    "id": 5
+  },
+  {
+    "word": "and",
+    "posList": [
+      {
+        "pos": "",
+        "meaningZh": "就及 oe 而； ； ；"
+      }
+    ],
+    "frequencyGroup": [
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114
+    ],
+    "page": 1,
+    "id": 6
+  },
+  {
+    "word": "another",
+    "posList": [
+      {
+        "pos": "",
+        "meaningZh": "；一另 一個"
+      },
+      {
+        "pos": "[pron.]",
+        "meaningZh": "個"
+      }
+    ],
+    "frequencyGroup": [
+      110,
+      111,
+      113,
+      114
+    ],
+    "page": 1,
+    "id": 7
+  },
+  {
+    "word": "lu",
+    "posList": [
+      {
+        "pos": "",
+        "meaningZh": "和 [N.} eras ,"
+      }
+    ],
+    "frequencyGroup": [
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114
+    ],
+    "page": 1,
+    "id": 8
+  },
+  {
+    "word": "are",
+    "posList": [
+      {
+        "pos": "",
+        "meaningZh": ""
+      }
+    ],
+    "frequencyGroup": [
+      110,
+      111,
+      113,
+      114
+    ],
+    "page": 1,
+    "id": 9
+  },
+  {
+    "word": "as",
+    "posList": [
+      {
+        "pos": "",
+        "meaningZh": ""
+      }
+    ],
+    "frequencyGroup": [
+      110,
+      111,
+      113,
+      114
+    ],
+    "page": 1,
+    "id": 10
+  },
+  {
+    "word": "at",
+    "posList": [
+      {
+        "pos": "",
+        "meaningZh": ""
+      }
+    ],
+    "frequencyGroup": [
+      110,
+      111,
+      113,
+      114
+    ],
+    "page": 1,
+    "id": 11
+  },
+  {
+    "word": "away",
+    "posList": [
+      {
+        "pos": "",
+        "meaningZh": "；在離開的"
+      },
+      {
+        "pos": "[adv.]",
+        "meaningZh": ",； ； IEE... 有在"
+      },
+      {
+        "pos": "[aux.]",
+        "meaningZh": "；"
+      }
+    ],
+    "frequencyGroup": [
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      113,
+      114
+    ],
+    "page": 1,
+    "id": 12
+  },
+  {
+    "word": "ecause",
+    "posList": [
+      {
+        "pos": "",
+        "meaningZh": ""
+      }
+    ],
+    "frequencyGroup": [
+      110,
+      111,
+      113,
+      114
+    ],
+    "page": 1,
+    "id": 13
+  },
+  {
+    "word": "been",
+    "posList": [
+      {
+        "pos": "",
+        "meaningZh": ") 有在 的去 要過 分； ； ,；"
+      }
+    ],
+    "frequencyGroup": [
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      113,
+      114
+    ],
+    "page": 1,
+    "id": 14
+  },
+  {
+    "word": "before",
+    "posList": [
+      {
+        "pos": "",
+        "meaningZh": "； '“' 在同"
+      },
+      {
+        "pos": "[prep.]",
+        "meaningZh": "前之 前"
+      }
+    ],
+    "frequencyGroup": [
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      113,
+      114
+    ],
+    "page": 1,
+    "id": 15
+  },
+  {
+    "word": "best",
+    "posList": [
+      {
+        "pos": "",
+        "meaningZh": "好的 ) 的還 最高 級"
+      }
+    ],
+    "frequencyGroup": [
+      110,
+      111,
+      113,
+      114
+    ],
+    "page": 1,
+    "id": 16
+  },
+  {
+    "word": "AMO",
+    "posList": [
+      {
+        "pos": "",
+        "meaningZh": "； m 公車"
+      },
+      {
+        "pos": "[n.]",
+        "meaningZh": "運送"
+      }
+    ],
+    "frequencyGroup": [
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114
+    ],
+    "page": 1,
+    "id": 17
+  }
+]
