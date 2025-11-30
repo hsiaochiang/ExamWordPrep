@@ -15,21 +15,16 @@ npm run dev
 ```
 啟動後於終端顯示的網址開啟瀏覽器（預設 http://localhost:5173/）。
 
-## 轉換 TOP 單字 PDF → JSON
-1. 將 TOP 單字 PDF 放在專案根目錄（名稱不限）。
-2. 執行：
-   ```bash
-   node tools/convert-top-pdf-to-json.mjs input.pdf public/data/words.json
-   ```
-   - 第一個參數為輸入 PDF 路徑。
-   - 第二個參數為輸出 JSON 路徑（可省略，預設 `public/data/words.json`）。
-3. `words.json` 欄位：
-   - `id`: 唯一識別碼
-   - `word`: 英文單字
-   - `posRaw`: 原始詞性標註
-   - `meaningZh`: 中文解釋
-   - `frequencyGroup`: 出現次數分級（1–10）
-   - `page`: PDF 頁碼
+## 自訂單字資料
+- 內建 `public/data/words-sample.json` 作為示範，可複製為 `words.json` 進行調整。
+- 自訂欄位結構建議遵守以下格式：
+  - `id`: 唯一識別碼
+  - `word`: 英文單字
+  - `posRaw`: 原始詞性標註
+  - `meaningZh`: 中文解釋
+  - `frequencyGroup`: 出現次數分級（1–10）
+  - `page`: 來源頁碼或自訂分類
+- 匯出後可備份 JSON，再於「使用者管理」匯入以更新資料。
 
 ## 建置與部署
 ```bash
@@ -46,7 +41,6 @@ npm run build
 
 ## 專案目錄重點
 - `src/`：前端 React 原始碼（HashRouter）
-- `public/data/words-sample.json`：示範單字檔，正式使用可覆蓋為轉換後的 `words.json`
-- `tools/convert-top-pdf-to-json.mjs`：本機 PDF 轉 JSON 的 Node CLI
+- `public/data/words-sample.json`：示範單字檔，正式使用可覆蓋為自訂的 `words.json`
 
 所有頁面文案使用繁體中文，並考量 RWD；同裝置多使用者的設定與紀錄皆以帳號為單位存放。
